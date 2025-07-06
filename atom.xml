@@ -6,7 +6,7 @@
   <link href="https://lanoao.github.io/LanOoO.github.io/atom.xml" rel="self"/>
   
   <link href="https://lanoao.github.io/LanOoO.github.io/"/>
-  <updated>2025-07-06T08:18:12.229Z</updated>
+  <updated>2025-07-06T08:55:09.400Z</updated>
   <id>https://lanoao.github.io/LanOoO.github.io/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://lanoao.github.io/LanOoO.github.io/hexo-optimize.html"/>
     <id>https://lanoao.github.io/LanOoO.github.io/hexo-optimize.html</id>
     <published>2025-07-05T16:36:33.000Z</published>
-    <updated>2025-07-06T08:18:12.229Z</updated>
+    <updated>2025-07-06T08:55:09.400Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些编写博文的笔记</p><span id="more"></span><h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是一些文章的选项👀</p><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p><figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure><h1 id="特殊内容"><a href="#特殊内容" class="headerlink" title="特殊内容"></a>特殊内容</h1><p>这里是一些文章内容编写相关👀</p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><p>或者三个“&#96;”</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>内容</p><footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p><span id="more"></span><h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p><figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure><h1 id="特殊内容"><a href="#特殊内容" class="headerlink" title="特殊内容"></a>特殊内容</h1><p>这里是文章内容编写相关👀</p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><p>或者三个“&#96;”</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>内容</p><footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>]]></content>
     
     
-    <summary type="html">&lt;p&gt;一些编写博文的笔记&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;编写博文的笔记&lt;/p&gt;</summary>
     
     
     
