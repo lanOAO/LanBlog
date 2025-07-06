@@ -3,11 +3,11 @@
   <title>幽篁里</title>
   
   <subtitle>Toda mi ambición es ser libre toda mi vida.</subtitle>
-  <link href="https://lanoao.github.io/LanOoO.github.io/atom.xml" rel="self"/>
+  <link href="https://lanoao.github.io/LanBlog/atom.xml" rel="self"/>
   
-  <link href="https://lanoao.github.io/LanOoO.github.io/"/>
+  <link href="https://lanoao.github.io/LanBlog/"/>
   <updated>2025-07-06T08:55:09.400Z</updated>
-  <id>https://lanoao.github.io/LanOoO.github.io/</id>
+  <id>https://lanoao.github.io/LanBlog/</id>
   
   <author>
     <name>LanOoO</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo博文编写</title>
-    <link href="https://lanoao.github.io/LanOoO.github.io/hexo-optimize.html"/>
-    <id>https://lanoao.github.io/LanOoO.github.io/hexo-optimize.html</id>
+    <link href="https://lanoao.github.io/LanBlog/hexo-optimize.html"/>
+    <id>https://lanoao.github.io/LanBlog/hexo-optimize.html</id>
     <published>2025-07-05T16:36:33.000Z</published>
     <updated>2025-07-06T08:55:09.400Z</updated>
     
@@ -31,9 +31,9 @@
     
     
     
-    <category term="笔记" scheme="https://lanoao.github.io/LanOoO.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="笔记" scheme="https://lanoao.github.io/LanBlog/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="博客" scheme="https://lanoao.github.io/LanOoO.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="https://lanoao.github.io/LanBlog/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
