@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>幽篁里</title>
+  
+  <subtitle>Toda mi ambición es ser libre toda mi vida.</subtitle>
+  <link href="https://lanoao.github.io/LanOoO.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://lanoao.github.io/LanOoO.github.io/"/>
+  <updated>2025-07-06T06:07:18.211Z</updated>
+  <id>https://lanoao.github.io/LanOoO.github.io/</id>
+  
+  <author>
+    <name>LanOoO</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客优化</title>
+    <link href="https://lanoao.github.io/LanOoO.github.io/2025/07/06/%E4%BD%A0%E5%A5%BDHexo/"/>
+    <id>https://lanoao.github.io/LanOoO.github.io/2025/07/06/%E4%BD%A0%E5%A5%BDHexo/</id>
+    <published>2025-07-05T16:36:33.000Z</published>
+    <updated>2025-07-06T06:07:18.211Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="笔记" scheme="https://lanoao.github.io/LanOoO.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="博客" scheme="https://lanoao.github.io/LanOoO.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://lanoao.github.io/LanOoO.github.io/2025/07/05/hello-world/"/>
+    <id>https://lanoao.github.io/LanOoO.github.io/2025/07/05/hello-world/</id>
+    <published>2025-07-05T15:28:59.838Z</published>
+    <updated>2025-07-05T15:28:59.838Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
