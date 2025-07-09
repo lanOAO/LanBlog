@@ -26,4 +26,62 @@
         <tag>博客</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <url>/LanBlog/AutoHotkey1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<span id="more"></span>
+<p>***<a href="https://autohotkey.com/">AutoHotkey</a>***是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<blockquote>
+<p>以下全部建立在2.0.19版本的的基础上</p>
+</blockquote>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
+<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
+<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
+<li>双击脚本，即可运行</li>
+</ul>
+<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1>]]></content>
+      <categories>
+        <category>利器OuO</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>AutoHotkey</tag>
+        <tag>软件</tag>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><span id="more"></span>
+<p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
+]]></content>
+      <categories>
+        <category>参考</category>
+      </categories>
+      <tags>
+        <tag>参考</tag>
+      </tags>
+  </entry>
 </search>

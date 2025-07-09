@@ -6,7 +6,7 @@
   <link href="https://lanoao.github.io/LanBlog/atom.xml" rel="self"/>
   
   <link href="https://lanoao.github.io/LanBlog/"/>
-  <updated>2025-07-06T16:36:33.000Z</updated>
+  <updated>2025-07-09T16:53:24.328Z</updated>
   <id>https://lanoao.github.io/LanBlog/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>各种各样的参考页面</title>
+    <link href="https://lanoao.github.io/LanBlog/reference.html"/>
+    <id>https://lanoao.github.io/LanBlog/reference.html</id>
+    <published>2025-07-09T16:48:18.000Z</published>
+    <updated>2025-07-09T16:53:24.328Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><span id="more"></span><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;p&gt;&lt;a href=&quot;https</summary>
+      
+    
+    
+    
+    <category term="参考" scheme="https://lanoao.github.io/LanBlog/categories/%E5%8F%82%E8%80%83/"/>
+    
+    
+    <category term="参考" scheme="https://lanoao.github.io/LanBlog/tags/%E5%8F%82%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <link href="https://lanoao.github.io/LanBlog/AutoHotkey1.html"/>
+    <id>https://lanoao.github.io/LanBlog/AutoHotkey1.html</id>
+    <published>2025-07-09T14:27:08.000Z</published>
+    <updated>2025-07-09T17:15:52.857Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>    .inline-note {      display: inline-block;      background-color: #fffbe6;      color: #333;      border-left: 4px solid #f7c948;      padding: 0.2em 0.6em;      margin: 0 0.2em;      font-size: 0.95em;      border-radius: 3px;      box-shadow: 0 1px 2px rgba(0,0,0,0.05);      font-style: italic;      cursor: help;      transition: all 0.2s ease;    }    .inline-note:hover {      background-color: #fff3bf;      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);    }</style><span id="more"></span><p>***<a href="https://autohotkey.com/">AutoHotkey</a>***是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p><blockquote><p>以下全部建立在2.0.19版本的的基础上</p></blockquote><h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul><li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li><li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li><li>双击脚本，即可运行</li></ul><h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1>]]></content>
+    
+    
+    <summary type="html">&lt;style&gt;
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+&lt;/style&gt;</summary>
+    
+    
+    
+    <category term="利器OuO" scheme="https://lanoao.github.io/LanBlog/categories/%E5%88%A9%E5%99%A8OuO/"/>
+    
+    
+    <category term="笔记" scheme="https://lanoao.github.io/LanBlog/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="AutoHotkey" scheme="https://lanoao.github.io/LanBlog/tags/AutoHotkey/"/>
+    
+    <category term="软件" scheme="https://lanoao.github.io/LanBlog/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="脚本" scheme="https://lanoao.github.io/LanBlog/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博文编写</title>
