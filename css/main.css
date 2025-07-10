@@ -18,6 +18,34 @@
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #1c241c;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: #2d362d;
+    --card-bg-color: #3f493f;
+    --text-color: #b8ccb8;
+    --blockquote-color: #98ad98;
+    --link-color: #b8ccb8;
+    --link-hover-color: #e6ede6;
+    --brand-color: #cfe0cf;
+    --brand-hover-color: #cfe0cf;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #3f493f;
+    --btn-default-bg: #1c241c;
+    --btn-default-color: #b8ccb8;
+    --btn-default-border-color: #3f493f;
+    --btn-default-hover-bg: #596659;
+    --btn-default-hover-color: #b8ccb8;
+    --btn-default-hover-border-color: #596659;
+  }
+  img {
+    opacity: 0.75;
+  }
+  img:hover {
+    opacity: 0.9;
+  }
+}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -177,7 +205,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
   line-height: 2;
 }
@@ -193,7 +221,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai', 'LXGW WenKai', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -416,7 +444,7 @@ pre {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'LXGW WenKai Mono', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #e6ede6;
@@ -1010,7 +1038,7 @@ pre .javascript .function {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai', 'LXGW WenKai', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1129,6 +1157,31 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
+.book-mark-link {
+  border-bottom: none;
+  display: inline-block;
+  position: fixed;
+  right: 30px;
+  top: -10px;
+  transition: 0.3s;
+}
+@media (max-width: 991px) {
+  .book-mark-link {
+    display: none;
+  }
+}
+.book-mark-link::before {
+  color: #浅色的绿;
+  content: '\f02e';
+  font-size: 32px;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.book-mark-link:hover,
+.book-mark-link-fixed {
+  top: -2px;
+}
 .sidebar {
   background: #1c241c;
   bottom: 0;
@@ -1193,7 +1246,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5eff79;
+  background: #c49a3b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1436,7 +1489,7 @@ pre .javascript .function {
   width: 100%;
 }
 .with-love {
-  color: #32CD32;
+  color: #006400;
   display: inline-block;
   margin: 0 5px;
   animation: iconAnimate 1.33s ease-in-out infinite;
@@ -1546,7 +1599,7 @@ pre .javascript .function {
   top: 0;
 }
 .post-body {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai', 'LXGW WenKai', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1844,7 +1897,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #7a8c7a;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai', 'LXGW WenKai', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2727,4 +2780,15 @@ body {
 }
 .popup {
   opacity: 0.8;
+}
+@font-face {
+  font-family: 'LXGW WenKai';
+  src: url("../fonts/LXGWWenKai-Regular.ttf");
+}
+@font-face {
+  font-family: 'LXGW WenKai Mono';
+  src: url("../fonts/LXGWWenKaiMono-Regular.ttf");
+}
+.site-nav a {
+  font-size: 0.83em;
 }
