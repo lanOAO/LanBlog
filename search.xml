@@ -80,8 +80,11 @@
   <entry>
     <title>各种各样的参考页面</title>
     <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><span id="more"></span>
-<p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
+<span id="more"></span>
+<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
+<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
+<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
 ]]></content>
       <categories>
         <category>参考</category>
