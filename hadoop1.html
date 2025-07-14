@@ -24,21 +24,18 @@
 
   <meta name="description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AutoHotkey —— 自动热键软件">
-<meta property="og:url" content="https://lanoao.github.io/LanBlog/AutoHotkey1.html">
+<meta property="og:title" content="Hadoop入门">
+<meta property="og:url" content="https://lanoao.github.io/LanBlog/hadoop1.html">
 <meta property="og:site_name" content="幽篁里">
 <meta property="og:description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-09T14:27:08.000Z">
-<meta property="article:modified_time" content="2025-07-09T18:52:04.091Z">
+<meta property="article:published_time" content="2025-07-14T12:59:00.000Z">
+<meta property="article:modified_time" content="2025-07-14T14:56:13.643Z">
 <meta property="article:author" content="LanOoO">
-<meta property="article:tag" content="AutoHotkey">
-<meta property="article:tag" content="笔记">
-<meta property="article:tag" content="软件">
-<meta property="article:tag" content="脚本">
+<meta property="article:tag" content="Hadoop">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lanoao.github.io/LanBlog/AutoHotkey1.html">
+<link rel="canonical" href="https://lanoao.github.io/LanBlog/hadoop1.html">
 
 
 <script id="page-configurations">
@@ -51,7 +48,7 @@
   };
 </script>
 
-  <title>AutoHotkey —— 自动热键软件 | 幽篁里</title>
+  <title>Hadoop入门 | 幽篁里</title>
   
 
 
@@ -208,7 +205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lanoao.github.io/LanBlog/AutoHotkey1.html">
+    <link itemprop="mainEntityOfPage" href="https://lanoao.github.io/LanBlog/hadoop1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/LanBlog/images/AAAASpring.jpg">
@@ -221,7 +218,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AutoHotkey —— 自动热键软件
+          Hadoop入门
         </h1>
 
         <div class="post-meta">
@@ -230,23 +227,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2025-07-09 22:27:08" itemprop="dateCreated datePublished" datetime="2025-07-09T22:27:08+08:00">2025-07-09</time>
+              <time title="创建时间：2025-07-14 20:59:00 / 修改时间：22:56:13" itemprop="dateCreated datePublished" datetime="2025-07-14T20:59:00+08:00">2025-07-14</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-07-10 02:52:04" itemprop="dateModified" datetime="2025-07-10T02:52:04+08:00">2025-07-10</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LanBlog/categories/%E5%88%A9%E5%99%A8OuO/" itemprop="url" rel="index"><span itemprop="name">利器OuO</span></a>
+                  <a href="/LanBlog/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
                 </span>
             </span>
 
@@ -263,14 +254,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -303,48 +294,326 @@
       box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
     }
 </style>
-
-<p><b><a target="_blank" rel="noopener" href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<p> 一些关于Hadoop的理论知识</p>
 <span id="more"></span>
 <blockquote>
-<p>以下全部建立在2.0.19版本的的基础上</p>
+<p>本篇文章将全篇以 Hadoop 2.x 为基础为大家介绍 Hadoop</p>
+<blockquote>
+<p>Hadoop 2.x 起，YARN 替代了原本的 JobTracker&#x2F;TaskTracker 模式，引入 ResourceManager 与 ApplicationMaster，将资源管理与作业调度解耦。</p>
 </blockquote>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
-<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a target="_blank" rel="noopener" href="https://autohotkey.com/">AutoHotkey</a></span></li>
-<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
-<li>双击脚本，即可运行</li>
-</ul>
-<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
-<p>详细可以看<a target="_blank" rel="noopener" href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
 </blockquote>
-<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
+<hr>
+<h1 id="Hadoop-是什么？"><a href="#Hadoop-是什么？" class="headerlink" title="Hadoop 是什么？"></a>Hadoop 是什么？</h1><p><a class="inline-note" title="由 Apache 基金会开发，使用 Java 编写" target="_blank" rel="noopener" href="https://hadoop.apache.org/">Hadoop</a> 是一个开源的、可扩展的、分布式的大数据处理框架。</p>
+<p>它的设计理念是：<strong>将数据分布到多台普通机器上，并让程序靠近数据运行（移动‘计算’，而不是移动‘数据’）</strong>。</p>
+<h2 id="优势与缺点"><a href="#优势与缺点" class="headerlink" title="优势与缺点"></a>优势与缺点</h2><p>✅ <strong>优势</strong></p>
 <ul>
-<li><code>#</code> ：win 键</li>
-<li><code>!</code> ：alt</li>
-<li><code>^</code> ：ctrl</li>
-<li><code>+</code> ：shift</li>
-<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
+<li><strong>高可靠性</strong>：Hadoop 通过数据<code>多副本机制</code>，确保即使部分节点发生故障，数据依然不会丢失。</li>
+<li><strong>高扩展性</strong>：可<code>横向扩展</code>到成百上千台普通服务器，支持大规模数据处理。</li>
+<li><strong>高效性</strong>：基于 MapReduce <code>并行处理</code>模型，能够显著加快数据处理速度。</li>
+<li><strong>高容错性</strong>：节点或任务失败时，系统能<code>自动检测并重新调度任务</code>，保障任务完成。</li>
+</ul>
+<p>❎ <strong>缺点</strong></p>
+<ul>
+<li>MapReduce 编程模型对<strong>实时性不友好</strong>（批处理，延迟高）；</li>
+<li>编程门槛相对较高；</li>
+<li>数据随机访问性能差；</li>
+<li>运维成本大，对硬件和配置依赖强。</li>
+</ul>
+<h1 id="Hadoop-生态系统"><a href="#Hadoop-生态系统" class="headerlink" title="Hadoop 生态系统"></a>Hadoop 生态系统</h1><table>
+<thead>
+<tr>
+<th>组件</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hadoop HDFS</strong></td>
+<td>Hadoop 分布式存储系统</td>
+</tr>
+<tr>
+<td><strong>MapReduce</strong></td>
+<td>并行处理框架</td>
+</tr>
+<tr>
+<td><strong>YARN</strong></td>
+<td>资源管理与调度</td>
+</tr>
+<tr>
+<td><strong>Hive</strong></td>
+<td>基于 SQL 的数据仓库工具</td>
+</tr>
+<tr>
+<td><strong>Pig</strong></td>
+<td>数据流脚本语言</td>
+</tr>
+<tr>
+<td><strong>HBase</strong></td>
+<td>分布式列式数据库</td>
+</tr>
+<tr>
+<td><strong>Sqoop</strong></td>
+<td>与关系型数据库之间导入导出</td>
+</tr>
+<tr>
+<td><strong>Flume</strong></td>
+<td>收集日志数据流入 Hadoop</td>
+</tr>
+<tr>
+<td><strong>Zookeeper</strong></td>
+<td>分布式协调服务，提供统一的注册、选举和配置服务（常用于 HBase）</td>
+</tr>
+<tr>
+<td><strong>Oozie</strong></td>
+<td>工作流调度工具</td>
+</tr>
+<tr>
+<td><strong>Spark</strong></td>
+<td>基于内存的快速大数据计算框架</td>
+</tr>
+</tbody></table>
+<p>接下来为大家介绍三个核心组件（HDFS、MapReduce、YARN）^^</p>
+<h2 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h2><p>分布式文件系统，负责<strong>存储数据</strong>。</p>
+<ul>
+<li><p>类似于普通文件系统，但它将文件切分成多个块，分散存储在集群中的多台机器上。</p>
+</li>
+<li><p>每个数据块默认会备份三份，保证<strong>容错性和高可用性</strong>。</p>
+</li>
+<li><p>主节点：<code>NameNode</code>，存储元数据（文件名、位置等）；</p>
+</li>
+<li><p>从节点：<code>DataNode</code>，存储真实数据块。</p>
+</li>
+</ul>
+<h2 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h2><p>分布式计算框架，负责<strong>计算数据</strong>。</p>
+<ul>
+<li><p>编程模型包含两个阶段：Map（映射） 和 Reduce（归约）；</p>
+</li>
+<li><p>用户编写 Map 和 Reduce 函数，框架负责将任务分发到多台机器上执行；</p>
+</li>
+<li><p>特点是<strong>高度容错</strong>，适合批处理。</p>
+</li>
 </ul>
 <blockquote>
-<p><code>^q</code> 即代表ctrl + q</p>
+<p>它会把计算任务移动到离数据最近的地方进行执行，因为移动大量数据是非常耗费资源的。</p>
 </blockquote>
-<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
-<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
-<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
-<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>一个脚本里可以有多个热键</li>
-<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
+<h2 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h2><p>资源管理系统，负责<strong>资源调度</strong>。</p>
+<ul>
+<li><p>资源管理和任务调度&#x2F;监控功分割成不同的进程</p>
+</li>
+<li><p>主节点：<code>ResourceManager</code>，负责给 application 分配资源</p>
+</li>
+<li><p>从节点：<code>NodeManager</code> ，负责监控容器使用资源情况，并把资源使用情况报告 ResourceManager。这里所说的资源一般是指CPU、内存、磁盘、网络等。</p>
+</li>
 </ul>
+<h1 id="Hadoop工作方式"><a href="#Hadoop工作方式" class="headerlink" title="Hadoop工作方式"></a>Hadoop工作方式</h1><h2 id="主从工作方式"><a href="#主从工作方式" class="headerlink" title="主从工作方式"></a>主从工作方式</h2><p>一个 Master 和多个 Slave 节点，Slave 节点可以扩招到1000个</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主节点（Master）</th>
+<th>从节点（Slave）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>主要职责</strong></td>
+<td>负责元数据管理、任务调度、资源分配等控制类工作</td>
+<td>执行实际的存储或计算任务，如保存数据块、运行 MapReduce 任务等</td>
+</tr>
+<tr>
+<td><strong>HDFS 中角色</strong></td>
+<td><code>NameNode</code>（存储文件系统的目录结构、数据块位置等元数据）</td>
+<td><code>DataNode</code>（存储实际的数据块）</td>
+</tr>
+<tr>
+<td><strong>YARN 中角色</strong></td>
+<td><code>ResourceManager</code>（管理集群资源）<br><code>ApplicationMaster</code>（调度某个应用的任务）</td>
+<td><code>NodeManager</code>（管理本节点资源并报告给 ResourceManager）<br><code>Container</code>（执行任务）</td>
+</tr>
+<tr>
+<td><strong>容错机制</strong></td>
+<td>通常单点故障（如 <code>NameNode</code>）需配置**高可用模式（HA）**来避免整个集群瘫痪</td>
+<td>任意从节点故障，系统可自动将任务&#x2F;副本转移到其他节点，影响较小</td>
+</tr>
+<tr>
+<td><strong>故障影响</strong></td>
+<td>故障可能导致整个系统不可用或任务调度失败</td>
+<td>局部计算或存储失败，影响有限，系统具备自动容错能力</td>
+</tr>
+<tr>
+<td><strong>硬件要求</strong></td>
+<td>对稳定性、内存、网络、磁盘性能要求较高</td>
+<td>可使用普通服务器，但需数量足够以提供分布式计算&#x2F;存储能力</td>
+</tr>
+<tr>
+<td><strong>部署建议</strong></td>
+<td>建议部署在可靠性高、性能优的节点上，并开启冗余&#x2F;主备机制</td>
+<td>可大规模横向扩展，支持动态加入或移除</td>
+</tr>
+</tbody></table>
+<h2 id="守护进程"><a href="#守护进程" class="headerlink" title="守护进程"></a>守护进程</h2><p>Hadoop 主要有4个守护进程:</p>
+<ul>
+<li>NameNode ：它是HDFS运行在Master节点守护进程。</li>
+<li>DataNode：它是 HDFS 运行在Slave节点守护进程。</li>
+<li>ResourceManager：它是 Yarn 运行在 Master 节点守护进程。</li>
+<li>NodeManager：它是 Yarn 运行在 Slave 节点的守护进程。</li>
+</ul>
+<p>除了这些，可能还会有 secondary NameNode，standby NameNode，Job HistoryServer 等进程。</p>
+<h1 id="Hadoop-常用命令"><a href="#Hadoop-常用命令" class="headerlink" title="Hadoop 常用命令"></a>Hadoop 常用命令</h1><p><a target="_blank" rel="noopener" href="https://hadoop.apache.ac.cn/docs/stable/hadoop-project-dist/hadoop-common/CommandsManual.html">Apache Hadoop 3.3.6 – Hadoop 命令指南 - Hadoop 框架</a></p>
+<h2 id="📁-HDFS-文件系统命令"><a href="#📁-HDFS-文件系统命令" class="headerlink" title="📁 HDFS 文件系统命令"></a>📁 HDFS 文件系统命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hadoop fs -ls /</code></td>
+<td>查看根目录下的文件和目录</td>
+</tr>
+<tr>
+<td><code>hadoop fs -mkdir /data</code></td>
+<td>创建新目录 <code>/data</code></td>
+</tr>
+<tr>
+<td><code>hadoop fs -put localfile.txt /data/</code></td>
+<td>上传本地文件到 HDFS</td>
+</tr>
+<tr>
+<td><code>hadoop fs -get /data/file.txt ./</code></td>
+<td>下载 HDFS 文件到本地</td>
+</tr>
+<tr>
+<td><code>hadoop fs -cat /data/file.txt</code></td>
+<td>查看 HDFS 中的文件内容</td>
+</tr>
+<tr>
+<td><code>hadoop fs -rm /data/file.txt</code></td>
+<td>删除 HDFS 中的文件</td>
+</tr>
+<tr>
+<td><code>hadoop fs -rm -r /data/</code></td>
+<td>递归删除目录及其内容</td>
+</tr>
+<tr>
+<td><code>hadoop fs -du -h /data</code></td>
+<td>查看目录或文件占用空间</td>
+</tr>
+<tr>
+<td><code>hadoop fs -chmod 755 /data</code></td>
+<td>修改 HDFS 中文件权限</td>
+</tr>
+</tbody></table>
 <hr>
-<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-
-<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
-<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+<h2 id="🚀-启动-关闭-Hadoop-集群"><a href="#🚀-启动-关闭-Hadoop-集群" class="headerlink" title="🚀 启动&#x2F;关闭 Hadoop 集群"></a>🚀 启动&#x2F;关闭 Hadoop 集群</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>start-dfs.sh</code></td>
+<td>启动 HDFS（NameNode 和 DataNode）</td>
+</tr>
+<tr>
+<td><code>stop-dfs.sh</code></td>
+<td>关闭 HDFS</td>
+</tr>
+<tr>
+<td><code>start-yarn.sh</code></td>
+<td>启动 YARN（ResourceManager 和 NodeManager）</td>
+</tr>
+<tr>
+<td><code>stop-yarn.sh</code></td>
+<td>关闭 YARN</td>
+</tr>
+<tr>
+<td><code>mr-jobhistory-daemon.sh start historyserver</code></td>
+<td>启动 MapReduce JobHistory 服务（可选）</td>
+</tr>
+<tr>
+<td><code>mr-jobhistory-daemon.sh stop historyserver</code></td>
+<td>停止 JobHistory 服务</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🧰-MapReduce-作业相关命令"><a href="#🧰-MapReduce-作业相关命令" class="headerlink" title="🧰 MapReduce 作业相关命令"></a>🧰 MapReduce 作业相关命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hadoop jar yourjob.jar MainClass /input /output</code></td>
+<td>提交 MapReduce 作业</td>
+</tr>
+<tr>
+<td><code>hadoop job -list</code></td>
+<td>查看正在运行的作业（Hadoop 1.x）</td>
+</tr>
+<tr>
+<td><code>yarn application -list</code></td>
+<td>查看正在运行的应用（Hadoop 2.x 及以后）</td>
+</tr>
+<tr>
+<td><code>yarn application -status </code></td>
+<td>查看某个应用的状态</td>
+</tr>
+<tr>
+<td><code>yarn application -kill </code></td>
+<td>杀掉某个应用</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📄-日志查看命令"><a href="#📄-日志查看命令" class="headerlink" title="📄 日志查看命令"></a>📄 日志查看命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>jps</code></td>
+<td>查看 Hadoop 组件进程（需安装 JDK）</td>
+</tr>
+<tr>
+<td><code>tail -f $HADOOP_HOME/logs/*.log</code></td>
+<td>实时查看日志输出</td>
+</tr>
+<tr>
+<td><code>less $HADOOP_HOME/logs/hadoop-*.log</code></td>
+<td>分页查看日志</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🧪-其他实用命令"><a href="#🧪-其他实用命令" class="headerlink" title="🧪 其他实用命令"></a>🧪 其他实用命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hdfs dfsadmin -report</code></td>
+<td>查看集群节点、容量、使用情况等摘要</td>
+</tr>
+<tr>
+<td><code>hdfs dfsadmin -safemode get</code></td>
+<td>查看当前是否处于安全模式</td>
+</tr>
+<tr>
+<td><code>hdfs dfsadmin -safemode leave</code></td>
+<td>退出安全模式</td>
+</tr>
+<tr>
+<td><code>hdfs dfs -test -e /path</code></td>
+<td>判断某路径是否存在（返回码为 0 表示存在）</td>
+</tr>
+<tr>
+<td><code>hdfs namenode -format</code></td>
+<td>格式化 HDFS（⚠️仅首次初始化）</td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -360,7 +629,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lanoao.github.io/LanBlog/AutoHotkey1.html" title="AutoHotkey —— 自动热键软件">https://lanoao.github.io/LanBlog/AutoHotkey1.html</a>
+    <a href="https://lanoao.github.io/LanBlog/hadoop1.html" title="Hadoop入门">https://lanoao.github.io/LanBlog/hadoop1.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -372,10 +641,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/LanBlog/tags/AutoHotkey/" rel="tag"><i class="fa fa-tag"></i> AutoHotkey</a>
-              <a href="/LanBlog/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
-              <a href="/LanBlog/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"><i class="fa fa-tag"></i> 软件</a>
-              <a href="/LanBlog/tags/%E8%84%9A%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 脚本</a>
+              <a href="/LanBlog/tags/Hadoop/" rel="tag"><i class="fa fa-tag"></i> Hadoop</a>
           </div>
 
         
@@ -384,13 +650,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/LanBlog/hexo-optimize.html" rel="prev" title="Hexo博文编写">
-      <i class="fa fa-chevron-left"></i> Hexo博文编写
+    <a href="/LanBlog/reference.html" rel="prev" title="各种各样的参考页面">
+      <i class="fa fa-chevron-left"></i> 各种各样的参考页面
     </a></div>
-      <div class="post-nav-item">
-    <a href="/LanBlog/reference.html" rel="next" title="各种各样的参考页面">
-      各种各样的参考页面 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -452,7 +715,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99"><span class="nav-number">2.</span> <span class="nav-text">脚本编写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E9%94%AE%E6%A0%87%E8%AE%B0"><span class="nav-number">2.1.</span> <span class="nav-text">热键标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F-%E7%BD%91%E9%A1%B5"><span class="nav-number">2.2.</span> <span class="nav-text">打开程序 &amp; 网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF"><span class="nav-number">2.3.</span> <span class="nav-text">关于开机自启</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.4.</span> <span class="nav-text">其他注意事项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A1%88%E4%BE%8B%E5%88%86%E4%BA%AB"><span class="nav-number">3.</span> <span class="nav-text">一些案例分享</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ctrl-%E7%A9%BA%E6%A0%BC-%E7%AA%97%E5%8F%A3%E7%BD%AE%E9%A1%B6-%E5%8F%96%E6%B6%88%E7%BD%AE%E9%A1%B6"><span class="nav-number">3.1.</span> <span class="nav-text">ctrl 空格 窗口置顶&#x2F;取消置顶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E6%9B%BF%E6%8D%A2-%E5%BF%AB%E6%8D%B7%E8%BE%93%E5%85%A5"><span class="nav-number">3.2.</span> <span class="nav-text">文字替换&#x2F;快捷输入</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hadoop 是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8A%BF%E4%B8%8E%E7%BC%BA%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">优势与缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop-%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">Hadoop 生态系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HDFS"><span class="nav-number">2.1.</span> <span class="nav-text">HDFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce"><span class="nav-number">2.2.</span> <span class="nav-text">MapReduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YARN"><span class="nav-number">2.3.</span> <span class="nav-text">YARN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">Hadoop工作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E4%BB%8E%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">主从工作方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">守护进程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">Hadoop 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%81-HDFS-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4"><span class="nav-number">4.1.</span> <span class="nav-text">📁 HDFS 文件系统命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E5%90%AF%E5%8A%A8-%E5%85%B3%E9%97%AD-Hadoop-%E9%9B%86%E7%BE%A4"><span class="nav-number">4.2.</span> <span class="nav-text">🚀 启动&#x2F;关闭 Hadoop 集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%B0-MapReduce-%E4%BD%9C%E4%B8%9A%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">4.3.</span> <span class="nav-text">🧰 MapReduce 作业相关命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%84-%E6%97%A5%E5%BF%97%E6%9F%A5%E7%9C%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">4.4.</span> <span class="nav-text">📄 日志查看命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%AA-%E5%85%B6%E4%BB%96%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">4.5.</span> <span class="nav-text">🧪 其他实用命令</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
