@@ -18,34 +18,6 @@
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #1c241c;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg-color: #282828;
-    --content-bg-color: #2d362d;
-    --card-bg-color: #3f493f;
-    --text-color: #b8ccb8;
-    --blockquote-color: #98ad98;
-    --link-color: #b8ccb8;
-    --link-hover-color: #e6ede6;
-    --brand-color: #cfe0cf;
-    --brand-hover-color: #cfe0cf;
-    --table-row-odd-bg-color: #282828;
-    --table-row-hover-bg-color: #363636;
-    --menu-item-bg-color: #3f493f;
-    --btn-default-bg: #1c241c;
-    --btn-default-color: #b8ccb8;
-    --btn-default-border-color: #3f493f;
-    --btn-default-hover-bg: #596659;
-    --btn-default-hover-color: #b8ccb8;
-    --btn-default-hover-border-color: #596659;
-  }
-  img {
-    opacity: 0.75;
-  }
-  img:hover {
-    opacity: 0.9;
-  }
-}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -1246,7 +1218,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff5342;
+  background: #967ce3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
