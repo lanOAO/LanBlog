@@ -1,6 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <url>/LanBlog/AutoHotkey1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+
+<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<span id="more"></span>
+<blockquote>
+<p>以下全部建立在2.0.19版本的的基础上</p>
+</blockquote>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
+<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
+<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
+<li>双击脚本，即可运行</li>
+</ul>
+<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
+<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
+</blockquote>
+<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
+<ul>
+<li><code>#</code> ：win 键</li>
+<li><code>!</code> ：alt</li>
+<li><code>^</code> ：ctrl</li>
+<li><code>+</code> ：shift</li>
+<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
+</ul>
+<blockquote>
+<p><code>^q</code> 即代表ctrl + q</p>
+</blockquote>
+<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
+<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
+<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
+<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
+<li>一个脚本里可以有多个热键</li>
+<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
+</ul>
+<hr>
+<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
+<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+]]></content>
+      <categories>
+        <category>利器OuO</category>
+      </categories>
+      <tags>
+        <tag>AutoHotkey</tag>
+        <tag>软件</tag>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 学习笔记</title>
+    <url>/LanBlog/docker_note1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>初学者的docker入门笔记<br>参考：<br><a href="https://blog.csdn.net/leah126/article/details/131871717">Docker入门教程（非常详细）从零基础入门到精通，看完这一篇就够了_docker教程-CSDN博客</a></p>
+<span id="more"></span>
+<p><a href="https://docs.docker.com/">Docker文档</a></p>
+<h1 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h1><h2 id="Docker-出现的原因"><a href="#Docker-出现的原因" class="headerlink" title="Docker 出现的原因"></a>Docker 出现的原因</h2><p><u>解决环境一致性问题</u><br>当我们开发一个项目时，通常需要依赖大量的框架、库、插件、环境变量等。例如，某个项目可能依赖：</p>
+<ul>
+<li>Node.js 特定版本</li>
+<li>MySQL 数据库</li>
+<li>Redis 缓存</li>
+<li>某些 C++ 编译器或 Python 包</li>
+</ul>
+<p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
+<p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
+<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
+<div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>Docker 镜像就好比一个虚拟机的快照，<br>里面包含你要部署的应用程序以及它关联的所有库。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>仓库就是存放镜像的地方，分为 <strong>公有仓库</strong> 和 <strong>私有仓库</strong>。</p></div></div></div>
+
+
+<p>除了以上几个结构组成中重要的概念外，还有另一个重要的概念<br><strong>Dockerfile</strong>：<br>它像一个自动化的脚本，它主要用来创建我们之前讲到的镜像。<br>他就好比在虚拟机中创建虚拟机并安装软件。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hadoop入门</title>
     <url>/LanBlog/hadoop1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -349,128 +474,19 @@
       </tags>
   </entry>
   <entry>
-    <title>AutoHotkey —— 自动热键软件</title>
-    <url>/LanBlog/AutoHotkey1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-
-<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
 <span id="more"></span>
-<blockquote>
-<p>以下全部建立在2.0.19版本的的基础上</p>
-</blockquote>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
-<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
-<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
-<li>双击脚本，即可运行</li>
-</ul>
-<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
-<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
-</blockquote>
-<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
-<ul>
-<li><code>#</code> ：win 键</li>
-<li><code>!</code> ：alt</li>
-<li><code>^</code> ：ctrl</li>
-<li><code>+</code> ：shift</li>
-<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
-</ul>
-<blockquote>
-<p><code>^q</code> 即代表ctrl + q</p>
-</blockquote>
-<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
-<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
-<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
-<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>一个脚本里可以有多个热键</li>
-<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
-</ul>
-<hr>
-<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-
-<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
-<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
+<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
+<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
 ]]></content>
       <categories>
-        <category>利器OuO</category>
+        <category>参考</category>
       </categories>
       <tags>
-        <tag>AutoHotkey</tag>
-        <tag>软件</tag>
-        <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker 学习笔记</title>
-    <url>/LanBlog/docker_note1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>初学者的docker入门笔记<br>参考：<br><a href="https://blog.csdn.net/leah126/article/details/131871717">Docker入门教程（非常详细）从零基础入门到精通，看完这一篇就够了_docker教程-CSDN博客</a></p>
-<span id="more"></span>
-<p><a href="https://docs.docker.com/">Docker文档</a></p>
-<h1 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h1><h2 id="Docker-出现的原因"><a href="#Docker-出现的原因" class="headerlink" title="Docker 出现的原因"></a>Docker 出现的原因</h2><p><u>解决环境一致性问题</u><br>当我们开发一个项目时，通常需要依赖大量的框架、库、插件、环境变量等。例如，某个项目可能依赖：</p>
-<ul>
-<li>Node.js 特定版本</li>
-<li>MySQL 数据库</li>
-<li>Redis 缓存</li>
-<li>某些 C++ 编译器或 Python 包</li>
-</ul>
-<p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
-<p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
-<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="/LanBlog/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20250806092641702.png"></p>
-<div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>Docker 镜像就好比一个虚拟机的快照，<br>里面包含你要部署的应用程序以及它关联的所有库。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>仓库就是存放镜像的地方，分为 <strong>公有仓库</strong> 和 <strong>私有仓库</strong>。</p></div></div></div>
-
-
-<p>除了以上几个结构组成中重要的概念外，还有另一个重要的概念<br><strong>Dockerfile</strong>：<br>它像一个自动化的脚本，它主要用来创建我们之前讲到的镜像。<br>他就好比在虚拟机中创建虚拟机并安装软件。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
+        <tag>参考</tag>
       </tags>
   </entry>
   <entry>
@@ -515,22 +531,6 @@
 ]]></content>
       <tags>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>各种各样的参考页面</title>
-    <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
-<span id="more"></span>
-<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
-<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
-<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
-]]></content>
-      <categories>
-        <category>参考</category>
-      </categories>
-      <tags>
-        <tag>参考</tag>
       </tags>
   </entry>
   <entry>

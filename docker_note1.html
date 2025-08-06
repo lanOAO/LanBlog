@@ -29,13 +29,13 @@
 <meta property="og:site_name" content="幽篁里">
 <meta property="og:description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lanoao.github.io/LanBlog/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20250806092641702.png">
+<meta property="og:image" content="https://docs.docker.com/get-started/images/docker-architecture.webp">
 <meta property="article:published_time" content="2025-08-06T11:52:38.000Z">
-<meta property="article:modified_time" content="2025-08-06T13:44:59.763Z">
+<meta property="article:modified_time" content="2025-08-06T13:46:47.765Z">
 <meta property="article:author" content="LanOoO">
 <meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lanoao.github.io/LanBlog/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20250806092641702.png">
+<meta name="twitter:image" content="https://docs.docker.com/get-started/images/docker-architecture.webp">
 
 <link rel="canonical" href="https://lanoao.github.io/LanBlog/docker_note1.html">
 
@@ -231,7 +231,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-08-06 19:52:38 / 修改时间：21:44:59" itemprop="dateCreated datePublished" datetime="2025-08-06T19:52:38+08:00">2025-08-06</time>
+              <time title="创建时间：2025-08-06 19:52:38 / 修改时间：21:46:47" itemprop="dateCreated datePublished" datetime="2025-08-06T19:52:38+08:00">2025-08-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -308,7 +308,7 @@
 </ul>
 <p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
 <p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
-<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="/LanBlog/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20250806092641702.png"></p>
+<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
 <div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>Docker 镜像就好比一个虚拟机的快照，<br>里面包含你要部署的应用程序以及它关联的所有库。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>仓库就是存放镜像的地方，分为 <strong>公有仓库</strong> 和 <strong>私有仓库</strong>。</p></div></div></div>
 
 
