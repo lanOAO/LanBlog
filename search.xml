@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo博文编写</title>
-    <url>/LanBlog/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
-<span id="more"></span>
-<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个“&#96;”</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop入门</title>
     <url>/LanBlog/hadoop1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -374,22 +349,6 @@
       </tags>
   </entry>
   <entry>
-    <title>各种各样的参考页面</title>
-    <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
-<span id="more"></span>
-<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
-<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
-<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
-]]></content>
-      <categories>
-        <category>参考</category>
-      </categories>
-      <tags>
-        <tag>参考</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AutoHotkey —— 自动热键软件</title>
     <url>/LanBlog/AutoHotkey1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -463,6 +422,154 @@
         <tag>AutoHotkey</tag>
         <tag>软件</tag>
         <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博文编写</title>
+    <url>/LanBlog/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
+<span id="more"></span>
+<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
+
+<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个“&#96;”</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning">
+            <p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+          </div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#96;</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 学习笔记</title>
+    <url>/LanBlog/docker_note1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<span id="more"></span>]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>当我去学习一个东西时，我该从哪几方面入手</title>
+    <url>/LanBlog/learn_think1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+
+<span id="more"></span>
+
+<div class="note info">
+            <p>在写了几篇入门性质博客之后，我发现了一个问题<br><strong>——当我去学习一个东西时，我该从哪几方面入手</strong></p><p>于是根据这个问题写此小记，一方面整理思路，另一方面也分享给大家，求同存异、引发共鸣。</p><p>BTW. 也希望大家多多和我交流，可以发 email 给我⭐OUO</p>
+          </div>
+<h1 id="总体研究路径"><a href="#总体研究路径" class="headerlink" title="总体研究路径"></a>总体研究路径</h1><ol>
+<li>背景与用途（是什么 &amp; 为什么）</li>
+<li>核心概念（关键术语 &amp; 架构）</li>
+<li>运行原理（工作机制）</li>
+<li>实战操作（安装、配置、使用）</li>
+<li>最佳实践（性能优化、安全、维护等）</li>
+<li>常见问题（踩坑记录）</li>
+<li>进阶与生态（插件、对接技术、发展方向）</li>
+</ol>
+<h1 id="通用学习方式建议"><a href="#通用学习方式建议" class="headerlink" title="通用学习方式建议"></a>通用学习方式建议</h1><ol>
+<li><p><strong>官方文档 + 样例项目</strong>：权威、系统。</p>
+</li>
+<li><p><strong>入门教程 + B站&#x2F;YouTube视频讲解</strong>：快速理解。</p>
+</li>
+<li><p><strong>中英文博客 + GitHub 项目实践</strong>：实际问题解决 + 实战经验。</p>
+</li>
+<li><p><strong>写总结 &amp; 动手操作</strong>：理论结合实践，形成自己的知识体系。</p>
+</li>
+<li><p><strong>社区讨论</strong>：解决卡点，了解流行用法。</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
+<span id="more"></span>
+<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
+<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
+<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
+]]></content>
+      <categories>
+        <category>参考</category>
+      </categories>
+      <tags>
+        <tag>参考</tag>
       </tags>
   </entry>
 </search>

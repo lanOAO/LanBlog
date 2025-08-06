@@ -6,7 +6,7 @@
   <link href="https://lanoao.github.io/LanBlog/atom.xml" rel="self"/>
   
   <link href="https://lanoao.github.io/LanBlog/"/>
-  <updated>2025-07-14T15:14:51.860Z</updated>
+  <updated>2025-08-06T12:29:55.989Z</updated>
   <id>https://lanoao.github.io/LanBlog/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>当我去学习一个东西时，我该从哪几方面入手</title>
+    <link href="https://lanoao.github.io/LanBlog/learn_think1.html"/>
+    <id>https://lanoao.github.io/LanBlog/learn_think1.html</id>
+    <published>2025-08-06T12:02:31.000Z</published>
+    <updated>2025-08-06T12:29:55.989Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>    .inline-note {      display: inline-block;      background-color: #fffbe6;      color: #333;      border-left: 4px solid #f7c948;      padding: 0.2em 0.6em;      margin: 0 0.2em;      font-size: 0.95em;      border-radius: 3px;      box-shadow: 0 1px 2px rgba(0,0,0,0.05);      font-style: italic;      cursor: help;      transition: all 0.2s ease;    }    .inline-note:hover {      background-color: #fff3bf;      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);    }</style><span id="more"></span><div class="note info">            <p>在写了几篇入门性质博客之后，我发现了一个问题<br><strong>——当我去学习一个东西时，我该从哪几方面入手</strong></p><p>于是根据这个问题写此小记，一方面整理思路，另一方面也分享给大家，求同存异、引发共鸣。</p><p>BTW. 也希望大家多多和我交流，可以发 email 给我⭐OUO</p>          </div><h1 id="总体研究路径"><a href="#总体研究路径" class="headerlink" title="总体研究路径"></a>总体研究路径</h1><ol><li>背景与用途（是什么 &amp; 为什么）</li><li>核心概念（关键术语 &amp; 架构）</li><li>运行原理（工作机制）</li><li>实战操作（安装、配置、使用）</li><li>最佳实践（性能优化、安全、维护等）</li><li>常见问题（踩坑记录）</li><li>进阶与生态（插件、对接技术、发展方向）</li></ol><h1 id="通用学习方式建议"><a href="#通用学习方式建议" class="headerlink" title="通用学习方式建议"></a>通用学习方式建议</h1><ol><li><p><strong>官方文档 + 样例项目</strong>：权威、系统。</p></li><li><p><strong>入门教程 + B站&#x2F;YouTube视频讲解</strong>：快速理解。</p></li><li><p><strong>中英文博客 + GitHub 项目实践</strong>：实际问题解决 + 实战经验。</p></li><li><p><strong>写总结 &amp; 动手操作</strong>：理论结合实践，形成自己的知识体系。</p></li><li><p><strong>社区讨论</strong>：解决卡点，了解流行用法。</p></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;style&gt;
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+&lt;/style&gt;</summary>
+    
+    
+    
+    
+    <category term="思考" scheme="https://lanoao.github.io/LanBlog/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker 学习笔记</title>
+    <link href="https://lanoao.github.io/LanBlog/docker_note1.html"/>
+    <id>https://lanoao.github.io/LanBlog/docker_note1.html</id>
+    <published>2025-08-06T11:52:38.000Z</published>
+    <updated>2025-08-06T11:57:11.659Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>    .inline-note {      display: inline-block;      background-color: #fffbe6;      color: #333;      border-left: 4px solid #f7c948;      padding: 0.2em 0.6em;      margin: 0 0.2em;      font-size: 0.95em;      border-radius: 3px;      box-shadow: 0 1px 2px rgba(0,0,0,0.05);      font-style: italic;      cursor: help;      transition: all 0.2s ease;    }    .inline-note:hover {      background-color: #fff3bf;      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);    }</style><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;style&gt;
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+&lt;/style&gt;</summary>
+    
+    
+    
+    <category term="笔记" scheme="https://lanoao.github.io/LanBlog/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="docker" scheme="https://lanoao.github.io/LanBlog/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Hadoop入门</title>
@@ -133,7 +213,7 @@
     <published>2025-07-05T16:36:33.000Z</published>
     <updated>2025-07-06T16:36:33.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p><span id="more"></span><h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p><h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p><figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure><h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure><p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><p>或者三个“&#96;”</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>内容</p><footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p><span id="more"></span><h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p><h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p><figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure><h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure><p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><p>或者三个“&#96;”</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>内容</p><footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote><h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure><div class="note warning">            <p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>          </div><table><thead><tr><th>语法</th><th>效果说明</th><th>常见用途</th></tr></thead><tbody><tr><td>&#96;</td><td></td><td></td></tr></tbody></table>]]></content>
     
     
     <summary type="html">&lt;p&gt;编写博文的笔记&lt;/p&gt;</summary>
