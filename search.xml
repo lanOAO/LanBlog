@@ -1,333 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AutoHotkey —— 自动热键软件</title>
-    <url>/LanBlog/AutoHotkey1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-
-<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
-<span id="more"></span>
-<blockquote>
-<p>以下全部建立在2.0.19版本的的基础上</p>
-</blockquote>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
-<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
-<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
-<li>双击脚本，即可运行</li>
-</ul>
-<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
-<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
-</blockquote>
-<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
-<ul>
-<li><code>#</code> ：win 键</li>
-<li><code>!</code> ：alt</li>
-<li><code>^</code> ：ctrl</li>
-<li><code>+</code> ：shift</li>
-<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
-</ul>
-<blockquote>
-<p><code>^q</code> 即代表ctrl + q</p>
-</blockquote>
-<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
-<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
-<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
-<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>一个脚本里可以有多个热键</li>
-<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
-</ul>
-<hr>
-<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-
-<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
-<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
-]]></content>
-      <categories>
-        <category>利器OuO</category>
-      </categories>
-      <tags>
-        <tag>AutoHotkey</tag>
-        <tag>软件</tag>
-        <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker 学习笔记</title>
-    <url>/LanBlog/docker_note1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>初学者的docker入门笔记</p>
-<span id="more"></span>
-<p><a href="https://docs.docker.com/">Docker文档</a></p>
-<h1 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h1><h2 id="Docker-出现的原因"><a href="#Docker-出现的原因" class="headerlink" title="Docker 出现的原因"></a>Docker 出现的原因</h2><p><u>解决环境一致性问题</u><br>当我们开发一个项目时，通常需要依赖大量的框架、库、插件、环境变量等。例如，某个项目可能依赖：</p>
-<ul>
-<li>Node.js 特定版本</li>
-<li>MySQL 数据库</li>
-<li>Redis 缓存</li>
-<li>某些 C++ 编译器或 Python 包</li>
-</ul>
-<p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
-<p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
-<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
-<div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>类似于虚拟机中的镜像，是一个包含有文件系统的面向Docker引擎的只读模板。<br>任何应用程序运行都需要环境，而镜像就是用来提供这种运行环境的。例如一个Ubuntu镜像就是一个包含Ubuntu操作系统环境的模板，同理在该镜像上装上Apache软件，就可以称为Apache镜像。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>类似于代码仓库，这里是镜像仓库，是Docker用来集中存放镜像文件的地方。<br>注意与注册服务器（Registry）的区别：注册服务器是存放仓库的地方，一般会有多个仓库；而仓库是存放镜像的地方，一般每个仓库存放一类镜像，每个镜像利用tag进行区分，比如Ubuntu仓库存放有多个版本（12.04、14.04等）的Ubuntu镜像。</p></div></div></div>
-
-
-<p>除了以上几个结构组成中重要的概念外，还有另一个重要的概念<br><strong>Dockerfile</strong>：<br>它像一个自动化的脚本，它主要用来创建我们之前讲到的镜像。</p>
-<blockquote>
-<p>他就好比把虚拟机中创建虚拟机并安装软件的过程压缩为一个脚本。</p>
-</blockquote>
-<h1 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h1><div class="note info">
-            <p><a href="https://docs.docker.com/get-started/get-docker/">Docker Desktop 安装文档</a><br><a href="https://docs.docker.com/engine/install/">Docker Engine 安装文档</a></p>
-          </div>
-<p>安装完成后可以使用<code>docker version</code>查看Docker的版本信息<br>查看Docker的帮助信息：<code>docker --help</code></p>
-<h1 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h1><div class="note warning">
-            <p><strong>列举所有的容器:</strong> <code>docker ps</code><br><strong>停止容器:</strong> <code>docker stop &lt;容器 ID&gt;</code><br><strong>重启容器:</strong> <code>docker restart &lt;容器 ID&gt;</code><br><strong>删除容器:</strong> <code>docker rm &lt;容器 ID&gt;</code><br><strong>启动一个远程 Shell:</strong> <code>docker exec -it&lt;容器 ID&gt; /bin/bash</code></p>
-          </div>
-
-
-<ol>
-<li><p><code>docker run</code>: 运行一个容器。<br>示例：<code>docker run </code></p>
-</li>
-<li><p><code>docker ps</code>: 列出正在运行的容器。<br>示例：<code>docker ps</code></p>
-</li>
-<li><p><code>docker images</code>: 列出本地已有的镜像。<br>示例：<code>docker images</code></p>
-</li>
-<li><p><code>docker pull</code>: 从远程仓库下载镜像。<br>示例：<code>docker pull </code></p>
-</li>
-<li><p><code>docker stop</code>: 停止一个运行中的容器。<br>示例：<code>docker stop </code></p>
-</li>
-<li><p><code>docker rm</code>: 删除一个容器。<br>示例：<code>docker rm </code></p>
-</li>
-<li><p><code>docker rmi</code>: 删除一个镜像。<br>示例：<code>docker rmi </code></p>
-</li>
-<li><p><code>docker build</code>: 构建一个镜像。<br>示例：<code>docker build -t  </code></p>
-</li>
-<li><p><code>docker exec</code>: 在运行中的容器中执行命令。<br>示例：<code>docker exec  </code></p>
-</li>
-<li><p><code>docker logs</code>: 查看容器的日志。<br>示例：<code>docker logs </code></p>
-</li>
-<li><p><code>docker-compose up</code>: 使用Docker Compose启动容器。<br>示例：<code>docker-compose up</code></p>
-</li>
-<li><p><code>docker-compose down</code>: 停止并移除使用Docker Compose启动的容器。<br>示例：<code>docker-compose down</code></p>
-</li>
-<li><p><code>docker network ls</code>: 列出Docker网络。<br>示例：<code>docker network ls</code></p>
-</li>
-<li><p><code>docker network create</code>: 创建一个Docker网络。<br>示例：<code>docker network create </code></p>
-</li>
-<li><p><code>docker network connect</code>: 将容器连接到一个Docker网络。<br>示例：<code>docker network connect  </code></p>
-</li>
-<li><p><code>docker volume ls</code>: 列出Docker卷。<br>示例：<code>docker volume ls</code></p>
-</li>
-<li><p><code>docker volume create</code>: 创建一个Docker卷。<br>示例：<code>docker volume create </code></p>
-</li>
-<li><p><code>docker volume rm</code>: 删除一个Docker卷。<br>示例：<code>docker volume rm </code></p>
-</li>
-<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
-</li>
-<li><p><code>docker tag</code>: 创建一个标签来标识镜像。<br>示例：<code>docker tag  </code></p>
-</li>
-<li><p><code>docker push</code>: 将镜像推送到远程仓库。<br>示例：<code>docker push </code></p>
-</li>
-<li><p><code>docker login</code>: 登录到远程Docker仓库。<br>示例：<code>docker login</code></p>
-</li>
-<li><p><code>docker logout</code>: 从远程Docker仓库注销。<br>示例：<code>docker logout</code></p>
-</li>
-<li><p><code>docker restart</code>: 重启一个容器。<br>示例：<code>docker restart </code></p>
-</li>
-<li><p><code>docker pause</code>: 暂停一个容器的所有进程。<br>示例：<code>docker pause </code></p>
-</li>
-<li><p><code>docker unpause</code>: 恢复一个暂停的容器。<br>示例：<code>docker unpause </code></p>
-</li>
-<li><p><code>docker kill</code>: 强制停止一个容器。<br>示例：<code>docker kill </code></p>
-</li>
-<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
-</li>
-<li><p><code>docker cp</code>: 在容器和主机之间复制文件或目录。<br>示例：<code>docker cp : </code></p>
-</li>
-<li><p><code>docker stats</code>: 实时显示容器的资源使用情况。<br>示例：<code>docker stats </code></p>
-</li>
-<li><p><code>docker attach</code>: 连接到正在运行的容器的标准输入、输出和错误流。<br>示例：<code>docker attach </code></p>
-</li>
-<li><p><code>docker top</code>: 显示容器中运行的进程列表。<br>示例：<code>docker top </code></p>
-</li>
-<li><p><code>docker commit</code>: 创建一个新的镜像，基于正在运行的容器。<br>示例：<code>docker commit  </code></p>
-</li>
-<li><p><code>docker system prune</code>: 清理无用的镜像、容器和卷。<br>示例：<code>docker system prune</code></p>
-</li>
-<li><p><code>docker version</code>: 显示Docker客户端和服务器的版本信息。<br>示例：<code>docker version</code></p>
-</li>
-</ol>
-<hr>
-<p>参考：<br><a href="https://zhuanlan.zhihu.com/p/23599229">只要一小时，零基础入门Docker - 知乎</a><br><a href="https://blog.csdn.net/leah126/article/details/131871717">Docker入门教程（非常详细）从零基础入门到精通，看完这一篇就够了_docker教程-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博文编写</title>
-    <url>/LanBlog/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
-<span id="more"></span>
-<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个“&#96;”</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-
-<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning">
-            <p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
-          </div>
-<table>
-<thead>
-<tr>
-<th>语法</th>
-<th>效果说明</th>
-<th>常见用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>当我去学习一个东西时，我该从哪几方面入手</title>
-    <url>/LanBlog/learn_think1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-
-<span id="more"></span>
-
-<div class="note info">
-            <p>在写了几篇入门性质博客之后，我发现了一个问题<br><strong>——当我去学习一个东西时，我该从哪几方面入手</strong></p><p>于是根据这个问题写此小记，一方面整理思路，另一方面也分享给大家，求同存异、引发共鸣。</p><p>BTW. 也希望大家多多和我交流，可以发 email 给我⭐OUO</p>
-          </div>
-<h1 id="总体研究路径"><a href="#总体研究路径" class="headerlink" title="总体研究路径"></a>总体研究路径</h1><ol>
-<li>背景与用途（是什么 &amp; 为什么）</li>
-<li>核心概念（关键术语 &amp; 架构）</li>
-<li>运行原理（工作机制）</li>
-<li>实战操作（安装、配置、使用）</li>
-<li>最佳实践（性能优化、安全、维护等）</li>
-<li>常见问题（踩坑记录）</li>
-<li>进阶与生态（插件、对接技术、发展方向）</li>
-</ol>
-<h1 id="通用学习方式建议"><a href="#通用学习方式建议" class="headerlink" title="通用学习方式建议"></a>通用学习方式建议</h1><ol>
-<li><p><strong>官方文档 + 样例项目</strong>：权威、系统。</p>
-</li>
-<li><p><strong>入门教程 + B站&#x2F;YouTube视频讲解</strong>：快速理解。</p>
-</li>
-<li><p><strong>中英文博客 + GitHub 项目实践</strong>：实际问题解决 + 实战经验。</p>
-</li>
-<li><p><strong>写总结 &amp; 动手操作</strong>：理论结合实践，形成自己的知识体系。</p>
-</li>
-<li><p><strong>社区讨论</strong>：解决卡点，了解流行用法。</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>各种各样的参考页面</title>
-    <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
-<span id="more"></span>
-<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
-<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
-<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
-]]></content>
-      <categories>
-        <category>参考</category>
-      </categories>
-      <tags>
-        <tag>参考</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop入门</title>
     <url>/LanBlog/hadoop1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -673,6 +346,334 @@
       </categories>
       <tags>
         <tag>Hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <url>/LanBlog/AutoHotkey1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+
+<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>以下全部建立在2.0.19版本的的基础上</p>
+</blockquote>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
+<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
+<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
+<li>双击脚本，即可运行</li>
+</ul>
+<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
+<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
+</blockquote>
+<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
+<ul>
+<li><code>#</code> ：win 键</li>
+<li><code>!</code> ：alt</li>
+<li><code>^</code> ：ctrl</li>
+<li><code>+</code> ：shift</li>
+<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
+</ul>
+<blockquote>
+<p><code>^q</code> 即代表ctrl + q</p>
+</blockquote>
+<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
+<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
+<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
+<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
+<li>一个脚本里可以有多个热键</li>
+<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
+</ul>
+<hr>
+<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
+<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+]]></content>
+      <categories>
+        <category>利器OuO</category>
+      </categories>
+      <tags>
+        <tag>AutoHotkey</tag>
+        <tag>软件</tag>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些常用参考资料</p>
+<span id="more"></span>
+<h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p><a href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br><a href="https://cloud.tencent.com/developer/article/1947268">hexo 个性化 - next 主题动态显示 subtitle</a></p>
+<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p><a href="https://markdown.com.cn/basic-syntax/"> Markdown 教程</a><br><a href="https://markdown.com.cn/editor/">在线markdown编辑器&amp;教程</a></p>
+<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p><a href="https://icon-sets.iconify.design/">Iconify - home of open source icons</a><br><a href="https://simpleicons.org/">Simple Icons</a></p>
+]]></content>
+      <categories>
+        <category>参考</category>
+      </categories>
+      <tags>
+        <tag>参考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博文编写</title>
+    <url>/LanBlog/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
+<span id="more"></span>
+<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
+
+<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个“&#96;”</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning">
+            <p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+          </div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>当我去学习一个东西时，我该从哪几方面入手</title>
+    <url>/LanBlog/learn_think1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+
+<span id="more"></span>
+
+<div class="note info">
+            <p>在写了几篇入门性质博客之后，我发现了一个问题<br><strong>——当我去学习一个东西时，我该从哪几方面入手</strong></p><p>于是根据这个问题写此小记，一方面整理思路，另一方面也分享给大家，求同存异、引发共鸣。</p><p>BTW. 也希望大家多多和我交流，可以发 email 给我⭐OUO</p>
+          </div>
+<h1 id="总体研究路径"><a href="#总体研究路径" class="headerlink" title="总体研究路径"></a>总体研究路径</h1><ol>
+<li>背景与用途（是什么 &amp; 为什么）</li>
+<li>核心概念（关键术语 &amp; 架构）</li>
+<li>运行原理（工作机制）</li>
+<li>实战操作（安装、配置、使用）</li>
+<li>最佳实践（性能优化、安全、维护等）</li>
+<li>常见问题（踩坑记录）</li>
+<li>进阶与生态（插件、对接技术、发展方向）</li>
+</ol>
+<h1 id="通用学习方式建议"><a href="#通用学习方式建议" class="headerlink" title="通用学习方式建议"></a>通用学习方式建议</h1><ol>
+<li><p><strong>官方文档 + 样例项目</strong>：权威、系统。</p>
+</li>
+<li><p><strong>入门教程 + B站&#x2F;YouTube视频讲解</strong>：快速理解。</p>
+</li>
+<li><p><strong>中英文博客 + GitHub 项目实践</strong>：实际问题解决 + 实战经验。</p>
+</li>
+<li><p><strong>写总结 &amp; 动手操作</strong>：理论结合实践，形成自己的知识体系。</p>
+</li>
+<li><p><strong>社区讨论</strong>：解决卡点，了解流行用法。</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 学习笔记</title>
+    <url>/LanBlog/docker_note1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>初学者的docker入门笔记</p>
+<span id="more"></span>
+<p><a href="https://docs.docker.com/">Docker文档</a></p>
+<h1 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h1><h2 id="Docker-出现的原因"><a href="#Docker-出现的原因" class="headerlink" title="Docker 出现的原因"></a>Docker 出现的原因</h2><p><u>解决环境一致性问题</u><br>当我们开发一个项目时，通常需要依赖大量的框架、库、插件、环境变量等。例如，某个项目可能依赖：</p>
+<ul>
+<li>Node.js 特定版本</li>
+<li>MySQL 数据库</li>
+<li>Redis 缓存</li>
+<li>某些 C++ 编译器或 Python 包</li>
+</ul>
+<p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
+<p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
+<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
+<div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>类似于虚拟机中的镜像，是一个包含有文件系统的面向Docker引擎的只读模板。<br>任何应用程序运行都需要环境，而镜像就是用来提供这种运行环境的。例如一个Ubuntu镜像就是一个包含Ubuntu操作系统环境的模板，同理在该镜像上装上Apache软件，就可以称为Apache镜像。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>类似于代码仓库，这里是镜像仓库，是Docker用来集中存放镜像文件的地方。<br>注意与注册服务器（Registry）的区别：注册服务器是存放仓库的地方，一般会有多个仓库；而仓库是存放镜像的地方，一般每个仓库存放一类镜像，每个镜像利用tag进行区分，比如Ubuntu仓库存放有多个版本（12.04、14.04等）的Ubuntu镜像。</p></div></div></div>
+
+
+<p>除了以上几个结构组成中重要的概念外，还有另一个重要的概念<br><strong>Dockerfile</strong>：<br>它像一个自动化的脚本，它主要用来创建我们之前讲到的镜像。</p>
+<blockquote>
+<p>他就好比把虚拟机中创建虚拟机并安装软件的过程压缩为一个脚本。</p>
+</blockquote>
+<h1 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h1><div class="note info">
+            <p><a href="https://docs.docker.com/get-started/get-docker/">Docker Desktop 安装文档</a><br><a href="https://docs.docker.com/engine/install/">Docker Engine 安装文档</a></p>
+          </div>
+<p>安装完成后可以使用<code>docker version</code>查看Docker的版本信息<br>查看Docker的帮助信息：<code>docker --help</code></p>
+<h1 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h1><div class="note warning">
+            <p><strong>列举所有的容器:</strong> <code>docker ps</code><br><strong>停止容器:</strong> <code>docker stop &lt;容器 ID&gt;</code><br><strong>重启容器:</strong> <code>docker restart &lt;容器 ID&gt;</code><br><strong>删除容器:</strong> <code>docker rm &lt;容器 ID&gt;</code><br><strong>启动一个远程 Shell:</strong> <code>docker exec -it&lt;容器 ID&gt; /bin/bash</code></p>
+          </div>
+
+
+<ol>
+<li><p><code>docker run</code>: 运行一个容器。<br>示例：<code>docker run </code></p>
+</li>
+<li><p><code>docker ps</code>: 列出正在运行的容器。<br>示例：<code>docker ps</code></p>
+</li>
+<li><p><code>docker images</code>: 列出本地已有的镜像。<br>示例：<code>docker images</code></p>
+</li>
+<li><p><code>docker pull</code>: 从远程仓库下载镜像。<br>示例：<code>docker pull </code></p>
+</li>
+<li><p><code>docker stop</code>: 停止一个运行中的容器。<br>示例：<code>docker stop </code></p>
+</li>
+<li><p><code>docker rm</code>: 删除一个容器。<br>示例：<code>docker rm </code></p>
+</li>
+<li><p><code>docker rmi</code>: 删除一个镜像。<br>示例：<code>docker rmi </code></p>
+</li>
+<li><p><code>docker build</code>: 构建一个镜像。<br>示例：<code>docker build -t  </code></p>
+</li>
+<li><p><code>docker exec</code>: 在运行中的容器中执行命令。<br>示例：<code>docker exec  </code></p>
+</li>
+<li><p><code>docker logs</code>: 查看容器的日志。<br>示例：<code>docker logs </code></p>
+</li>
+<li><p><code>docker-compose up</code>: 使用Docker Compose启动容器。<br>示例：<code>docker-compose up</code></p>
+</li>
+<li><p><code>docker-compose down</code>: 停止并移除使用Docker Compose启动的容器。<br>示例：<code>docker-compose down</code></p>
+</li>
+<li><p><code>docker network ls</code>: 列出Docker网络。<br>示例：<code>docker network ls</code></p>
+</li>
+<li><p><code>docker network create</code>: 创建一个Docker网络。<br>示例：<code>docker network create </code></p>
+</li>
+<li><p><code>docker network connect</code>: 将容器连接到一个Docker网络。<br>示例：<code>docker network connect  </code></p>
+</li>
+<li><p><code>docker volume ls</code>: 列出Docker卷。<br>示例：<code>docker volume ls</code></p>
+</li>
+<li><p><code>docker volume create</code>: 创建一个Docker卷。<br>示例：<code>docker volume create </code></p>
+</li>
+<li><p><code>docker volume rm</code>: 删除一个Docker卷。<br>示例：<code>docker volume rm </code></p>
+</li>
+<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
+</li>
+<li><p><code>docker tag</code>: 创建一个标签来标识镜像。<br>示例：<code>docker tag  </code></p>
+</li>
+<li><p><code>docker push</code>: 将镜像推送到远程仓库。<br>示例：<code>docker push </code></p>
+</li>
+<li><p><code>docker login</code>: 登录到远程Docker仓库。<br>示例：<code>docker login</code></p>
+</li>
+<li><p><code>docker logout</code>: 从远程Docker仓库注销。<br>示例：<code>docker logout</code></p>
+</li>
+<li><p><code>docker restart</code>: 重启一个容器。<br>示例：<code>docker restart </code></p>
+</li>
+<li><p><code>docker pause</code>: 暂停一个容器的所有进程。<br>示例：<code>docker pause </code></p>
+</li>
+<li><p><code>docker unpause</code>: 恢复一个暂停的容器。<br>示例：<code>docker unpause </code></p>
+</li>
+<li><p><code>docker kill</code>: 强制停止一个容器。<br>示例：<code>docker kill </code></p>
+</li>
+<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
+</li>
+<li><p><code>docker cp</code>: 在容器和主机之间复制文件或目录。<br>示例：<code>docker cp : </code></p>
+</li>
+<li><p><code>docker stats</code>: 实时显示容器的资源使用情况。<br>示例：<code>docker stats </code></p>
+</li>
+<li><p><code>docker attach</code>: 连接到正在运行的容器的标准输入、输出和错误流。<br>示例：<code>docker attach </code></p>
+</li>
+<li><p><code>docker top</code>: 显示容器中运行的进程列表。<br>示例：<code>docker top </code></p>
+</li>
+<li><p><code>docker commit</code>: 创建一个新的镜像，基于正在运行的容器。<br>示例：<code>docker commit  </code></p>
+</li>
+<li><p><code>docker system prune</code>: 清理无用的镜像、容器和卷。<br>示例：<code>docker system prune</code></p>
+</li>
+<li><p><code>docker version</code>: 显示Docker客户端和服务器的版本信息。<br>示例：<code>docker version</code></p>
+</li>
+</ol>
+<hr>
+<p>参考：<br><a href="https://zhuanlan.zhihu.com/p/23599229">只要一小时，零基础入门Docker - 知乎</a><br><a href="https://blog.csdn.net/leah126/article/details/131871717">Docker入门教程（非常详细）从零基础入门到精通，看完这一篇就够了_docker教程-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
       </tags>
   </entry>
 </search>
