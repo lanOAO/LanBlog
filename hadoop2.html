@@ -22,17 +22,22 @@
     var CONFIG = {"hostname":"lanoao.github.io","root":"/LanBlog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#浅色的绿","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="自由一生，是我全部的野心">
-<meta property="og:type" content="website">
-<meta property="og:title" content="幽篁里">
-<meta property="og:url" content="https://lanoao.github.io/LanBlog/tags/docker/index.html">
+  <meta name="description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hadoop搭建教程">
+<meta property="og:url" content="https://lanoao.github.io/LanBlog/hadoop2.html">
 <meta property="og:site_name" content="幽篁里">
-<meta property="og:description" content="自由一生，是我全部的野心">
+<meta property="og:description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png">
+<meta property="article:published_time" content="2025-08-14T10:45:31.000Z">
+<meta property="article:modified_time" content="2025-08-14T15:23:56.171Z">
 <meta property="article:author" content="LanOoO">
+<meta property="article:tag" content="Hadoop">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png">
 
-<link rel="canonical" href="https://lanoao.github.io/LanBlog/tags/docker/">
+<link rel="canonical" href="https://lanoao.github.io/LanBlog/hadoop2.html">
 
 
 <script id="page-configurations">
@@ -40,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: docker | 幽篁里</title>
+  <title>Hadoop搭建教程 | 幽篁里</title>
   
 
 
@@ -195,51 +200,182 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">docker
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanoao.github.io/LanBlog/hadoop2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/LanBlog/images/AAAASpring.jpg">
+      <meta itemprop="name" content="LanOoO">
+      <meta itemprop="description" content="自由一生，是我全部的野心">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="幽篁里">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hadoop搭建教程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-08-14 18:45:31 / 修改时间：23:23:56" itemprop="dateCreated datePublished" datetime="2025-08-14T18:45:31+08:00">2025-08-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/LanBlog/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fas fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>679</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>在<a href="https://lanoao.github.io/LanBlog/hadoop1.html">Hadoop入门 </a>中，为大家简单介绍了 Hadoop 。</p>
+<p>在本文，我将为大家演示基于 linux 的 Hadoop 搭建。</p>
+<span id="more"></span>
+
+<blockquote>
+<p><strong>本文所用软件版本:</strong></p>
+<p>CentOS 7<br>Vmware 16<br>Xshell 7<br>Xftp 7</p>
+</blockquote>
+<div class="note primary">
+            <p><strong>在开始之前你需要提前下载：</strong></p><ul><li><input checked="" disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMwareWworkstation Pro</a> 虚拟机管理软件</li><li><input checked="" disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/centos/7/isos/x86_64/">CentOS 7 镜像</a>或者其他版本的镜像</li></ul><p>PS. 镜像下载时间超长</p>
+          </div>
+
+
+
+<hr>
+<p><span class = "inline-note" title ="小提示">本文将以初学者的视角进行详细讲解，左侧配有目录，大家按需选择阅读章节OuO。</p>
+<p>全文中的重点内容都采用与本条相同的样式，鼠标悬停即可显示简要说明，方便快速理解。</p>
+<p>如果你有一定的 Linux 基础，阅读会更加轻松；即使没有，也不用担心，悬停内容中会提供说明和步骤，帮助你轻松上手 OwO。</span></p>
+<h1 id="VMware-虚拟机配置"><a href="#VMware-虚拟机配置" class="headerlink" title="VMware 虚拟机配置"></a>VMware 虚拟机配置</h1><p>具体配置教程大家可以在网上搜索，这里只展示我觉得比较重要的点</p>
+<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png" alt="image-20250814221946282"></p>
+<div class="tabs" id=""><ul class="nav-tabs"></ul><div class="tab-content"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-08-06T19:52:38+08:00"
-              content="2025-08-06">
-          08-06
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>LanOoO
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lanoao.github.io/LanBlog/hadoop2.html" title="Hadoop搭建教程">https://lanoao.github.io/LanBlog/hadoop2.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/LanBlog/docker_note1.html" itemprop="url">
-            <span itemprop="name">docker 学习笔记</span>
-          </a>
-      </div>
 
-    </header>
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/LanBlog/tags/Hadoop/" rel="tag"><i class="fa fa-tag"></i> Hadoop</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/LanBlog/learn_think1.html" rel="prev" title="当我去学习一个东西时，我该从哪几方面入手">
+      <i class="fa fa-chevron-left"></i> 当我去学习一个东西时，我该从哪几方面入手
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -295,6 +431,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VMware-%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">VMware 虚拟机配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">网络设置</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
