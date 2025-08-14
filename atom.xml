@@ -6,7 +6,7 @@
   <link href="https://lanoao.github.io/LanBlog/atom.xml" rel="self"/>
   
   <link href="https://lanoao.github.io/LanBlog/"/>
-  <updated>2025-08-14T15:23:56.171Z</updated>
+  <updated>2025-08-06T12:29:55.989Z</updated>
   <id>https://lanoao.github.io/LanBlog/</id>
   
   <author>
@@ -15,49 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hadoop搭建教程</title>
-    <link href="https://lanoao.github.io/LanBlog/hadoop2.html"/>
-    <id>https://lanoao.github.io/LanBlog/hadoop2.html</id>
-    <published>2025-08-14T10:45:31.000Z</published>
-    <updated>2025-08-14T15:23:56.171Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>    .inline-note {      display: inline-block;      background-color: #fffbe6;      color: #333;      border-left: 4px solid #f7c948;      padding: 0.2em 0.6em;      margin: 0 0.2em;      font-size: 0.95em;      border-radius: 3px;      box-shadow: 0 1px 2px rgba(0,0,0,0.05);      font-style: italic;      cursor: help;      transition: all 0.2s ease;    }    .inline-note:hover {      background-color: #fff3bf;      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);    }</style><p>在<a href="https://lanoao.github.io/LanBlog/hadoop1.html">Hadoop入门 </a>中，为大家简单介绍了 Hadoop 。</p><p>在本文，我将为大家演示基于 linux 的 Hadoop 搭建。</p><span id="more"></span><blockquote><p><strong>本文所用软件版本:</strong></p><p>CentOS 7<br>Vmware 16<br>Xshell 7<br>Xftp 7</p></blockquote><div class="note primary">            <p><strong>在开始之前你需要提前下载：</strong></p><ul><li><input checked="" disabled="" type="checkbox"> <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMwareWworkstation Pro</a> 虚拟机管理软件</li><li><input checked="" disabled="" type="checkbox"> <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/">CentOS 7 镜像</a>或者其他版本的镜像</li></ul><p>PS. 镜像下载时间超长</p>          </div><hr><p><span class = "inline-note" title ="小提示">本文将以初学者的视角进行详细讲解，左侧配有目录，大家按需选择阅读章节OuO。</p><p>全文中的重点内容都采用与本条相同的样式，鼠标悬停即可显示简要说明，方便快速理解。</p><p>如果你有一定的 Linux 基础，阅读会更加轻松；即使没有，也不用担心，悬停内容中会提供说明和步骤，帮助你轻松上手 OwO。</span></p><h1 id="VMware-虚拟机配置"><a href="#VMware-虚拟机配置" class="headerlink" title="VMware 虚拟机配置"></a>VMware 虚拟机配置</h1><p>具体配置教程大家可以在网上搜索，这里只展示我觉得比较重要的点</p><h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png" alt="image-20250814221946282"></p><div class="tabs" id=""><ul class="nav-tabs"></ul><div class="tab-content"></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;style&gt;
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-&lt;/style&gt;
-&lt;p&gt;在&lt;a href=&quot;https://lanoao.github.io/LanBlog/hadoop1.html&quot;&gt;Hadoop入门 &lt;/a&gt;中，为大家简单介绍了 Hadoop 。&lt;/p&gt;
-&lt;p&gt;在本文，我将为大家演示基于 linux 的 Hadoop 搭建。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="大数据" scheme="https://lanoao.github.io/LanBlog/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-    
-    <category term="Hadoop" scheme="https://lanoao.github.io/LanBlog/tags/Hadoop/"/>
-    
-  </entry>
   
   <entry>
     <title>当我去学习一个东西时，我该从哪几方面入手</title>
