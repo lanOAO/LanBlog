@@ -1,83 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AutoHotkey —— 自动热键软件</title>
-    <url>/LanBlog/AutoHotkey1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-
-<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
-<span id="more"></span>
-
-<blockquote>
-<p>以下全部建立在2.0.19版本的的基础上</p>
-</blockquote>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
-<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
-<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
-<li>双击脚本，即可运行</li>
-</ul>
-<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
-<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
-</blockquote>
-<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
-<ul>
-<li><code>#</code> ：win 键</li>
-<li><code>!</code> ：alt</li>
-<li><code>^</code> ：ctrl</li>
-<li><code>+</code> ：shift</li>
-<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
-</ul>
-<blockquote>
-<p><code>^q</code> 即代表ctrl + q</p>
-</blockquote>
-<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
-<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
-<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
-<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>一个脚本里可以有多个热键</li>
-<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
-</ul>
-<hr>
-<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-
-<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
-<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
-]]></content>
-      <categories>
-        <category>利器OuO</category>
-      </categories>
-      <tags>
-        <tag>AutoHotkey</tag>
-        <tag>软件</tag>
-        <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop入门</title>
     <url>/LanBlog/hadoop1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -426,29 +349,123 @@
       </tags>
   </entry>
   <entry>
-    <title>各种各样的参考页面</title>
-    <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="7bf31651f2058b541b90c1781b3245e1f5eca31d04b97727f7e3e7d33312cfa2">c32395f63df771905c259445e1aa88f3899ee4804f798168a843621515b7539500991886f73e55266910bee5a5b66327e524d8162e2ec9fec6fcfda26661a9930eec9caf050ca5f9c108385159c0f1e968a1b5e142c0c85994af2c696ecc181ce436acc974aa63818589a52609ba5f3a9ad4010ae889f1894b4a9d9e64e2ece134003aab3794ea4436ae924ab54b02accb5b1ea9aba8acbd6abdf03218c8b53bc23a6b11578ff36c383887e99236a09abe81d70dfa6b17483ec4bd6251d18a718204e6193a1e46ed1093ba7444ab0c57017bc6c910b46ab7801b31bea28bf20c40dd4ca51a7fd4af444d5f6e48ce365677c48f6f133ba10b60a370b6820a549cabdaa371d3ce62016cb802821cc9e58e3522b85f5b1dcf2e94d07a749801fbd6ea5d9ad1da303732776a7565ebaa42a83d74fd71c242cc5137606e196bdc77dc290855b33c5269e6ca9e7fac8562746f7d486a203890380a0803474eea8044116ca6fc1fc5a1307d2dbe91fb02a2553abe02a9d9773da63bb8c8c690a97589dc5221e600685051758f2e08d044576513ae38c0f066bcef5e0598522295d12c8147428bf71bd6a608e612b6a833bf1dab0f758256fe2cec11d8ed7e4fc2af08937b440b292be7c5e73d12dc213141dff34d35e3c2d8200484340bdd3759d63b0b137a08898904195cbbc4ed7c9725560ad7a517fdfed5840e72796177e55db72dbbfecfa2dfb0704e95ce052fb23d364e1720d9c3386c0df8a08d3e0791860b602f8e0a68c8c9ab577fb55c28227a9009ffbcae29da0b6eabd8f4264040eafa00181852fa79565657c794b6b44b65bc3e111355d0fb7c2c8186c1b9568895d2883cda1ce8ab719f542ee97c3ebfe10cad74278cdad79d71c8a78b50e85c7570e6cd2684a04734f45dac93241bf7c8d1905142707f8199540d96eb7ccd1bc0d2a8164aca5126135c8f03c1f5766af0a916eb276c2d8fa97c618424c3a07524558d491bf962f7ec23f572ba930d75226b2eec0789703ff3ed9c6cfc68cd8fba92a75704fe6d8bd944adf495976348db968d35e57906b3ce191fe8e679788426e24da6516521671d8e02704fcbbe68367a6861394977304fd75ca7ffed10c317722c689705d82b8bbb7ca000510ad255ab6861fe8c57bb01ab52a7468695e382d0407451e05c42971b94604a3bbae38902b740dadd6a45dc846232e4ba8f06761b126c5eba1a8d7ad5784cbd82927e52c275bfb2223253fa4e6cf034213a0569beb90ed8a1125cd8fb6aa7922f3f943eb41566076c33096a1872c14bfdbc059608ba</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <url>/LanBlog/AutoHotkey1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+
+<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>以下全部建立在2.0.19版本的的基础上</p>
+</blockquote>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
+<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
+<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
+<li>双击脚本，即可运行</li>
+</ul>
+<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
+<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
+</blockquote>
+<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
+<ul>
+<li><code>#</code> ：win 键</li>
+<li><code>!</code> ：alt</li>
+<li><code>^</code> ：ctrl</li>
+<li><code>+</code> ：shift</li>
+<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
+</ul>
+<blockquote>
+<p><code>^q</code> 即代表ctrl + q</p>
+</blockquote>
+<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
+<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
+<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
+<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
+<li>一个脚本里可以有多个热键</li>
+<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
+</ul>
+<hr>
+<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
+<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+]]></content>
       <categories>
-        <category>参考</category>
+        <category>利器OuO</category>
       </categories>
       <tags>
-        <tag>参考</tag>
+        <tag>AutoHotkey</tag>
+        <tag>软件</tag>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博文编写</title>
+    <url>/LanBlog/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
+<span id="more"></span>
+<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
+
+<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个“&#96;”</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -585,46 +602,29 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博文编写</title>
-    <url>/LanBlog/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
-<span id="more"></span>
-<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个“&#96;”</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-
-<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="7bf31651f2058b541b90c1781b3245e1f5eca31d04b97727f7e3e7d33312cfa2">c32395f63df771905c259445e1aa88f3899ee4804f798168a843621515b7539500991886f73e55266910bee5a5b66327e524d8162e2ec9fec6fcfda26661a9930eec9caf050ca5f9c108385159c0f1e968a1b5e142c0c85994af2c696ecc181ce436acc974aa63818589a52609ba5f3a9ad4010ae889f1894b4a9d9e64e2ece134003aab3794ea4436ae924ab54b02accb5b1ea9aba8acbd6abdf03218c8b53bc23a6b11578ff36c383887e99236a09abe81d70dfa6b17483ec4bd6251d18a718204e6193a1e46ed1093ba7444ab0c57017bc6c910b46ab7801b31bea28bf20c40dd4ca51a7fd4af444d5f6e48ce365677c48f6f133ba10b60a370b6820a549cabdaa371d3ce62016cb802821cc9e58e3522b85f5b1dcf2e94d07a749801fbd6ea5d9ad1da303732776a7565ebaa42a83d74fd71c242cc5137606e196bdc77dc290855b33c5269e6ca9e7fac8562746f7d486a203890380a0803474eea8044116ca6fc1fc5a1307d2dbe91fb02a2553abe02a9d9773da63bb8c8c690a97589dc5221e600685051758f2e08d044576513ae38c0f066bcef5e0598522295d12c8147428bf71bd6a608e612b6a833bf1dab0f758256fe2cec11d8ed7e4fc2af08937b440b292be7c5e73d12dc213141dff34d35e3c2d8200484340bdd3759d63b0b137a08898904195cbbc4ed7c9725560ad7a517fdfed5840e72796177e55db72dbbfecfa2dfb0704e95ce052fb23d364e1720d9c3386c0df8a08d3e0791860b602f8e0a68c8c9ab577fb55c28227a9009ffbcae29da0b6eabd8f4264040eafa00181852fa79565657c794b6b44b65bc3e111355d0fb7c2c8186c1b9568895d2883cda1ce8ab719f542ee97c3ebfe10cad74278cdad79d71c8a78b50e85c7570e6cd2684a04734f45dac93241bf7c8d1905142707f8199540d96eb7ccd1bc0d2a8164aca5126135c8f03c1f5766af0a916eb276c2d8fa97c618424c3a07524558d491bf962f7ec23f572ba930d75226b2eec0789703ff3ed9c6cfc68cd8fba92a75704fe6d8bd944adf495976348db968d35e57906b3ce191fe8e679788426e24da6516521671d8e02704fcbbe68367a6861394977304fd75ca7ffed10c317722c689705d82b8bbb7ca000510ad255ab6861fe8c57bb01ab52a7468695e382d0407451e05c42971b94604a3bbae38902b740dadd6a45dc846232e4ba8f06761b126c5eba1a8d7ad5784cbd82927e52c275bfb2223253fa4e6cf034213a0569beb90ed8a1125cd8fb6aa7922f3f943eb41566076c33096a1872c14bfdbc059608ba</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
 </div>
-<table>
-<thead>
-<tr>
-<th>语法</th>
-<th>效果说明</th>
-<th>常见用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>参考</category>
+      </categories>
       <tags>
-        <tag>博客</tag>
+        <tag>参考</tag>
       </tags>
   </entry>
 </search>
