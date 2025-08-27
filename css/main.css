@@ -1240,7 +1240,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #2b1db3;
+    background: #967fcf;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2908,4 +2908,14 @@ body {
 }
 .busuanzi-count #busuanzi_container_site_pv {
   display: inline;
+}
+p:has(+ #more) {
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4;
+/* 元素整体向上移动一点 */
+  margin-top: -5px;
+/* 与 #more 的距离加大 */
+  margin-bottom: 20px;
 }
