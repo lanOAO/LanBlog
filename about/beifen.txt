@@ -2,75 +2,152 @@
 title: About me
 date: 2025-07-06 22:34:01
 ---
-
-<!-- 引入 Font Awesome 和动画插件 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css" />
-
 <style>
-.h {
-  color: #8FBC8F;
-  font-weight: bold;
-}
-h3{
-color: #006400;
-}
+  #terminal {
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 700px;
+    font-family: 'Fira Code', monospace, monospace;
+    color: #204020; /* 深绿色文字 */
+    background: transparent; /* 无背景色 */
+  }
+  .line {
+    white-space: pre-wrap;
+    line-height: 1.5em;
+    font-size: 16px;
+    margin-bottom: 0.4em;
+  }
+  .prompt {
+    color: #3a7d44; /* 绿调提示符 */
+    user-select: text;
+  }
+  .output {
+    color: #204020;
+    user-select: text;
+  }
+  .comment {
+    color: #5a7d5a;
+    font-style: italic;
+  }
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    background: #3a7d44;
+    animation: blink 1s step-start 0s infinite;
+    vertical-align: bottom;
+  }
+  @keyframes blink {
+    50% { background: transparent; }
+  }
+
+  /* twopeople 容器样式 */
+  .twopeople{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+  }
+  .twopeople canvas {
+    display: block;
+    margin: 0 auto;
+    cursor: move;
+  }
 </style>
-<style>
 
+<div id="terminal"></div>
 
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 1; }
-}
+<script>
+  const lines = [
+    { cmd: '$ whoami', out: '\nlanOoO\n# INFP | 软件工程萌新 | 运维爱好者' },
+    { cmd: '$ pwd', out: '\n/home/lanOoO/blog' },
+    { cmd: '$ uname -a', out: '\nLinux lanOoO-pc 6.1.12-arch1-1 #1 SMP PREEMPT x86_64 GNU/Linux' },
+    { cmd: '$ neofetch', out: `\n            /\\\n           /  \\      lanOoO@arch\n          /\\   \\     ----------------\n         /  __  \\    Role:  软件工程学习中 / 运维玩家\n        /__/  \\__\\   Stack: Linux · Shell · Python · LLM\n        \\  \\  /  /   Mood: INFP, 喜欢慢慢打磨\n         \\  \\/  /    Home: /home/lanOoO/blog\n          \\    /     Kernel: 6.1.12-arch1-1\n           \\  /\n            \\/` },
+    { cmd: '$ cat about.txt', out: `\nHi，我是 lanOoO。\n热衷探索 Linux、运维与脚本开发，也在研究大模型的可能性。\n这里记录学习笔记、奇思妙想与技术折腾。\n闲暇时会看番、读书、写随笔，把灵感留在这个小角落。` }
+  ];
 
-.fade-icon {
-  animation: fadeInOut 2s infinite ease-in-out;
-}
-</style>
+  const terminal = document.getElementById('terminal');
 
+  let lineIndex = 0;
+  let charIndex = 0;
+  let currentLineElem = null;
 
+  function insertTwoPeopleDiv() {
+    const container = document.createElement('div');
+    container.className = 'twopeople';
+    container.innerHTML = `
+      <div class="container" style="height:200px;">
+          <canvas class="illo" width="800" height="800" 
+            style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;">
+          </canvas>
+      </div>
+      <style>
+          /* canvas 样式已写在上面 */
+      </style>
+    `;
+    terminal.appendChild(container);
 
-一个喜欢折腾，有点迷茫的未知物种 O.O
-<h3> 
-  <i class="fas fa-puzzle-piece fade-icon" style="color: #63E6BE;"></i> 一些小小的爱好
-</h3>
+    const scripts = [
+      'https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople1.js',
+      'https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/zdog.dist.js',
+      'https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople.js'
+    ];
 
-听音乐🎵 | 唱歌🎤 | 拍照片📸 | 记录📔 | 塔罗🪄 | 阅读📖
-<div class="twopeople">
-    <div class="container" style="height:200px;">
-        <canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople1.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/zdog.dist.js"></script>
-    <script id="rendered-js" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople.js"></script>
-    <style>
-        .twopeople{
-            margin: 0;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        canvas {
-            display: block;
-            margin: 0 auto;
-            cursor: move;
-        }
-    </style>
-</div>
-<h3>
-  <i class="fa-solid fa-comment faa-bounce animated" style="color: #bdffcd;"></i> 当下OuO
-</h3>
-<ul>
-<li>享受暑假🤩</li>
-<li>寻找 <i class="h">[存在意义]</i> 中</li>
-</ul>
-```
-$ whoami
-lanOoO
+    scripts.forEach(src => {
+      const script = document.createElement('script');
+      script.src = src;
+      document.body.appendChild(script);
+    });
+  }
 
+  function typeLine() {
+    if (lineIndex >= lines.length) {
+      insertTwoPeopleDiv();
+      return;
+    }
 
- /\_/\  
-( o.o ) 
- > ^ <
-```
+    if (!currentLineElem) {
+      currentLineElem = document.createElement('div');
+      currentLineElem.className = 'line';
+      const promptSpan = document.createElement('span');
+      promptSpan.className = 'prompt';
+      promptSpan.textContent = lines[lineIndex].cmd + ' ';
+      currentLineElem.appendChild(promptSpan);
+      terminal.appendChild(currentLineElem);
+    }
+
+    const outputText = lines[lineIndex].out;
+    if (charIndex < outputText.length) {
+      const nextChar = outputText[charIndex];
+      if (nextChar === '\n') {
+        currentLineElem.appendChild(document.createElement('br'));
+      } else {
+        const outSpan = document.createElement('span');
+        outSpan.className = 'output';
+        outSpan.textContent = nextChar;
+        currentLineElem.appendChild(outSpan);
+      }
+      charIndex++;
+      setTimeout(typeLine, 20);
+    } else {
+      lineIndex++;
+      charIndex = 0;
+      currentLineElem = null;
+      terminal.appendChild(document.createElement('br'));
+      setTimeout(typeLine, 200);
+    }
+  }
+
+  window.onload = () => {
+    typeLine();
+  }
+
+  // 首次加载
+  window.addEventListener('load', startTerminalAnimation);
+
+  // 兼容 NexT PJAX：每次切换页面时也执行
+  document.addEventListener('pjax:success', startTerminalAnimation);
+
+  window.addEventListener('load', startTerminalAnimation);
+</script>
