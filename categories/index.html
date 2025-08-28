@@ -73,23 +73,25 @@
 
 
 <script>
-// Hexo 博客：给 #more 上面的所有 <p> 添加样式
 document.addEventListener("DOMContentLoaded", function() {
   const more = document.getElementById('more');
-  if (!more) return;
+  const metaItem = document.querySelector('.post-meta-item-text'); // 定位目标元素
+  if (!more || !metaItem) return;
+
+  const metaRect = metaItem.getBoundingClientRect();
+  const scrollTop = window.scrollY || window.pageYOffset;
+  const metaBottom = metaRect.bottom + scrollTop; // 元素底部相对于文档顶部
 
   let prev = more.previousElementSibling;
   const ps = [];
 
-  // 收集 #more 上方所有的 <p>
   while (prev) {
     if (prev.tagName.toLowerCase() === 'p') {
-      ps.unshift(prev); // 用 unshift 保证顺序从上到下
+      ps.unshift(prev);
     }
     prev = prev.previousElementSibling;
   }
 
-  // 遍历所有找到的 <p>
   ps.forEach((p, index) => {
     p.style.color = '#888888';
     p.style.fontSize = '0.9rem';
@@ -97,16 +99,20 @@ document.addEventListener("DOMContentLoaded", function() {
     p.style.lineHeight = '1.4';
 
     if (index === 0) {
-      // 第一个 <p>（最上面的）
-      p.style.marginTop = '-55px';
+      // 设置第一个 <p> 的 marginTop，使其紧贴 .post-meta-item-text 底部
+      const pRect = p.getBoundingClientRect();
+      const pCurrentTop = pRect.top + scrollTop;
+      const marginTop = metaBottom - pCurrentTop;
+      p.style.marginTop = `${marginTop}*1.1px`;
     }
+
     if (index === ps.length - 1) {
-      // 最后一个 <p>（紧挨着 #more 的）
       p.style.marginBottom = '90px';
     }
   });
 });
 </script>
+
   <noscript>
     <link rel="stylesheet" href="/LanBlog/css/noscript.css">
   </noscript>
