@@ -63,7 +63,7 @@ color: #006400;
   <i class="fa-solid fa-comment faa-bounce animated" style="color: #bdffcd;"></i> 当下OuO
 </h3>
 <ul>
-<li>享受暑假🤩</li>
+<li>筹备开学😫</li>
 <li>寻找 <i class="h">[存在意义]</i> 中</li>
 <li>正在探索的课题是：<span class="h">正确的边界</span></li>
 </ul>
