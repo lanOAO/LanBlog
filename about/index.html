@@ -30,7 +30,7 @@
 <meta property="og:description" content=".h {   color: #8FBC8F;   font-weight: bold; } h3{ color: #006400; }     @keyframes fadeInOut {   0%, 100% { opacity: 0.2; }   50% { opacity: 1; } }  .fade-icon {   animation: fadeInOut 2s infinit">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-06T14:34:01.000Z">
-<meta property="article:modified_time" content="2025-08-29T17:04:48.015Z">
+<meta property="article:modified_time" content="2025-09-02T11:44:49.986Z">
 <meta property="article:author" content="LanOoO">
 <meta name="twitter:card" content="summary">
 
@@ -115,6 +115,40 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
+
+<!-- 使用自定义标签，chars属性可以写要循环的内容
+<an_loadingn chars="123456" interval="500"></an_loading>
+-->
+<script>
+class CharAnimation extends HTMLElement {
+  constructor() {
+    super();
+    this.index = 0;
+    this.shadow = this.attachShadow({mode: 'open'});
+    this.display = document.createElement('span');
+    this.shadow.appendChild(this.display);
+  }
+
+  connectedCallback() {
+    this.chars = this.getAttribute('chars') || '.';
+    this.interval = parseInt(this.getAttribute('interval')) || 500;
+
+    this.timer = setInterval(() => {
+      this.index++;
+      if(this.index > this.chars.length) this.index = 1;
+      this.display.textContent = this.chars.slice(0, this.index);
+    }, this.interval);
+  }
+
+  disconnectedCallback() {
+    clearInterval(this.timer);
+  }
+}
+
+customElements.define('an_loading', CharAnimation);
+</script>
+
 
   <noscript>
     <link rel="stylesheet" href="/LanBlog/css/noscript.css">
@@ -343,7 +377,7 @@ color: #006400;
   <i class="fa-solid fa-comment faa-bounce animated" style="color: #bdffcd;"></i> 当下OuO
 </h3>
 <ul>
-<li.>筹备开学😫</li>
+<li.>升级中<an_loadingn chars="123456" interval="500"></an_loading></li>
 
 
 </ul>

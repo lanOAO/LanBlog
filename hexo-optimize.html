@@ -116,6 +116,40 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+
+<!-- 使用自定义标签，chars属性可以写要循环的内容
+<an_loadingn chars="123456" interval="500"></an_loading>
+-->
+<script>
+class CharAnimation extends HTMLElement {
+  constructor() {
+    super();
+    this.index = 0;
+    this.shadow = this.attachShadow({mode: 'open'});
+    this.display = document.createElement('span');
+    this.shadow.appendChild(this.display);
+  }
+
+  connectedCallback() {
+    this.chars = this.getAttribute('chars') || '.';
+    this.interval = parseInt(this.getAttribute('interval')) || 500;
+
+    this.timer = setInterval(() => {
+      this.index++;
+      if(this.index > this.chars.length) this.index = 1;
+      this.display.textContent = this.chars.slice(0, this.index);
+    }, this.interval);
+  }
+
+  disconnectedCallback() {
+    clearInterval(this.timer);
+  }
+}
+
+customElements.define('an_loading', CharAnimation);
+</script>
+
+
   <noscript>
     <link rel="stylesheet" href="/LanBlog/css/noscript.css">
   </noscript>
