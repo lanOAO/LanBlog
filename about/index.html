@@ -30,7 +30,7 @@
 <meta property="og:description" content=".h {   color: #8FBC8F;   font-weight: bold; } h3{ color: #006400; }     @keyframes fadeInOut {  0%, 100% { opacity: 0.2; }  50% { opacity: 1; }} .fade-icon {  animation: fadeInOut 2s infinite e">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-06T14:34:01.000Z">
-<meta property="article:modified_time" content="2025-11-04T11:28:16.154Z">
+<meta property="article:modified_time" content="2025-11-04T12:09:37.848Z">
 <meta property="article:author" content="LanOoO">
 <meta name="twitter:card" content="summary">
 
@@ -153,8 +153,8 @@ customElements.define('an_loading', CharAnimation);
   <noscript>
     <link rel="stylesheet" href="/LanBlog/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/LanBlog/atom.xml" title="幽篁里" type="application/atom+xml">
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="alternate" href="/LanBlog/atom.xml" title="幽篁里" type="application/atom+xml">
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -337,27 +337,44 @@ color: #006400;
 <p>.fade-icon {<br>  animation: fadeInOut 2s infinite ease-in-out;<br>}<br></style></p>
 <p>一个喜欢折腾，有点迷茫的软件工程在读学生 O.O</p>
 <div id="player1">
-    <pre class="aplayer-lrc-content">
-        
-<pre><code>&lt;/pre&gt;
-</code></pre>
+  <pre class="aplayer-lrc-content"></pre>
 </div>
+
 <script>
-    var ap = new APlayer
-            ({
-                element: document.getElementById('player1'),
-                narrow: false,
-                autoplay: true,
-                showlrc: true,
-                music: {
-                        title: '遇见',
-                        author: '孙燕姿',
-                        url: 'http://music.163.com/song/media/outer/url?id=287035.mp3',
-                        pic: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000002ehzTm0TxXC2.jpg'
-                        }
-            });
-    ap.init();
+async function initPlayer() {
+  // 1. 分别获取歌曲、封面和歌词的真实内容
+  const [musicRes, picRes, lyricRes] = await Promise.all([
+    fetch('https://music-api.gdstudio.xyz/api.php?types=url&id=2647582426').then(r => r.json()),
+    fetch('https://music-api.gdstudio.xyz/api.php?types=pic&id=2647582426').then(r => r.json()),
+    fetch('https://music-api.gdstudio.xyz/api.php?types=lyric&id=2647582426').then(r => r.json())
+  ]);
+
+  const musicUrl = musicRes.url;
+  const picUrl = picRes.url;
+  const lyricText = lyricRes.lyric;
+
+  // 2. 创建播放器
+  const ap = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: true,
+    showlrc: true,
+    lrcType: 1,
+    music: {
+      title: 'Tyndal',
+      author: 'Youzee Music',
+      url: musicUrl,  // ✅ 真正的音频链接
+      pic: "http://p2.music.126.net/uPeYnxVCcG3L1jyNfpWEHA==/109951170243924736.jpg?param=130y130",    // ✅ 真正的封面链接
+      lrc: lyricText  // ✅ 直接传歌词文本
+    }
+  });
+
+  ap.init();
+}
+
+initPlayer();
 </script>
+
 
 <h3> 
   <i class="fas fa-puzzle-piece fade-icon" style="color: #63E6BE;"></i> 一些小小的爱好
