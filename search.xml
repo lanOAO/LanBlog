@@ -78,182 +78,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Hadoop搭建教程</title>
-    <url>/LanBlog/hadoop2.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>在<a href="https://lanoao.github.io/LanBlog/hadoop1.html">Hadoop入门 </a>中，为大家简单介绍了 <a href="https://hadoop.apache.org/docs/">Hadoop</a> 。</p>
-<p>在本文，我将为大家演示基于 linux 的 Hadoop 搭建。</p>
-<span id="more"></span>
-
-<blockquote>
-<p><strong>本文所用软件版本:</strong></p>
-<p>CentOS 7<br>Vmware 16<br>Xshell 7<br>Xftp 7</p>
-</blockquote>
-<div class="note primary"><p><strong>在开始之前你需要提前下载：</strong></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMwareWworkstation Pro</a> 虚拟机管理软件</li>
-<li><input checked="" disabled="" type="checkbox"> <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/">CentOS 7 镜像</a>或者其他版本的镜像</li>
-</ul>
-<p>PS. 镜像下载时间超长</p>
-<p><strong>你需要提前准备:</strong></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 一台配置好 <em><a href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE">网络</a>&amp;主机名&amp;配置好xshell</em> 的虚拟机</li>
-</ul>
+    <title>Python 学习笔记</title>
+    <url>/LanBlog/Python_1.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="a3138cd302d98c38c04f75cb88b91d1dabdbc914325bafdad27c13b8c171cf99">172b901311fda5dafa89e27317358587749f6b88053833814a240761be71973790ebbe06846f2440e034d3d366d915c5a38504e790b8fce97d523ee15e69a2ae67450fe5822b521e85c2f5208f1515ea07866f04a6ca3bf0bdb73254ec02fd68e7e6cdbb1060508571575042ecd908a839af15bb0b543b0574f553c6564c054f97c6993d9793546a1215996719c924d953ad01a96e2b7bbbd4bf1e72b33d3695ddffea104097e3da925ab38de8c04d616372c3df6ace2a8dcbec066ace349fb6427a21ff2240f2502955efa72cbdcbc85e6d1f446a25d2c19624f271bfcdf36bc00319db63af994e4f27173e19b9e8b0dd6448c15d75838adc8a18da80c059fb4df3fa09bd2d66a263baaf009544ba2f7081616b70529a45840ef092394b6f7b97edc0753432028e7eab256063873198dd366e20b7d7474ba35fcff9f91a6de08d3c27b2c674bd249f897fb540049e455973aef4a1d811bda4785d7cf72dff8c6b0eb9479ae066f90f3620fbb84ce47629bbdc0a57b28beb48e7afe69351e522b78abd5123005c329dc0028ddea6e9a2f5848e0e3947387ed67a18de4c31c0e441244a02480e42d0c6c0a0f37ce2712587d6f18cefa060beffed6c9c799903e054ef0dc8b5666e2e261dde0ee0b6bdb7bb369e6563f3f58705204fa379e1e99875f28d3d551aad78ed9011de29661a7393de34187d6bdcbb070646654661514778a059621336e4e4a26b1d7637b7a93a154e7dc6fe16d9e5da1ac4aaf159a851298469833bfe4c220023ca8f95a2f638fb98b6fe12f29ab881c6fcd9bd7a05be6422b98f3bd451080fbd3ad3e9d881455221d258737504380da78d3a10d885e5df2ddb4a53ff71b3126c021abb8dc832f6f28fdaa4be887c43ac5f9038dddb6b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
 </div>
-
-
-
-<hr>
-<p><span class = "inline-note" title ="小提示">本文将以初学者的视角进行详细讲解，左侧配有目录，大家按需选择阅读章节OuO。</p>
-<p>全文中的重点内容都采用与本条相同的样式，鼠标悬停即可显示简要说明，方便快速理解。</p>
-</span>
-
-<h1 id="VMware-软件使用"><a href="#VMware-软件使用" class="headerlink" title="VMware 软件使用"></a>VMware 软件使用</h1><p>具体从软件配置到创建虚拟机这里不再赘述，大家可以自行搜索，这里只展示我觉得需要注意的点</p>
-<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png"></p>
-<div class="tabs" id="vmware"><ul class="nav-tabs"><li class="tab active"><a href="#vmware-1">桥接模式</a></li><li class="tab"><a href="#vmware-2">NAT模式</a></li><li class="tab"><a href="#vmware-3">仅主机模式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vmware-1"><p>桥接模式会直接把虚拟机连接到物理网络，就像一台真实电脑。<br><strong>虚拟机直接使用主机所在的局域网IP</strong></p></div><div class="tab-pane" id="vmware-2"><p>NAT模式会通过主机共享网络连接，虚拟机和外网通信时由主机做中转。<br><strong>虚拟机通过主机的网络访问外网</strong></p></div><div class="tab-pane" id="vmware-3"><p>仅主机模式下，虚拟机只能和主机互通，不能访问外网。<br><strong>适合内网测试或安全环境</strong></p></div></div></div>
-
-<hr>
-<h1 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemcttl stop firewalld    --关闭防火墙</span><br><span class="line">systemctl disable firewalld    --永久关闭防火墙</span><br></pre></td></tr></table></figure>
-
-<h1 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h1><h2 id="1-使用Xftp传输压缩包并解压"><a href="#1-使用Xftp传输压缩包并解压" class="headerlink" title="1.使用Xftp传输压缩包并解压"></a>1.使用Xftp传输压缩包并解压</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master opt]# pwd</span><br><span class="line">/opt</span><br><span class="line">[root@master opt]# mkdir module #解压后的位置</span><br><span class="line">[root@master opt]# mkdir software #压缩包</span><br><span class="line">[root@master opt]# cd software</span><br><span class="line">[root@master software]# ll</span><br><span class="line">total 1488592</span><br><span class="line">-rw-r--r--. 1 root root  87380462 Aug 27 10:59 apache-flume-1.11.0-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  22347776 Aug 27 10:59 apache-hive-3.1.2-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  14853274 Aug 27 10:59 apache-zookeeper-3.8.3-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 730107476 Aug 27 10:59 hadoop-3.3.6.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 141600542 Aug 27 10:59 jdk-8u401-linux-x64.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 528015360 Aug 27 10:59 mysql-5.7.25-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">[root@master software]# tar -zvxf jdk-8u401-linux-x64.tar.gz -C ../module #解压jdk压缩包</span><br><span class="line">[root@master software]# tar -zvxf hadoop-3.3.6.tar.gz -C ../module/ #解压hadoop压缩包</span><br><span class="line">[root@master software]# cd ../module/                              </span><br><span class="line">[root@master module]# ll</span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 10 1000 1000 4096 Jun 18  2023 hadoop-3.3.6</span><br><span class="line">drwxr-x---.  8 root root 4096 Aug 27 11:02 jdk1.8.0_401</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master module]# cd jdk1.8.0_401/</span><br><span class="line">[root@master jdk1.8.0_401]# pwd</span><br><span class="line">/opt/module/jdk1.8.0_401</span><br><span class="line"></span><br><span class="line">[root@master module]# vi /etc/profile</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/opt/module/jdk1.8.0_401</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"></span><br><span class="line">[root@master module]# source /etc/profile #刷新环境变量</span><br><span class="line">[root@master ~]# jps</span><br><span class="line">508 Jps</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="克隆三台虚拟机"><a href="#克隆三台虚拟机" class="headerlink" title="克隆三台虚拟机"></a>克隆三台虚拟机</h1><p>在克隆之前建议配置好<a href="#1.%E6%9B%B4%E6%94%B9hosts">hosts文件</a>为下一步做准备</p>
-<p>配置好后依次更改主机名</p>
-<p>这里不过多赘述</p>
-<h1 id="配置免密—SSH"><a href="#配置免密—SSH" class="headerlink" title="配置免密—SSH"></a>配置免密—SSH</h1><h2 id="1-更改hosts"><a href="#1-更改hosts" class="headerlink" title="1.更改hosts"></a>1.更改hosts</h2><p>三台虚拟机都更改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi /etc/hosts</span><br><span class="line">[ip-1] [hostname-1]</span><br><span class="line">[ip-2] [hostname-2]</span><br><span class="line">[ip-3] [hostname-3]</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-生成并传输密钥"><a href="#2-生成并传输密钥" class="headerlink" title="2.生成并传输密钥"></a>2.生成并传输密钥</h2><p>在<span class = "inline-note " title = "一定要更改好hosts后再生成">主节点生成密钥</span></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa #生成密钥</span><br><span class="line">ssh-copy-id [hostname-1&amp;2&amp;3] #传输密钥</span><br></pre></td></tr></table></figure>
-
-<p>输入 yes+对应主机的密码</p>
-<p>成功后可以使用 <code>ssh + [hostname-1&amp;2&amp;3]</code>进行测试</p>
-<p><code>exit</code>命令即可退出</p>
-<h1 id="配置Hadoop配置文件"><a href="#配置Hadoop配置文件" class="headerlink" title="配置Hadoop配置文件"></a>配置Hadoop配置文件</h1><p>以下配置文件的路径为<code>$hadoop_home/etc/hadoop/</code></p>
-<h2 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/root/software/hadoop-3.3.4/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span>    --hadoop路径</span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>3<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master:50070<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.app.mapreduce.am.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.map.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.reduce.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.env-whitelist<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,</span><br><span class="line">HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,</span><br><span class="line">HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>4096<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="hadoop-env-sh"><a href="#hadoop-env-sh" class="headerlink" title="hadoop-env.sh"></a>hadoop-env.sh</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=$JAVA_HOME</span><br></pre></td></tr></table></figure>
-
-<h2 id="workers"><a href="#workers" class="headerlink" title="workers"></a>workers</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">三台机器的名字</span><br></pre></td></tr></table></figure>
-<h1 id="配置并刷新环境变量"><a href="#配置并刷新环境变量" class="headerlink" title="配置并刷新环境变量"></a>配置并刷新环境变量</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#hadoop</span><br><span class="line">export HADOOP_HOME=/root/software/hadoop-3.3.4</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin</span><br><span class="line"></span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">export YARN_NODEMANAGER_USER=root</span><br></pre></td></tr></table></figure>
-<p>刷新环境变量   <code>source /etc/profile</code></p>
-<h1 id="SSH-传输"><a href="#SSH-传输" class="headerlink" title="SSH 传输"></a>SSH 传输</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp [-1246BCpqrv]  [-c cipher]  [-F ssh_config]  [-i identity_file]  [-l limit]  [-o ssh_option]  [-P port]  [-S program]  [[user@]host1:]file1 [...]  [[user@]host2:]file2</span><br></pre></td></tr></table></figure>
-<p>依次传输Hadoop、环境变量到其他虚拟机</p>
-<h1 id="启动Hadoop"><a href="#启动Hadoop" class="headerlink" title="启动Hadoop"></a>启动Hadoop</h1><p><span class = "inline-note" title ="注意都在主节点运行"><strong>Hadoop 启动与停止命令一览</strong></span></p>
-<h2 id="1-启动-停止所有守护进程"><a href="#1-启动-停止所有守护进程" class="headerlink" title="1. 启动&#x2F;停止所有守护进程"></a>1. 启动&#x2F;停止所有守护进程</h2><ul>
-<li><p><strong>启动所有守护进程</strong></p>
-<p><code>sbin/start-all.sh</code></p>
-</li>
-</ul>
-<p>启动内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
-<ul>
-<li><p><strong>停止所有守护进程</strong></p>
-<p><code>sbin/stop-all.sh</code></p>
-</li>
-</ul>
-<p>停止内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
-<hr>
-<h2 id="2-HDFS-守护进程"><a href="#2-HDFS-守护进程" class="headerlink" title="2. HDFS 守护进程"></a>2. HDFS 守护进程</h2><ul>
-<li><p><strong>启动 HDFS 守护进程</strong></p>
-<p><code>sbin/start-dfs.sh</code></p>
-</li>
-</ul>
-<p>启动内容：NameNode、Secondary NameNode、DataNode</p>
-<ul>
-<li><p><strong>停止 HDFS 守护进程</strong></p>
-<p><code>sbin/stop-dfs.sh</code></p>
-</li>
-</ul>
-<p>停止内容：NameNode、Secondary NameNode、DataNode</p>
-<h3 id="单独启动-停止-HDFS-守护进程"><a href="#单独启动-停止-HDFS-守护进程" class="headerlink" title="单独启动&#x2F;停止 HDFS 守护进程"></a>单独启动&#x2F;停止 HDFS 守护进程</h3><ul>
-<li><p><strong>NameNode</strong></p>
-<p><code>sbin/hadoop-daemons.sh start namenode</code></p>
-<p><code>sbin/hadoop-daemons.sh stop namenode</code></p>
-</li>
-<li><p><strong>DataNode</strong></p>
-<p><code>sbin/hadoop-daemons.sh start datanode</code></p>
-<p><code>sbin/hadoop-daemons.sh stop datanode</code></p>
-</li>
-<li><p><strong>Secondary NameNode</strong></p>
-<p><code>sbin/hadoop-daemons.sh start secondarynamenode</code></p>
-<p><code>sbin/hadoop-daemons.sh stop secondarynamenode</code></p>
-</li>
-</ul>
-<hr>
-<h2 id="3-YARN-守护进程"><a href="#3-YARN-守护进程" class="headerlink" title="3. YARN 守护进程"></a>3. YARN 守护进程</h2><ul>
-<li><p><strong>启动 YARN 守护进程</strong></p>
-<p><code>sbin/start-yarn.sh</code></p>
-</li>
-</ul>
-<p>启动内容：ResourceManager、NodeManager</p>
-<ul>
-<li><p><strong>停止 YARN 守护进程</strong></p>
-<p><code>sbin/stop-yarn.sh</code></p>
-</li>
-</ul>
-<p>停止内容：ResourceManager、NodeManager</p>
-<h3 id="单独启动-停止-YARN-守护进程"><a href="#单独启动-停止-YARN-守护进程" class="headerlink" title="单独启动&#x2F;停止 YARN 守护进程"></a>单独启动&#x2F;停止 YARN 守护进程</h3><ul>
-<li><p><strong>ResourceManager</strong></p>
-<p><code>sbin/yarn-daemon.sh start resourcemanager</code></p>
-<p>&#96;&#96;sbin&#x2F;yarn-daemon.sh stop resourcemanager&#96;</p>
-</li>
-<li><p><strong>NodeManager</strong></p>
-<p><code>sbin/yarn-daemons.sh start nodemanager</code></p>
-<p>&#96;&#96;sbin&#x2F;yarn-daemons.sh stop nodemanager&#96;</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-MapReduce-JobHistory-服务"><a href="#4-MapReduce-JobHistory-服务" class="headerlink" title="4. MapReduce JobHistory 服务"></a>4. MapReduce JobHistory 服务</h2><ul>
-<li><p><strong>启动 JobHistory</strong></p>
-<p><code>sbin/mr-jobhistory-daemon.sh start historyserver</code></p>
-</li>
-<li><p><strong>停止 JobHistory</strong></p>
-<p><code>sbin/mr-jobhistory-daemon.sh stop historyserver</code></p>
-</li>
-</ul>
-<h1 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h1><ul>
-<li><p>先使用jps查看进程，查看是否成功启动所有进程</p>
-</li>
-<li><p>打开网页 主节点的ip地址:9870<br>查看是否有web ui,在这里你能看到你所搭建的集群的基本信息</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>大数据</category>
-      </categories>
-      <tags>
-        <tag>Hadoop</tag>
-        <tag>搭建</tag>
-        <tag>Linux</tag>
-      </tags>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>Hadoop入门</title>
@@ -604,6 +446,223 @@
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu24.04使用记录</title>
+    <url>/LanBlog/ubuntu_demo.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<span id="more"></span>
+
+<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
+
+<p>[^更新并安装]: </p>
+<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>ubuntu</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hadoop搭建教程</title>
+    <url>/LanBlog/hadoop2.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>在<a href="https://lanoao.github.io/LanBlog/hadoop1.html">Hadoop入门 </a>中，为大家简单介绍了 <a href="https://hadoop.apache.org/docs/">Hadoop</a> 。</p>
+<p>在本文，我将为大家演示基于 linux 的 Hadoop 搭建。</p>
+<span id="more"></span>
+
+<blockquote>
+<p><strong>本文所用软件版本:</strong></p>
+<p>CentOS 7<br>Vmware 16<br>Xshell 7<br>Xftp 7</p>
+</blockquote>
+<div class="note primary"><p><strong>在开始之前你需要提前下载：</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMwareWworkstation Pro</a> 虚拟机管理软件</li>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/">CentOS 7 镜像</a>或者其他版本的镜像</li>
+</ul>
+<p>PS. 镜像下载时间超长</p>
+<p><strong>你需要提前准备:</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 一台配置好 <em><a href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE">网络</a>&amp;主机名&amp;配置好xshell</em> 的虚拟机</li>
+</ul>
+</div>
+
+
+
+<hr>
+<p><span class = "inline-note" title ="小提示">本文将以初学者的视角进行详细讲解，左侧配有目录，大家按需选择阅读章节OuO。</p>
+<p>全文中的重点内容都采用与本条相同的样式，鼠标悬停即可显示简要说明，方便快速理解。</p>
+</span>
+
+<h1 id="VMware-软件使用"><a href="#VMware-软件使用" class="headerlink" title="VMware 软件使用"></a>VMware 软件使用</h1><p>具体从软件配置到创建虚拟机这里不再赘述，大家可以自行搜索，这里只展示我觉得需要注意的点</p>
+<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png"></p>
+<div class="tabs" id="vmware"><ul class="nav-tabs"><li class="tab active"><a href="#vmware-1">桥接模式</a></li><li class="tab"><a href="#vmware-2">NAT模式</a></li><li class="tab"><a href="#vmware-3">仅主机模式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vmware-1"><p>桥接模式会直接把虚拟机连接到物理网络，就像一台真实电脑。<br><strong>虚拟机直接使用主机所在的局域网IP</strong></p></div><div class="tab-pane" id="vmware-2"><p>NAT模式会通过主机共享网络连接，虚拟机和外网通信时由主机做中转。<br><strong>虚拟机通过主机的网络访问外网</strong></p></div><div class="tab-pane" id="vmware-3"><p>仅主机模式下，虚拟机只能和主机互通，不能访问外网。<br><strong>适合内网测试或安全环境</strong></p></div></div></div>
+
+<hr>
+<h1 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemcttl stop firewalld    --关闭防火墙</span><br><span class="line">systemctl disable firewalld    --永久关闭防火墙</span><br></pre></td></tr></table></figure>
+
+<h1 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h1><h2 id="1-使用Xftp传输压缩包并解压"><a href="#1-使用Xftp传输压缩包并解压" class="headerlink" title="1.使用Xftp传输压缩包并解压"></a>1.使用Xftp传输压缩包并解压</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master opt]# pwd</span><br><span class="line">/opt</span><br><span class="line">[root@master opt]# mkdir module #解压后的位置</span><br><span class="line">[root@master opt]# mkdir software #压缩包</span><br><span class="line">[root@master opt]# cd software</span><br><span class="line">[root@master software]# ll</span><br><span class="line">total 1488592</span><br><span class="line">-rw-r--r--. 1 root root  87380462 Aug 27 10:59 apache-flume-1.11.0-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  22347776 Aug 27 10:59 apache-hive-3.1.2-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  14853274 Aug 27 10:59 apache-zookeeper-3.8.3-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 730107476 Aug 27 10:59 hadoop-3.3.6.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 141600542 Aug 27 10:59 jdk-8u401-linux-x64.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 528015360 Aug 27 10:59 mysql-5.7.25-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">[root@master software]# tar -zvxf jdk-8u401-linux-x64.tar.gz -C ../module #解压jdk压缩包</span><br><span class="line">[root@master software]# tar -zvxf hadoop-3.3.6.tar.gz -C ../module/ #解压hadoop压缩包</span><br><span class="line">[root@master software]# cd ../module/                              </span><br><span class="line">[root@master module]# ll</span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 10 1000 1000 4096 Jun 18  2023 hadoop-3.3.6</span><br><span class="line">drwxr-x---.  8 root root 4096 Aug 27 11:02 jdk1.8.0_401</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master module]# cd jdk1.8.0_401/</span><br><span class="line">[root@master jdk1.8.0_401]# pwd</span><br><span class="line">/opt/module/jdk1.8.0_401</span><br><span class="line"></span><br><span class="line">[root@master module]# vi /etc/profile</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/opt/module/jdk1.8.0_401</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"></span><br><span class="line">[root@master module]# source /etc/profile #刷新环境变量</span><br><span class="line">[root@master ~]# jps</span><br><span class="line">508 Jps</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="克隆三台虚拟机"><a href="#克隆三台虚拟机" class="headerlink" title="克隆三台虚拟机"></a>克隆三台虚拟机</h1><p>在克隆之前建议配置好<a href="#1.%E6%9B%B4%E6%94%B9hosts">hosts文件</a>为下一步做准备</p>
+<p>配置好后依次更改主机名</p>
+<p>这里不过多赘述</p>
+<h1 id="配置免密—SSH"><a href="#配置免密—SSH" class="headerlink" title="配置免密—SSH"></a>配置免密—SSH</h1><h2 id="1-更改hosts"><a href="#1-更改hosts" class="headerlink" title="1.更改hosts"></a>1.更改hosts</h2><p>三台虚拟机都更改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi /etc/hosts</span><br><span class="line">[ip-1] [hostname-1]</span><br><span class="line">[ip-2] [hostname-2]</span><br><span class="line">[ip-3] [hostname-3]</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-生成并传输密钥"><a href="#2-生成并传输密钥" class="headerlink" title="2.生成并传输密钥"></a>2.生成并传输密钥</h2><p>在<span class = "inline-note " title = "一定要更改好hosts后再生成">主节点生成密钥</span></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa #生成密钥</span><br><span class="line">ssh-copy-id [hostname-1&amp;2&amp;3] #传输密钥</span><br></pre></td></tr></table></figure>
+
+<p>输入 yes+对应主机的密码</p>
+<p>成功后可以使用 <code>ssh + [hostname-1&amp;2&amp;3]</code>进行测试</p>
+<p><code>exit</code>命令即可退出</p>
+<h1 id="配置Hadoop配置文件"><a href="#配置Hadoop配置文件" class="headerlink" title="配置Hadoop配置文件"></a>配置Hadoop配置文件</h1><p>以下配置文件的路径为<code>$hadoop_home/etc/hadoop/</code></p>
+<h2 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/root/software/hadoop-3.3.4/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span>    --hadoop路径</span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>3<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master:50070<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.app.mapreduce.am.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.map.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.reduce.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.env-whitelist<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,</span><br><span class="line">HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,</span><br><span class="line">HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>4096<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="hadoop-env-sh"><a href="#hadoop-env-sh" class="headerlink" title="hadoop-env.sh"></a>hadoop-env.sh</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=$JAVA_HOME</span><br></pre></td></tr></table></figure>
+
+<h2 id="workers"><a href="#workers" class="headerlink" title="workers"></a>workers</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">三台机器的名字</span><br></pre></td></tr></table></figure>
+<h1 id="配置并刷新环境变量"><a href="#配置并刷新环境变量" class="headerlink" title="配置并刷新环境变量"></a>配置并刷新环境变量</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#hadoop</span><br><span class="line">export HADOOP_HOME=/root/software/hadoop-3.3.4</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin</span><br><span class="line"></span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">export YARN_NODEMANAGER_USER=root</span><br></pre></td></tr></table></figure>
+<p>刷新环境变量   <code>source /etc/profile</code></p>
+<h1 id="SSH-传输"><a href="#SSH-传输" class="headerlink" title="SSH 传输"></a>SSH 传输</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp [-1246BCpqrv]  [-c cipher]  [-F ssh_config]  [-i identity_file]  [-l limit]  [-o ssh_option]  [-P port]  [-S program]  [[user@]host1:]file1 [...]  [[user@]host2:]file2</span><br></pre></td></tr></table></figure>
+<p>依次传输Hadoop、环境变量到其他虚拟机</p>
+<h1 id="启动Hadoop"><a href="#启动Hadoop" class="headerlink" title="启动Hadoop"></a>启动Hadoop</h1><p><span class = "inline-note" title ="注意都在主节点运行"><strong>Hadoop 启动与停止命令一览</strong></span></p>
+<h2 id="1-启动-停止所有守护进程"><a href="#1-启动-停止所有守护进程" class="headerlink" title="1. 启动&#x2F;停止所有守护进程"></a>1. 启动&#x2F;停止所有守护进程</h2><ul>
+<li><p><strong>启动所有守护进程</strong></p>
+<p><code>sbin/start-all.sh</code></p>
+</li>
+</ul>
+<p>启动内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
+<ul>
+<li><p><strong>停止所有守护进程</strong></p>
+<p><code>sbin/stop-all.sh</code></p>
+</li>
+</ul>
+<p>停止内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
+<hr>
+<h2 id="2-HDFS-守护进程"><a href="#2-HDFS-守护进程" class="headerlink" title="2. HDFS 守护进程"></a>2. HDFS 守护进程</h2><ul>
+<li><p><strong>启动 HDFS 守护进程</strong></p>
+<p><code>sbin/start-dfs.sh</code></p>
+</li>
+</ul>
+<p>启动内容：NameNode、Secondary NameNode、DataNode</p>
+<ul>
+<li><p><strong>停止 HDFS 守护进程</strong></p>
+<p><code>sbin/stop-dfs.sh</code></p>
+</li>
+</ul>
+<p>停止内容：NameNode、Secondary NameNode、DataNode</p>
+<h3 id="单独启动-停止-HDFS-守护进程"><a href="#单独启动-停止-HDFS-守护进程" class="headerlink" title="单独启动&#x2F;停止 HDFS 守护进程"></a>单独启动&#x2F;停止 HDFS 守护进程</h3><ul>
+<li><p><strong>NameNode</strong></p>
+<p><code>sbin/hadoop-daemons.sh start namenode</code></p>
+<p><code>sbin/hadoop-daemons.sh stop namenode</code></p>
+</li>
+<li><p><strong>DataNode</strong></p>
+<p><code>sbin/hadoop-daemons.sh start datanode</code></p>
+<p><code>sbin/hadoop-daemons.sh stop datanode</code></p>
+</li>
+<li><p><strong>Secondary NameNode</strong></p>
+<p><code>sbin/hadoop-daemons.sh start secondarynamenode</code></p>
+<p><code>sbin/hadoop-daemons.sh stop secondarynamenode</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="3-YARN-守护进程"><a href="#3-YARN-守护进程" class="headerlink" title="3. YARN 守护进程"></a>3. YARN 守护进程</h2><ul>
+<li><p><strong>启动 YARN 守护进程</strong></p>
+<p><code>sbin/start-yarn.sh</code></p>
+</li>
+</ul>
+<p>启动内容：ResourceManager、NodeManager</p>
+<ul>
+<li><p><strong>停止 YARN 守护进程</strong></p>
+<p><code>sbin/stop-yarn.sh</code></p>
+</li>
+</ul>
+<p>停止内容：ResourceManager、NodeManager</p>
+<h3 id="单独启动-停止-YARN-守护进程"><a href="#单独启动-停止-YARN-守护进程" class="headerlink" title="单独启动&#x2F;停止 YARN 守护进程"></a>单独启动&#x2F;停止 YARN 守护进程</h3><ul>
+<li><p><strong>ResourceManager</strong></p>
+<p><code>sbin/yarn-daemon.sh start resourcemanager</code></p>
+<p>&#96;&#96;sbin&#x2F;yarn-daemon.sh stop resourcemanager&#96;</p>
+</li>
+<li><p><strong>NodeManager</strong></p>
+<p><code>sbin/yarn-daemons.sh start nodemanager</code></p>
+<p>&#96;&#96;sbin&#x2F;yarn-daemons.sh stop nodemanager&#96;</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-MapReduce-JobHistory-服务"><a href="#4-MapReduce-JobHistory-服务" class="headerlink" title="4. MapReduce JobHistory 服务"></a>4. MapReduce JobHistory 服务</h2><ul>
+<li><p><strong>启动 JobHistory</strong></p>
+<p><code>sbin/mr-jobhistory-daemon.sh start historyserver</code></p>
+</li>
+<li><p><strong>停止 JobHistory</strong></p>
+<p><code>sbin/mr-jobhistory-daemon.sh stop historyserver</code></p>
+</li>
+</ul>
+<h1 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h1><ul>
+<li><p>先使用jps查看进程，查看是否成功启动所有进程</p>
+</li>
+<li><p>打开网页 主节点的ip地址:9870<br>查看是否有web ui,在这里你能看到你所搭建的集群的基本信息</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>Hadoop</tag>
+        <tag>搭建</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博文编写</title>
     <url>/LanBlog/hexo-optimize.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
@@ -644,108 +703,6 @@
 ]]></content>
       <tags>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu24.04使用记录</title>
-    <url>/LanBlog/ubuntu_demo.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<span id="more"></span>
-
-<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
-
-<p>[^更新并安装]: </p>
-<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>ubuntu</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机相关记录</title>
-    <url>/LanBlog/computer_reference.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c5a9d62a158a50279128f62e9d3043275bb00b63d9aeb0226bccdc819029d65f">13892574096ed43c3d9bcdc076d901838387543c7371061ca519d260b8163f1e3957df996a2c81e5d776a83c6e427c4935e11da00bfaabc8c54996410a580b821f4847905b7942c3946a73a4178b5de2164ace3a09b1594cc3c09e34a93ff62e1c11cf0c092f0db666a432ba4def4e225ea222b6fbde7fdfbef2ef1a7fdca1b3d57e2aa95cbf5d42e6488d7e871947bc5151f795778077a417ba5273c5b172b6ddf0359af29d0c728333da6e08649fc2411ce87deace1e72cd897fee62961d34417dcf5194601af72524dd0899a2e0d65bfd5abd6eff47a88327e83e7a877b37b719c1433dad30e2e0a3e8eaf71456d9204def87f402eb10f81dfa1ba632107a01a7876e259e523ffa56ed7b23591f60973fe0e0c86d6871b52b63c195d7ca1a184ff6178a08e320cdeb3e55b4c44e6f36d8f4a5555624f98478702fc6817435c38fc76db6160564d38420e6faebc035abce4b1bb5336322c469874b0fb3a915a07804ef8291d0f259387a7ab65721a8bc16398d503f6af4947bed3c146079a424ec26a60c33ae2b70b89263e4cf943728b02be13042f3deb9310b936c52b97a34a5d4e6c9e14b6f6373d210d0a41e492127f99a35493667d03e4d401b74727336bbf262c2bda87acb2a5a425847b00a1a52fd094343fe76ce171c347d04d5dfc46a82c0b0cb500a3760d9861c927951bd23724a0d4596d8597c22708605d0c0d14feaeb2c3053f37d0d4beb22d2ca022717f4cc8b09693bb48c7fea55ac407cdb4a0beeaf4ece4ae24ea03ec2f6b13e3ffcb865c88a07fb2427f4a33666de88852281678b051dfb1b8efad7527cdd33fdb6338602fff323c2d5770bc99bb82bed313efe6a37ae7d26d84abeef9d96fe4c0844ab2cc9a27065aa773f515c02d8d68d43565788d2d1485b14684ec886e38965607ce2968f8173ae07a094166c27b02e5c4c0cf67b540dd464b5f2f21cf0ca8a8b6f95ddf9a648482b673f144cb0a6047d7bf8729127066af02988c5b95212edce480b6a2700975aa7ba1c1f1fc3caf3040911c3cf380a9d64381fdaaebccf6e41087ef8c9c3ebd553693218654f58dd38ce017655d37d9781967609031983bae10d6899ae7cc173e75e89a34693653bdb897bc28304c99d149752c02ca71cda2d9379539e35bf8163ea766855499b9833bb8081483296cb09ed29d3e2a2975a7d113f1f8fb917e5e2576ddba469</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>QWQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>centos更换yum源</title>
-    <url>/LanBlog/centos_yum.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>centos7更换为国内yum源</p>
-<span id="more"></span>
-<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.bak</p>
-<h1 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h1><p><span class=“inline-note” title="看什么看，没有注释EmE">这里的命令是centos7的更新命令，可以根据自己的的版本替换一下</span><br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
-<h1 id="更新缓存"><a href="#更新缓存" class="headerlink" title="更新缓存"></a>更新缓存</h1><p>yum makecache</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>yum</tag>
       </tags>
   </entry>
   <entry>
@@ -909,50 +866,41 @@
       </tags>
   </entry>
   <entry>
-    <title>各种各样的参考页面</title>
-    <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="9b26760bce33c996e69715027ef2c4d0c07332a1723cfbf01f2e9e887714ddd9">c32395f63df771905c259445e1aa88f3899ee4804f798168a843621515b7539500991886f73e55266910bee5a5b66327e524d8162e2ec9fec6fcfda26661a9930eec9caf050ca5f9c108385159c0f1e968a1b5e142c0c85994af2c696ecc181ce436acc974aa63818589a52609ba5f3a9ad4010ae889f1894b4a9d9e64e2ece134003aab3794ea4436ae924ab54b02accb5b1ea9aba8acbd6abdf03218c8b53bc23a6b11578ff36c383887e99236a09a40b286c6db8a76e6a4137233019d8f05b40995b37e3af7ba99f2e64b73ebfbdc4b8772d11c323380c53f04d620b49e3f6909bdbf5ff807454ce040b098ee2bef7bbee4314e31bfea19c34945f0d70bac46910ce25bf0a682c56d0e1a9c09b7a58f5dcf919aa574e0b79fcbe20462b46a3ecdd490a1a10b0829129904f9a24be819ac849031af1e2472fe9d0b40fe0570a34c97a743c049cd1389ace85efe0cb7d9b9efa555939887a51dd16fdbd8fba6a38e4c69791595a6a882b67ab095271accac1e6c1f6643e0528e51dd9eb9565f759965444ede025750f423e03356707165088b9a1fa2c8bf8b4054f48fb68d9de0003f8cb187d85fb6c3504508e4a2406220ffb60c057bdd96613b4ce9a98973a78ef2ad5039b763a05c50fb63b29885ea8cf9b7cc4f27ae20e0f611bab373fa655fa2a3d1822d8ff9aceae3cc5c44cbd95b366fbe6231dd7aa31254ddb715eaf823dc1716d10475b108263b12393b5cca887aab7516e7514e91cdd9dc03849f0f05f456653192bf90207212dd128e9daa231c3f0342b68326390c902a8ef1a0577b7f29ba01aa8428f64178b5843c95d6676501279450398531fde46239c39261a80ac094d8db7dfbb571005f669f42b44824f91cb8f733fd9c43078f33ed6ddbc981e3f68112ec7fffd496fc8d11d49cdf2795aff7d54be81d4cc3176fca7833ac9557126e2a5d8781deaa28ddcad0c48d5ec4b55e58c95bfd4c23b3a247c0deb50e8261237e848e93778c98c05534553769181f9a4c9888103d2b47c6b339ef2c9b9d753c0cdefde0fa6d230869575b38881d840aac5abcb578209a3637082737b2b3c48a7a24f9432c257123f440fed34ffda9936bb08c274fee532c5ad19383da9d6490561e7e2b9bbbde0ee6f734c0c0fafc49c471df8f24eaa4d8d4f3eb399892414fa1c96ade4bd11213b53859dff02ed9ae4fb44876711ed53f5deef243351c98422a46a3e51b8b87090917bc46c5382c09bf0479b81bfff8b167780d6572d66962e2ff000fd81bd5f2355af8f4ac22593e586916c89cbbe0fa9ccbc2e5e1781b6f1976d1125fe7bbecd674f93b4aae4137c7ff8bbfee35fb6cd7abd0d675cb0011f714f4ca1254ad33c127f60ee3f140450d51a6fb17e7d296ab6e04d1170d31cdb8cfb37d53e5536dc31f4bd81e5a2671c7d9e5cb7c5ebadc0f1626c2d55c46b4b63ef71ee309fc0d2882ed5c7210ad5806f14132b952f8b1917ccccbcc763dd9ee4302efff83a04b7d4b4fdba7e11dc03fa495fc8db1dc3d012391bd6e27da6a5526366b6d184dd3ad720893342479808f7f585bad8def71ed99f0058f4c066c60f7b63ab5c1f984bf4d2d187a3a2cfd3e51a585bfec3a8d78de1231be18d51cd1906e6467959d36b5ac3896370cb0e89fd5ec65eff6b47db6c14da6925a1261a01af25a6941277b28a80c8646d9ca4b0daf2b5a0e2aa591fbe14bd10701cda15ba67429d1f8c79a7073298938f5d8da9b9970c9a4946c9cb2308718b07f7ed16cc2fafc214300c067208ea26579c0973a9efbb7bf21e2a946cb61a5e62313c9c32527e9f10f56bfb8259a1970041eb8839c5d2ff471e680dd82f9ff126eeaa4991e30229dbef69032a4b9f52731e1e0b5dd73868ec5ddd4c36dad4fc86bb3348c5fe160a6899fdd20660416df90d630d78c4d1f25a1e02fc5d4afa7e2f3af83021cf20184f4fdb44ac22e4b24a31f49db1ac744da8a714c5029846e63440b00a08a0a875d48070c64ce521e549a2dca16bbe5e47df1eb9a29469d171c57e7d0cd1d82c21a13d545eba99462be675ffe8582bb686575385fc72049d6dfa3a5a74769a45697af07e4adee</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>centos更换yum源</title>
+    <url>/LanBlog/centos_yum.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>centos7更换为国内yum源</p>
+<span id="more"></span>
+<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.bak</p>
+<h1 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h1><p><span class=“inline-note” title="看什么看，没有注释EmE">这里的命令是centos7的更新命令，可以根据自己的的版本替换一下</span><br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
+<h1 id="更新缓存"><a href="#更新缓存" class="headerlink" title="更新缓存"></a>更新缓存</h1><p>yum makecache</p>
+]]></content>
       <categories>
-        <category>记录</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>参考</tag>
+        <tag>yum</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Python 学习笔记</title>
-    <url>/LanBlog/Python_1.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="a3138cd302d98c38c04f75cb88b91d1dabdbc914325bafdad27c13b8c171cf99">172b901311fda5dafa89e27317358587749f6b88053833814a240761be71973790ebbe06846f2440e034d3d366d915c5a38504e790b8fce97d523ee15e69a2ae67450fe5822b521e85c2f5208f1515ea07866f04a6ca3bf0bdb73254ec02fd68e7e6cdbb1060508571575042ecd908a839af15bb0b543b0574f553c6564c054f97c6993d9793546a1215996719c924d953ad01a96e2b7bbbd4bf1e72b33d3695ddffea104097e3da925ab38de8c04d616372c3df6ace2a8dcbec066ace349fb6427a21ff2240f2502955efa72cbdcbc85e6d1f446a25d2c19624f271bfcdf36bc00319db63af994e4f27173e19b9e8b0dd6448c15d75838adc8a18da80c059fb4df3fa09bd2d66a263baaf009544ba2f7081616b70529a45840ef092394b6f7b97edc0753432028e7eab256063873198dd366e20b7d7474ba35fcff9f91a6de08d3c27b2c674bd249f897fb540049e455973aef4a1d811bda4785d7cf72dff8c6b0eb9479ae066f90f3620fbb84ce47629bbdc0a57b28beb48e7afe69351e522b78abd5123005c329dc0028ddea6e9a2f5848e0e3947387ed67a18de4c31c0e441244a02480e42d0c6c0a0f37ce2712587d6f18cefa060beffed6c9c799903e054ef0dc8b5666e2e261dde0ee0b6bdb7bb369e6563f3f58705204fa379e1e99875f28d3d551aad78ed9011de29661a7393de34187d6bdcbb070646654661514778a059621336e4e4a26b1d7637b7a93a154e7dc6fe16d9e5da1ac4aaf159a851298469833bfe4c220023ca8f95a2f638fb98b6fe12f29ab881c6fcd9bd7a05be6422b98f3bd451080fbd3ad3e9d881455221d258737504380da78d3a10d885e5df2ddb4a53ff71b3126c021abb8dc832f6f28fdaa4be887c43ac5f9038dddb6b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>云原生实践：智能计算平台构建与研发</title>
@@ -1348,6 +1296,58 @@
         <tag>Centos</tag>
         <tag>Gradio</tag>
         <tag>Ollama</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d88c3591cb3f964cf598c6a8ebd6c4255d89f61e2b4ab9431bdd4808a53f6e90">c32395f63df771905c259445e1aa88f3899ee4804f798168a843621515b7539500991886f73e55266910bee5a5b66327e524d8162e2ec9fec6fcfda26661a9930eec9caf050ca5f9c108385159c0f1e968a1b5e142c0c85994af2c696ecc181ce436acc974aa63818589a52609ba5f3a9ad4010ae889f1894b4a9d9e64e2ece134003aab3794ea4436ae924ab54b02accb5b1ea9aba8acbd6abdf03218c8b53bc23a6b11578ff36c383887e99236a09a41e0489303999a2305b8961edd5d9e8017d2237ba846cb2d49e247f457936c1d6891e56c693d86e41fa9a187bd5a4c00b052e9f7ec3faf4cdd3d532d44f6fefa88ce7e06a99b145f57de3deb6599ffd1ed58513371739dc35705cdb74b10b1c94ddda5811b8d13ee7a8faeaa46c0554662f2feb46c5a685798a111b51b07c380c2ac38db9582d8488bfe0f9f09b9023bd2da9a405d57b2033ad92acc52d1733180595532b18ac8fafb9614bc10cc4b336e441b0377f897dfe9a2229b9560c655e9c1a630ec2ff80e44ea73abb02d9dde861ff4f3607159d451682f40bbb67c9b7ba74b947bb06e3fd10b5b899a6c9a3affb53a20bc7fea17a9459cdd65ebdac1af0f72612cae281535737bd7481dbd01fa4f0a6989d4e74f695374806fc1366d7ee05162485a0691b6e4b4d6ea6b0c29cbed6a0bca76ac5eeb7d215c017e580a14ca31558053c0510beb350eb067fd4fb60480f70fef4ee721c94617b9577ce6ae61e81749091cedc18869d23fb7af32fd5b95060527de58bb8a25a62fe8b68153d25fd0caf32ff07beb0860510a3ea7f4b8d46f4d3d9dead2efe87cca8e55cbd8014576e7496b36566d99d67f9d2e086828f43331b0b501942f9ff7805ecc993b5d056143085fa5ecb41c88c39ebdf11a0da1440d421a56a579c9d1a2bb256f6cbc5dc1acd1fa7e477fce1e54f74c95455e84f068e29291293a35d544469c8fb613b845e87c04b1fc5017f6449edcd65d0375ba866996b0c9261a64b903c994be7230fb9f63c9977d72471400c31eacdfc6ad1ac3b11821ba52b236bc0513f214887d61ab6b891aa99908795fad1c94ab5b12de80022aef2923cd554ae0cf38b2c2bab3fee804c7ced80bb714d5f424d79a346bec78f890231d942dc78becbeb6eeed2e7bb0a9a420c8b9592aa955f97884d8a0fcf6814ce078d8020357c742822582b72664c4d10a71981214f31b9f192731309897dcb10c330be9a0f8e50a4aadc83bfd4d2f1e647d2612f59c698680646fddeea118231405c7c4d806d81136c7f9a63e113b284bf7e91b812dc5988f8408c0c98a72c2ef9bea64c147999f6f09ef3e4f42d428c4d2bdfe5f38afbd73797efca313db496837503f1d6f7fd6c5e90f09220bfc496947f09fa574725c8be0b4af0da6873949f09b016da0986374686a4507e5bb30ec10d0de7f2d3d4f80665937a24e4fdad72652031527375570c1cc17ee0d147e7373cbfacd21445099ed3f0c6639af5a735a433c6a103e6e857f13b5ad8c76a5d9f386f47cccf4e5f3cd60cb5930429519901d5a63077a91f2151735b1fabe8ddff7bc14c10c8451de43035495269a1cceadd8d4b47552e592f5139754ef7245e71d99aa7f3ccabc7af7c9a78166ab35b8f708f71c5c882d61d4ca62f044d878e1d95b39f53e02eb477d4dabbba25e9467058f9c659d183ab0b6de3565b6d723f961ac0b9f0b155f7c88d25c4e878a26d222e9528cb6d545cbe8125316e7d99b159f524c3c67cd58e9f9881efbc3a1373b386641926a54a1f3f2beeb423e86e1d9f725fc6ddf9dfad258c05201074d923cd8890e49095784a9a28aeeaf910f1f8d61fea0e8300c7111c9f3682fce4cbd9939bfd6d22e8ec72e2103705083f7a0d6b59c3ffae8c64b3be39fb3bbec017d5a6a684b9c6205c6040dc0ecaef2dd5ad4034b9ea5e84041268a0986deb9988c44fbdba776453bb0550a533208ff9ecee53de1ee30d717eae4da19e7a47b6cf97faaf7ae608d3c056154d1c7d97f3ca026a625d6ea4587a2474eb463f633107c6731adb08403fbbadee5670e4df2fcb02d7a5c3fd9678d9d244f990fe5040dc5e114fa87d844d984997366fbc68d08b90bbdbb422237bc5c85238e44aa31b0b7dfe7dcc401575d416513ca4702b077a92a467f40da9a03fdd38e1a16eaf5875c1d83571cd68d9722674c80ad01f2c5a7010f35e29d8795a929c6c0545ead3a7f94a5fb649163c65cd9fec1e9002210500978bd65048e101023a348d767e24448960d6e33837a23aaa4c63ee4fff952b2162f2a054509243d484648c323575f8596486f6f2b2fdda7b45e5a9d5caa1e707dd46ce3683f058c</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>参考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机相关记录</title>
+    <url>/LanBlog/computer_reference.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c5a9d62a158a50279128f62e9d3043275bb00b63d9aeb0226bccdc819029d65f">13892574096ed43c3d9bcdc076d901838387543c7371061ca519d260b8163f1e3957df996a2c81e5d776a83c6e427c4935e11da00bfaabc8c54996410a580b821f4847905b7942c3946a73a4178b5de2164ace3a09b1594cc3c09e34a93ff62e1c11cf0c092f0db666a432ba4def4e225ea222b6fbde7fdfbef2ef1a7fdca1b3d57e2aa95cbf5d42e6488d7e871947bc5151f795778077a417ba5273c5b172b6ddf0359af29d0c728333da6e08649fc2411ce87deace1e72cd897fee62961d34417dcf5194601af72524dd0899a2e0d65bfd5abd6eff47a88327e83e7a877b37b719c1433dad30e2e0a3e8eaf71456d9204def87f402eb10f81dfa1ba632107a01a7876e259e523ffa56ed7b23591f60973fe0e0c86d6871b52b63c195d7ca1a184ff6178a08e320cdeb3e55b4c44e6f36d8f4a5555624f98478702fc6817435c38fc76db6160564d38420e6faebc035abce4b1bb5336322c469874b0fb3a915a07804ef8291d0f259387a7ab65721a8bc16398d503f6af4947bed3c146079a424ec26a60c33ae2b70b89263e4cf943728b02be13042f3deb9310b936c52b97a34a5d4e6c9e14b6f6373d210d0a41e492127f99a35493667d03e4d401b74727336bbf262c2bda87acb2a5a425847b00a1a52fd094343fe76ce171c347d04d5dfc46a82c0b0cb500a3760d9861c927951bd23724a0d4596d8597c22708605d0c0d14feaeb2c3053f37d0d4beb22d2ca022717f4cc8b09693bb48c7fea55ac407cdb4a0beeaf4ece4ae24ea03ec2f6b13e3ffcb865c88a07fb2427f4a33666de88852281678b051dfb1b8efad7527cdd33fdb6338602fff323c2d5770bc99bb82bed313efe6a37ae7d26d84abeef9d96fe4c0844ab2cc9a27065aa773f515c02d8d68d43565788d2d1485b14684ec886e38965607ce2968f8173ae07a094166c27b02e5c4c0cf67b540dd464b5f2f21cf0ca8a8b6f95ddf9a648482b673f144cb0a6047d7bf8729127066af02988c5b95212edce480b6a2700975aa7ba1c1f1fc3caf3040911c3cf380a9d64381fdaaebccf6e41087ef8c9c3ebd553693218654f58dd38ce017655d37d9781967609031983bae10d6899ae7cc173e75e89a34693653bdb897bc28304c99d149752c02ca71cda2d9379539e35bf8163ea766855499b9833bb8081483296cb09ed29d3e2a2975a7d113f1f8fb917e5e2576ddba469</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>QWQ</tag>
       </tags>
   </entry>
 </search>
