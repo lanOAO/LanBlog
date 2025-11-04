@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>幽篁里</title>
   
-  <subtitle>Toda mi ambición es ser libre toda mi vida.</subtitle>
+  <subtitle>Quidquid latine dictum sit, altum sonatur.</subtitle>
   <link href="https://lanoao.github.io/LanBlog/atom.xml" rel="self"/>
   
   <link href="https://lanoao.github.io/LanBlog/"/>
-  <updated>2025-09-07T11:33:28.298Z</updated>
+  <updated>2025-11-04T08:56:14.143Z</updated>
   <id>https://lanoao.github.io/LanBlog/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 学习笔记</title>
+    <link href="https://lanoao.github.io/LanBlog/Python_1.html"/>
+    <id>https://lanoao.github.io/LanBlog/Python_1.html</id>
+    <published>2025-11-04T08:31:03.000Z</published>
+    <updated>2025-11-04T08:56:14.143Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="a3138cd302d98c38c04f75cb88b91d1dabdbc914325bafdad27c13b8c171cf99">172b901311fda5dafa89e27317358587749f6b88053833814a240761be71973790ebbe06846f2440e034d3d366d915c5a38504e790b8fce97d523ee15e69a2ae67450fe5822b521e85c2f5208f1515ea07866f04a6ca3bf0bdb73254ec02fd68e7e6cdbb1060508571575042ecd908a839af15bb0b543b0574f553c6564c054f97c6993d9793546a1215996719c924d953ad01a96e2b7bbbd4bf1e72b33d3695ddffea104097e3da925ab38de8c04d616372c3df6ace2a8dcbec066ace349fb6427a21ff2240f2502955efa72cbdcbc85e6d1f446a25d2c19624f271bfcdf36bc00319db63af994e4f27173e19b9e8b0dd6448c15d75838adc8a18da80c059fb4df3fa09bd2d66a263baaf009544ba2f7081616b70529a45840ef092394b6f7b97edc0753432028e7eab256063873198dd366e20b7d7474ba35fcff9f91a6de08d3c27b2c674bd249f897fb540049e455973aef4a1d811bda4785d7cf72dff8c6b0eb9479ae066f90f3620fbb84ce47629bbdc0a57b28beb48e7afe69351e522b78abd5123005c329dc0028ddea6e9a2f5848e0e3947387ed67a18de4c31c0e441244a02480e42d0c6c0a0f37ce2712587d6f18cefa060beffed6c9c799903e054ef0dc8b5666e2e261dde0ee0b6bdb7bb369e6563f3f58705204fa379e1e99875f28d3d551aad78ed9011de29661a7393de34187d6bdcbb070646654661514778a059621336e4e4a26b1d7637b7a93a154e7dc6fe16d9e5da1ac4aaf159a851298469833bfe4c220023ca8f95a2f638fb98b6fe12f29ab881c6fcd9bd7a05be6422b98f3bd451080fbd3ad3e9d881455221d258737504380da78d3a10d885e5df2ddb4a53ff71b3126c021abb8dc832f6f28fdaa4be887c43ac5f9038dddb6b</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-xray">      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">密码是__</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu24.04使用记录</title>
+    <link href="https://lanoao.github.io/LanBlog/ubuntu_demo.html"/>
+    <id>https://lanoao.github.io/LanBlog/ubuntu_demo.html</id>
+    <published>2025-10-26T11:26:55.000Z</published>
+    <updated>2025-10-26T11:53:50.359Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>    .inline-note {      display: inline-block;      background-color: #fffbe6;      color: #333;      border-left: 4px solid #f7c948;      padding: 0.2em 0.6em;      margin: 0 0.2em;      font-size: 0.95em;      border-radius: 3px;      box-shadow: 0 1px 2px rgba(0,0,0,0.05);      font-style: italic;      cursor: help;      transition: all 0.2s ease;    }    .inline-note:hover {      background-color: #fff3bf;      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);    }</style><span id="more"></span><h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure><p>[^更新并安装]: </p><h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;style&gt;
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+&lt;/style&gt;</summary>
+    
+    
+    
+    <category term="ubuntu" scheme="https://lanoao.github.io/LanBlog/categories/ubuntu/"/>
+    
+    
+    <category term="ubuntu" scheme="https://lanoao.github.io/LanBlog/tags/ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>云原生实践：智能计算平台构建与研发</title>
