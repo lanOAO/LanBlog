@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lanoao.github.io","root":"/LanBlog/","images":"/LanBlog/images","scheme":"Gemini","darkmode":false,"version":"8.24.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism-solarizedlight.min","dark":"prism-dark.min"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"bounce","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/LanBlog/search.xml","localsearch":{"enable":true,"top_n_per_article":-1,"unescape":true,"preload":false}}</script><script src="/LanBlog/js/config.js" defer></script>
 
-    <meta name="description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
+    <meta name="description" content="基于Centos7.9操作系统和Docker容器引擎，构建Ollama + Gradio+ Deepseek&#x2F;Qwen环境，搭建大模型本地知识库，可以为企业快速搭建本地知识库，构建企业管理的智能体，提升内部信息管理效率。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="云原生实践：智能计算平台构建与研发">
 <meta property="og:url" content="https://lanoao.github.io/LanBlog/ccf_1.html">
 <meta property="og:site_name" content="幽篁里">
-<meta property="og:description" content=".inline-note {       display: inline-block;       background-color: #fffbe6;       color: #333;       border-left: 4px solid #f7c948;       padding: 0.2em 0.6em;       margin: 0 0.2em;       font">
+<meta property="og:description" content="基于Centos7.9操作系统和Docker容器引擎，构建Ollama + Gradio+ Deepseek&#x2F;Qwen环境，搭建大模型本地知识库，可以为企业快速搭建本地知识库，构建企业管理的智能体，提升内部信息管理效率。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925568.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925570.jpg">
@@ -68,7 +68,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925605.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925606.png">
 <meta property="article:published_time" content="2025-09-07T11:27:02.000Z">
-<meta property="article:modified_time" content="2025-09-07T11:33:28.298Z">
+<meta property="article:modified_time" content="2025-11-11T09:58:35.165Z">
 <meta property="article:author" content="LanOoO">
 <meta property="article:tag" content="ccf">
 <meta property="article:tag" content="dify">
@@ -196,8 +196,8 @@ customElements.define('an_loading', CharAnimation);
   <noscript>
     <link rel="stylesheet" href="/LanBlog/css/noscript.css">
   </noscript>
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="alternate" href="/LanBlog/atom.xml" title="幽篁里" type="application/atom+xml">
-</head>
+<link rel="alternate" href="/LanBlog/atom.xml" title="幽篁里" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -373,9 +373,15 @@ customElements.define('an_loading', CharAnimation);
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-09-07 19:27:02 / 修改时间：19:33:28" itemprop="dateCreated datePublished" datetime="2025-09-07T19:27:02+08:00">2025-09-07</time>
+      <time title="创建时间：2025-09-07 19:27:02" itemprop="dateCreated datePublished" datetime="2025-09-07T19:27:02+08:00">2025-09-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-11 17:58:35" itemprop="dateModified" datetime="2025-11-11T17:58:35+08:00">2025-11-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -401,7 +407,7 @@ customElements.define('an_loading', CharAnimation);
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>17k</span>
+      <span>16k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -418,28 +424,7 @@ customElements.define('an_loading', CharAnimation);
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>基于Centos7.9操作系统和Docker容器引擎，构建Ollama + Gradio+ Deepseek&#x2F;Qwen环境，搭建大模型本地知识库，可以为企业快速搭建本地知识库，构建企业管理的智能体，提升内部信息管理效率。</p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>基于Centos7.9操作系统和Docker容器引擎，构建Ollama + Gradio+ Deepseek&#x2F;Qwen环境，搭建大模型本地知识库，可以为企业快速搭建本地知识库，构建企业管理的智能体，提升内部信息管理效率。</p>
 <span id="more"></span>
 <div class="note info"><p>🤔 <strong>写在前面：</strong> 转载自2025 ccf培训内容</p>
 </div>
@@ -857,13 +842,13 @@ customElements.define('an_loading', CharAnimation);
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">32k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">29 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
