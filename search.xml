@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Flask学习笔记</title>
+    <url>/LanBlog/flask_lean1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AutoHotkey —— 自动热键软件</title>
     <url>/LanBlog/AutoHotkey1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -74,19 +87,6 @@
       <tags>
         <tag>AutoHotkey</tag>
         <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flask学习笔记</title>
-    <url>/LanBlog/flask_lean1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -438,6 +438,49 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo博文编写</title>
+    <url>/LanBlog/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
+<span id="more"></span>
+<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
+
+<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个“&#96;”</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hadoop搭建教程</title>
     <url>/LanBlog/hadoop2.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -617,6 +660,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu24.04使用记录</title>
+    <url>/LanBlog/ubuntu_demo.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
+<span id="more"></span>
+
+<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
+
+<p>[^更新并安装]: </p>
+<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 学习笔记</title>
     <url>/LanBlog/Python_1.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -643,23 +706,67 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu24.04使用记录</title>
-    <url>/LanBlog/ubuntu_demo.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
+    <title>centos更换yum源</title>
+    <url>/LanBlog/centos_yum.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>centos7更换为国内yum源</p>
 <span id="more"></span>
-
-<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
-
-<p>[^更新并安装]: </p>
-<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
-
+<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.bak</p>
+<h1 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h1><p><span class=“inline-note” title="看什么看，没有注释EmE">这里的命令是centos7的更新命令，可以根据自己的的版本替换一下</span><br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
+<h1 id="更新缓存"><a href="#更新缓存" class="headerlink" title="更新缓存"></a>更新缓存</h1><p>yum makecache</p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>ubuntu</tag>
+        <tag>yum</tag>
+        <tag>Centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>明日清单</title>
+    <url>/LanBlog/todo_list.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="1c49a70e0ea8eec22cbadb9dcbaf76e957f8847a529e5a82adbe5769e2c90f01">4139d70b29d5f8e74d5ab0d506a8a2d1c5ffdbef7010aa0eff7d387d74697f4aa20462941bd05263601c92a91fe171d1953b25d9a625c4acd2cc3deb83b3fe8a099c2c3cc4b9c445dbf8965b9533cfc826c7e080ce0becf6e7aec7bacfefb72c1f108aead79566f3d8aaf496d6f8a33a1341688ff2cc7705f580dc70396a47c620c0eda9b85e391478aab764248e662139a61e3845840949fd463b6376681702d30e134d6825924938e87de3e889901f8e3fd007803d941f9e5d4063a41e77d7fd89832a1df2a3aeadd8c8cbe8e8c3c02502d41adae5e1ec1df85bf80c57ee910b7679640d6e26da8823905cd759dfec48dd0200992a9f43f0f8c1766111a214716dea07410894e1e97d4916f7d5c90b1bd76915dfd15dd79eae3becb621455e15b52784c32dc4e1bb8105413334ebec1e147ec74615e688e93c000ce2106d78148a9e166db5544f407e845ac45fe6e0a7b62df1ab91bb82fb7e1a2f7d2e1de020e774d0c7aae5b7d5f190bedeec2048ba46bc6dcdaca9186e3999434880a6fdafda9c5aca9f3841e4d6f6dd5d58deeee69e76acf9124c058300deed1caa79c6d248cf773e45cc20fd0ff9dece8b38fa</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>清单</tag>
       </tags>
   </entry>
   <entry>
@@ -797,84 +904,55 @@
       </tags>
   </entry>
   <entry>
-    <title>centos更换yum源</title>
-    <url>/LanBlog/centos_yum.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>centos7更换为国内yum源</p>
-<span id="more"></span>
-<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.bak</p>
-<h1 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h1><p><span class=“inline-note” title="看什么看，没有注释EmE">这里的命令是centos7的更新命令，可以根据自己的的版本替换一下</span><br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
-<h1 id="更新缓存"><a href="#更新缓存" class="headerlink" title="更新缓存"></a>更新缓存</h1><p>yum makecache</p>
-]]></content>
+    <title>各种各样的参考页面</title>
+    <url>/LanBlog/reference.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="47d238a3d6a1d855e4c45a56e5d6f9225940ac099657b26398762e089661494f">c32395f63df771905c259445e1aa88f3899ee4804f798168a843621515b7539500991886f73e55266910bee5a5b66327e524d8162e2ec9fec6fcfda26661a9930eec9caf050ca5f9c108385159c0f1e968a1b5e142c0c85994af2c696ecc181ce436acc974aa63818589a52609ba5f3a9ad4010ae889f1894b4a9d9e64e2ece134003aab3794ea4436ae924ab54b02accb5b1ea9aba8acbd6abdf03218c8b53bc23a6b11578ff36c383887e99236a09a41e0489303999a2305b8961edd5d9e8017d2237ba846cb2d49e247f457936c1d6891e56c693d86e41fa9a187bd5a4c00b052e9f7ec3faf4cdd3d532d44f6fefa88ce7e06a99b145f57de3deb6599ffd1ed58513371739dc35705cdb74b10b1c927705b553e236c1fb5b2029b6eec53405522a6d42050ccd4756af71dd7134109a567c19a8b0ea663a6ea5db9c9e45b7b04f070ee1352c19a435b5caa75efdc5898372caa257405dee494e723e3d6e068931a5b597a0fded981c717c1811c8b44d98475ef290ad1e2b09710f02f5263398bf87ff4ab0872ac934d900768d632ecec7ff7ac1af1d230d36c12ca300d5eef5646a49eae352984cf9b83bb4f09be3eee51d3e0b56706421729b7e0f5d31ea081349287ab7b21fae891b5b73812921036dbccf9b0e193294c72f09921e7447ee8c06b0932cdedf282f40d73bb727c2a082a1ee8cdffd969f89f5c7988f0dacc75b5b09733090d4f6159df1d76c6b35041eaff47343f7c7ab4a0e900be17b662b292191fd69f363c9bef52f77a56b418fd67ead66543142ea3ee540ec8776891eb8c6273d8f1f70aaaa1135d1ca8d3946fddcde7382e8f10d0bff690c51a433fd6bbc7d6e9a6cad1aa8a9da9b8b25da9ead4ffad254ee88dcd3492733970f1ff8dcccf1d7e00e1a554eb515981c88da13afe81a15104ec87d8b2b06f38e22aa0260f55931cdaed7ba01cd064ef902a9d9084f84fbfca049d4180c1f12019a932085e010ca2339f3adc8bc1564a2e2549f828112fd8d1c724c6b78cda73f1fb517a044ab42e13ea007e1ac0facec239e2d01f90fc5685c3c4f0f9be7ff2187780c14ff1a853df48ea08ec965e4fce6bbd20398d37de1e1c1fec53781709824ab24a0394dcf67d48969f5dcb3204c710fd5a4c4f3ccb7bf2c4be12cf416abdd2baef6fa2d637fa4be636905144e14f07b6bd7118d0378be60995f0cc30528387dc915ab44262a10a3ece914b6f234b340747bd82234be7c519e3ab12a1abe5b362dd9db679a43fe1a1b7944f99d1f4153defcfaa4152b831f33258290fd637af61c25adf14ccc265a8705bfa5d19d478ca4784b58117d1cb67921d7821b1112c4be9a357d2242f64299d8be64d7ba3759a95a039b61b4b809f8747789dd62bc6969f99b12879b2ccc341758e3f85f678d5b40ed442b5d092fa6d924553a9f0fbbcf072c622f663ec0dd34e5ff43a40c4f3a1f0b4f5b79a26850d5f22ac8df5e4bfb6d838e0c2ffb68d5c31e94651edbd2e04e8b813d56fc37f219924b90a2c42b9ac2b4a35e91ddd077b32b809e07acdb44fbfa35a4d84ec74d687bdfeb0dd218ea2ac5bfcb555d34ffe53e5c77b71520cbdaadb22949c18ff5d6d74cfe4cf75998fb4eac5cab10932705033a9fb391ec44cefef2ddc601d9a4bb66d942449e5bbdf958292aa8e8fcc9d3c85e83d8a26754ac107ca0846a0ba66885463fec0f3d19ed31ce0623a6d3d1f2bc1d1d92d298100acce697450e7403d8a31e078a672a3053d0aae72db16a6cd37b617a5d9616c47d68a76d0bb9a99096eba0681ee3ebef986b1b0d82d89ff315071569ca38c866af5ab5a855d2fa4e6777ee5fc0d0a9416132c7f71a0dbe4bf58ed27cd2b6367f46ca51d3e4d341db4e2ce9d2bde14486f9afb1fcd879969c2263ad87890afb42646172afdc24fd05f8a5d9ff1ac9970143cf9932e88b445514fa0815418b09d744001d2be5e79aa7c8c6f2a26ff3fd4f5101729b4b948228a96b9efb3b60820a7e230f224c8280c3348b65bd6fec8f44ff165ef90edc76361ef4697c2ee9ae0a31bc0a85d53626425090cb8fae4e51a4966195926f8bb3ca3b8ad6969de5125f873645637cd27f7de10703b2c4a50dc059c05499b6365b99c654d83b59e1988dfb5bab64c661f8d0f4e2d1100e18be72f878172adaa80ed2ff24def28311d220ed67a6d4d64bc1be4d390e517af8d428f51f0a5c60184dd09b3a8dd78e1bef520f7b4088ac9cfca4c1a0981312b0673acd6f9f263d0d123171f445c3beb6db679cc4ea67268d8c7bbae4df53abad312f2afa24f8abbaa944a91a21d6b0a0942e0c9567c0a290c6da0dc367bbec24aad</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>Linux</category>
+        <category>记录</category>
       </categories>
       <tags>
-        <tag>yum</tag>
-        <tag>Centos</tag>
+        <tag>参考记录</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hexo博文编写</title>
-    <url>/LanBlog/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
-<span id="more"></span>
-<h1 id="网页内容"><a href="#网页内容" class="headerlink" title="网页内容"></a>网页内容</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h1 id="文章选项"><a href="#文章选项" class="headerlink" title="文章选项"></a>文章选项</h1><p>这里是文章的选项👀</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h1 id="文本内容"><a href="#文本内容" class="headerlink" title="文本内容"></a>文本内容</h1><p>这里是文章内容编写相关👀</p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个“&#96;”</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-
-<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+    <title>计算机相关记录</title>
+    <url>/LanBlog/computer_reference.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="41c52a4f3386df9ec67b3f4d67ece81bd8cb8c574e73df7b7c1d019daccbe494">13892574096ed43c3d9bcdc076d901838387543c7371061ca519d260b8163f1e3957df996a2c81e5d776a83c6e427c4935e11da00bfaabc8c54996410a580b821f4847905b7942c3946a73a4178b5de2164ace3a09b1594cc3c09e34a93ff62e1c11cf0c092f0db666a432ba4def4e226646bc09654a4de4d0a319eb04c8724ff82c8cabd411e43b38080717ed877fcdc79abc934d654a1b9edc6225a3efbdba7d987066148e750ce4aef4e7a6e6ea5e439c640749a77883d5999032e8e06d8971652c95e85583b1bdac996ff4e92204fcbdc270ab69dbe81a21eecacbf7c2dc3b7f5c7a808bc96d795a4735b0f1474103df27c0cb8ea27a82d9a385353a144ed20a8463e6a06eea158e011c60db4832cbaadc26024a81b39e970a03f0d3aa6d28b3f970454fb937c376023282a1a76d6f86edfa256d50ba0a45effdf786f9c29270710d30ede7ed4c3a6b688525ceacca1a7573fa7b167dfb11ce54f7e74bbb</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
 </div>
-<table>
-<thead>
-<tr>
-<th>语法</th>
-<th>效果说明</th>
-<th>常见用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
+<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
       <tags>
-        <tag>博客</tag>
+        <tag>QWQ</tag>
       </tags>
   </entry>
   <entry>
@@ -1247,90 +1325,12 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>docker</tag>
         <tag>Centos</tag>
+        <tag>docker</tag>
         <tag>ccf</tag>
         <tag>dify</tag>
         <tag>Gradio</tag>
         <tag>Ollama</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机相关记录</title>
-    <url>/LanBlog/computer_reference.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="41c52a4f3386df9ec67b3f4d67ece81bd8cb8c574e73df7b7c1d019daccbe494">13892574096ed43c3d9bcdc076d901838387543c7371061ca519d260b8163f1e3957df996a2c81e5d776a83c6e427c4935e11da00bfaabc8c54996410a580b821f4847905b7942c3946a73a4178b5de2164ace3a09b1594cc3c09e34a93ff62e1c11cf0c092f0db666a432ba4def4e226646bc09654a4de4d0a319eb04c8724ff82c8cabd411e43b38080717ed877fcdc79abc934d654a1b9edc6225a3efbdba7d987066148e750ce4aef4e7a6e6ea5e439c640749a77883d5999032e8e06d8971652c95e85583b1bdac996ff4e92204fcbdc270ab69dbe81a21eecacbf7c2dc3b7f5c7a808bc96d795a4735b0f1474103df27c0cb8ea27a82d9a385353a144ed20a8463e6a06eea158e011c60db4832cbaadc26024a81b39e970a03f0d3aa6d28b3f970454fb937c376023282a1a76d6f86edfa256d50ba0a45effdf786f9c29270710d30ede7ed4c3a6b688525ceacca1a7573fa7b167dfb11ce54f7e74bbb</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>QWQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>各种各样的参考页面</title>
-    <url>/LanBlog/reference.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="47d238a3d6a1d855e4c45a56e5d6f9225940ac099657b26398762e089661494f">c32395f63df771905c259445e1aa88f3899ee4804f798168a843621515b7539500991886f73e55266910bee5a5b66327e524d8162e2ec9fec6fcfda26661a9930eec9caf050ca5f9c108385159c0f1e968a1b5e142c0c85994af2c696ecc181ce436acc974aa63818589a52609ba5f3a9ad4010ae889f1894b4a9d9e64e2ece134003aab3794ea4436ae924ab54b02accb5b1ea9aba8acbd6abdf03218c8b53bc23a6b11578ff36c383887e99236a09a41e0489303999a2305b8961edd5d9e8017d2237ba846cb2d49e247f457936c1d6891e56c693d86e41fa9a187bd5a4c00b052e9f7ec3faf4cdd3d532d44f6fefa88ce7e06a99b145f57de3deb6599ffd1ed58513371739dc35705cdb74b10b1c927705b553e236c1fb5b2029b6eec53405522a6d42050ccd4756af71dd7134109a567c19a8b0ea663a6ea5db9c9e45b7b04f070ee1352c19a435b5caa75efdc5898372caa257405dee494e723e3d6e068931a5b597a0fded981c717c1811c8b44d98475ef290ad1e2b09710f02f5263398bf87ff4ab0872ac934d900768d632ecec7ff7ac1af1d230d36c12ca300d5eef5646a49eae352984cf9b83bb4f09be3eee51d3e0b56706421729b7e0f5d31ea081349287ab7b21fae891b5b73812921036dbccf9b0e193294c72f09921e7447ee8c06b0932cdedf282f40d73bb727c2a082a1ee8cdffd969f89f5c7988f0dacc75b5b09733090d4f6159df1d76c6b35041eaff47343f7c7ab4a0e900be17b662b292191fd69f363c9bef52f77a56b418fd67ead66543142ea3ee540ec8776891eb8c6273d8f1f70aaaa1135d1ca8d3946fddcde7382e8f10d0bff690c51a433fd6bbc7d6e9a6cad1aa8a9da9b8b25da9ead4ffad254ee88dcd3492733970f1ff8dcccf1d7e00e1a554eb515981c88da13afe81a15104ec87d8b2b06f38e22aa0260f55931cdaed7ba01cd064ef902a9d9084f84fbfca049d4180c1f12019a932085e010ca2339f3adc8bc1564a2e2549f828112fd8d1c724c6b78cda73f1fb517a044ab42e13ea007e1ac0facec239e2d01f90fc5685c3c4f0f9be7ff2187780c14ff1a853df48ea08ec965e4fce6bbd20398d37de1e1c1fec53781709824ab24a0394dcf67d48969f5dcb3204c710fd5a4c4f3ccb7bf2c4be12cf416abdd2baef6fa2d637fa4be636905144e14f07b6bd7118d0378be60995f0cc30528387dc915ab44262a10a3ece914b6f234b340747bd82234be7c519e3ab12a1abe5b362dd9db679a43fe1a1b7944f99d1f4153defcfaa4152b831f33258290fd637af61c25adf14ccc265a8705bfa5d19d478ca4784b58117d1cb67921d7821b1112c4be9a357d2242f64299d8be64d7ba3759a95a039b61b4b809f8747789dd62bc6969f99b12879b2ccc341758e3f85f678d5b40ed442b5d092fa6d924553a9f0fbbcf072c622f663ec0dd34e5ff43a40c4f3a1f0b4f5b79a26850d5f22ac8df5e4bfb6d838e0c2ffb68d5c31e94651edbd2e04e8b813d56fc37f219924b90a2c42b9ac2b4a35e91ddd077b32b809e07acdb44fbfa35a4d84ec74d687bdfeb0dd218ea2ac5bfcb555d34ffe53e5c77b71520cbdaadb22949c18ff5d6d74cfe4cf75998fb4eac5cab10932705033a9fb391ec44cefef2ddc601d9a4bb66d942449e5bbdf958292aa8e8fcc9d3c85e83d8a26754ac107ca0846a0ba66885463fec0f3d19ed31ce0623a6d3d1f2bc1d1d92d298100acce697450e7403d8a31e078a672a3053d0aae72db16a6cd37b617a5d9616c47d68a76d0bb9a99096eba0681ee3ebef986b1b0d82d89ff315071569ca38c866af5ab5a855d2fa4e6777ee5fc0d0a9416132c7f71a0dbe4bf58ed27cd2b6367f46ca51d3e4d341db4e2ce9d2bde14486f9afb1fcd879969c2263ad87890afb42646172afdc24fd05f8a5d9ff1ac9970143cf9932e88b445514fa0815418b09d744001d2be5e79aa7c8c6f2a26ff3fd4f5101729b4b948228a96b9efb3b60820a7e230f224c8280c3348b65bd6fec8f44ff165ef90edc76361ef4697c2ee9ae0a31bc0a85d53626425090cb8fae4e51a4966195926f8bb3ca3b8ad6969de5125f873645637cd27f7de10703b2c4a50dc059c05499b6365b99c654d83b59e1988dfb5bab64c661f8d0f4e2d1100e18be72f878172adaa80ed2ff24def28311d220ed67a6d4d64bc1be4d390e517af8d428f51f0a5c60184dd09b3a8dd78e1bef520f7b4088ac9cfca4c1a0981312b0673acd6f9f263d0d123171f445c3beb6db679cc4ea67268d8c7bbae4df53abad312f2afa24f8abbaa944a91a21d6b0a0942e0c9567c0a290c6da0dc367bbec24aad</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>参考记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>明日清单</title>
-    <url>/LanBlog/todo_list.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="1c49a70e0ea8eec22cbadb9dcbaf76e957f8847a529e5a82adbe5769e2c90f01">4139d70b29d5f8e74d5ab0d506a8a2d1c5ffdbef7010aa0eff7d387d74697f4aa20462941bd05263601c92a91fe171d1953b25d9a625c4acd2cc3deb83b3fe8a099c2c3cc4b9c445dbf8965b9533cfc826c7e080ce0becf6e7aec7bacfefb72c1f108aead79566f3d8aaf496d6f8a33a1341688ff2cc7705f580dc70396a47c620c0eda9b85e391478aab764248e662139a61e3845840949fd463b6376681702d30e134d6825924938e87de3e889901f8e3fd007803d941f9e5d4063a41e77d7fd89832a1df2a3aeadd8c8cbe8e8c3c02502d41adae5e1ec1df85bf80c57ee910b7679640d6e26da8823905cd759dfec48dd0200992a9f43f0f8c1766111a214716dea07410894e1e97d4916f7d5c90b1bd76915dfd15dd79eae3becb621455e15b52784c32dc4e1bb8105413334ebec1e147ec74615e688e93c000ce2106d78148a9e166db5544f407e845ac45fe6e0a7b62df1ab91bb82fb7e1a2f7d2e1de020e774d0c7aae5b7d5f190bedeec2048ba46bc6dcdaca9186e3999434880a6fdafda9c5aca9f3841e4d6f6dd5d58deeee69e76acf9124c058300deed1caa79c6d248cf773e45cc20fd0ff9dece8b38fa</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/LanBlog/lib/hbe.js"></script><link href="/LanBlog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>清单</tag>
       </tags>
   </entry>
 </search>
