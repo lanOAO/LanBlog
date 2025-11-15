@@ -75,9 +75,9 @@
     <category term="Linux" scheme="https://lanoao.github.io/LanBlog/categories/Linux/"/>
     
     
-    <category term="ubuntu" scheme="https://lanoao.github.io/LanBlog/tags/ubuntu/"/>
-    
     <category term="Linux" scheme="https://lanoao.github.io/LanBlog/tags/Linux/"/>
+    
+    <category term="ubuntu" scheme="https://lanoao.github.io/LanBlog/tags/ubuntu/"/>
     
   </entry>
   
@@ -102,8 +102,6 @@
     
     <category term="Linux" scheme="https://lanoao.github.io/LanBlog/tags/Linux/"/>
     
-    <category term="docker" scheme="https://lanoao.github.io/LanBlog/tags/docker/"/>
-    
     <category term="Centos" scheme="https://lanoao.github.io/LanBlog/tags/Centos/"/>
     
     <category term="ccf" scheme="https://lanoao.github.io/LanBlog/tags/ccf/"/>
@@ -113,6 +111,8 @@
     <category term="Gradio" scheme="https://lanoao.github.io/LanBlog/tags/Gradio/"/>
     
     <category term="Ollama" scheme="https://lanoao.github.io/LanBlog/tags/Ollama/"/>
+    
+    <category term="docker" scheme="https://lanoao.github.io/LanBlog/tags/docker/"/>
     
   </entry>
   
