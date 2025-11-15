@@ -102,9 +102,9 @@
     
     <category term="Linux" scheme="https://lanoao.github.io/LanBlog/tags/Linux/"/>
     
-    <category term="Centos" scheme="https://lanoao.github.io/LanBlog/tags/Centos/"/>
-    
     <category term="docker" scheme="https://lanoao.github.io/LanBlog/tags/docker/"/>
+    
+    <category term="Centos" scheme="https://lanoao.github.io/LanBlog/tags/Centos/"/>
     
     <category term="ccf" scheme="https://lanoao.github.io/LanBlog/tags/ccf/"/>
     
