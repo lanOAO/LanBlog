@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://blog.lanouo.xyz/Python_1.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-15</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.lanouo.xyz/todo_list.html</loc>
+    <lastmod>2025-11-15</lastmod>
   </url>
   <url>
     <loc>http://blog.lanouo.xyz/flask_lean1.html</loc>
@@ -31,14 +35,6 @@
   <url>
     <loc>http://blog.lanouo.xyz/reference.html</loc>
     <lastmod>2025-11-13</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.lanouo.xyz/todo_list.html</loc>
-    <lastmod>2025-11-11</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.lanouo.xyz/computer_reference.html</loc>
-    <lastmod>2025-11-11</lastmod>
   </url>
   <url>
     <loc>http://blog.lanouo.xyz/docker_note1.html</loc>
