@@ -67,12 +67,12 @@ function extractCharacters(text) {
     const outFile = path.join(fontDestDir, `subset_${ts}.txt`);
     fs.writeFileSync(outFile, subset, 'utf8');
     const fontsRootDir = path.join(process.cwd(),'..','fonts');
-    const outputs = fs.readdirSync(fontDestDir).filter(f => f.endsWith('.woff') || f.endsWith('.woff2'));
+    const outputs = fs.readdirSync(fontDestDir).filter(f => f.endsWith('.ttf'));
     for (const f of outputs) {
       fs.copyFileSync(path.join(fontDestDir, f), path.join(fontsRootDir, f));
     }
     console.log('🎉 字体子集化与压缩完成！输出目录：', fontDestDir);
     console.log('📝 输出识别到的字符文件：', outFile);
-    console.log('🔁 已替换 fonts 目录中的子集化字体：', outputs.join(', '));
+    console.log('🔁 已将裁剪后的 .ttf 文件复制到 fonts 目录：', outputs.join(', '));
   });
 })();
