@@ -100,9 +100,9 @@
     <category term="搭建" scheme="http://blog.lanouo.xyz/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
-    
     <category term="Linux" scheme="http://blog.lanouo.xyz/tags/Linux/"/>
+    
+    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
     
     <category term="docker" scheme="http://blog.lanouo.xyz/tags/docker/"/>
     

@@ -9,8 +9,8 @@ const Fontmin = require('fontmin');
 
 // 1️⃣ 扫描博客 所有 .md 文件
 const postsDir = path.join(process.cwd(),'..','..','source');
-const fontSrcDir = path.join(process.cwd(),'..', 'fonts');
-const fontDestDir = path.join(fontSrcDir, '_build');
+const fontSrcDir = path.join(process.cwd(),'..','fonts','_fonts_src');
+const fontDestDir = path.join(process.cwd(),'..','fonts','_build');
 
 // 提取文本的正则（中英文、数字、常见标点）
 const CHAR_FILTER = /[\u4e00-\u9fa5a-zA-Z0-9.,;:!?'"“”‘’—\-_=+()/\\[\]{}<>@#￥%……&*·、。\s]/g;
@@ -61,6 +61,18 @@ function extractCharacters(text) {
 
   fontmin.run(err => {
     if (err) throw err;
+    const now = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const ts = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+    const outFile = path.join(fontDestDir, `subset_${ts}.txt`);
+    fs.writeFileSync(outFile, subset, 'utf8');
+    const fontsRootDir = path.join(process.cwd(),'..','fonts');
+    const outputs = fs.readdirSync(fontDestDir).filter(f => f.endsWith('.woff') || f.endsWith('.woff2'));
+    for (const f of outputs) {
+      fs.copyFileSync(path.join(fontDestDir, f), path.join(fontsRootDir, f));
+    }
     console.log('🎉 字体子集化与压缩完成！输出目录：', fontDestDir);
+    console.log('📝 输出识别到的字符文件：', outFile);
+    console.log('🔁 已替换 fonts 目录中的子集化字体：', outputs.join(', '));
   });
 })();
