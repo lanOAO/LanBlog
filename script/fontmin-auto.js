@@ -8,7 +8,7 @@ import path from 'path';
 import Fontmin from 'fontmin';
 
 // 1️⃣ 扫描博客 所有 .md 文件
-const postsDir = path.join(process.cwd(),'..','_posts');
+const postsDir = path.join(process.cwd(),'..','..','source');
 const fontSrcDir = path.join(process.cwd(),'..', 'fonts');
 const fontDestDir = path.join(fontSrcDir, 'build');
 
