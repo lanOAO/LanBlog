@@ -3,14 +3,14 @@
  * 使用方式： node scripts/fontmin-auto.js
  */
 
-import fs from 'fs';
-import path from 'path';
-import Fontmin from 'fontmin';
+const fs = require('fs');
+const path = require('path');
+const Fontmin = require('fontmin');
 
 // 1️⃣ 扫描博客 所有 .md 文件
 const postsDir = path.join(process.cwd(),'..','..','source');
 const fontSrcDir = path.join(process.cwd(),'..', 'fonts');
-const fontDestDir = path.join(fontSrcDir, 'build');
+const fontDestDir = path.join(fontSrcDir, '_build');
 
 // 提取文本的正则（中英文、数字、常见标点）
 const CHAR_FILTER = /[\u4e00-\u9fa5a-zA-Z0-9.,;:!?'"“”‘’—\-_=+()/\\[\]{}<>@#￥%……&*·、。\s]/g;
