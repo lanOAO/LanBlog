@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.lanouo.xyz/git.html</loc>
+    
+    <lastmod>2025-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.lanouo.xyz/hadoop2.html</loc>
     
     <lastmod>2025-11-17</lastmod>
@@ -185,6 +194,13 @@
   </url>
   
   <url>
+    <loc>http://blog.lanouo.xyz/tags/git/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.lanouo.xyz/tags/Hadoop/</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -213,6 +229,13 @@
   </url>
   
   <url>
+    <loc>http://blog.lanouo.xyz/tags/docker/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -220,7 +243,7 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/docker/</loc>
+    <loc>http://blog.lanouo.xyz/tags/%E6%B8%85%E5%8D%95/</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -235,13 +258,6 @@
   
   <url>
     <loc>http://blog.lanouo.xyz/tags/Centos/</loc>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.lanouo.xyz/tags/%E6%B8%85%E5%8D%95/</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
