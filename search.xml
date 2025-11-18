@@ -14,36 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git 学习</title>
-    <url>/git.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><span id="more"></span>
-<blockquote>
-<p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
-</blockquote>
-<p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p>
-<p><code>Git Commit</code>：提交新记录，添加新节点</p>
-<p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p>
-<blockquote>
-<p><code>main*</code>代表你当前在main分支下</p>
-</blockquote>
-<p><code>git checkout &lt;name&gt;</code>：切换分支</p>
-<blockquote>
-<p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
-<blockquote>
-<p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p>
-</blockquote>
-</blockquote>
-<p><code>git merge &lt;your-branch-name&gt;</code> 合并分支</p>
-<p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AutoHotkey —— 自动热键软件</title>
     <url>/AutoHotkey1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -647,6 +617,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Git 学习</title>
+    <url>/git.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p>
+<span id="more"></span>
+
+<blockquote>
+<p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
+</blockquote>
+<p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p>
+<p><code>Git Commit</code>：提交新记录，添加新节点</p>
+<p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p>
+<blockquote>
+<p><code>main*</code>代表你当前在main分支下</p>
+</blockquote>
+<p><code>git checkout &lt;name&gt;</code>：切换分支</p>
+<blockquote>
+<p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
+<blockquote>
+<p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p>
+</blockquote>
+</blockquote>
+<p><code>git merge &lt;your-branch-name&gt;</code> 合并分支</p>
+<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181543273.png" alt="image-20251118153332906"></p>
+<p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181548515.png" alt="image-20251118154854472"></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博文编写</title>
     <url>/hexo-optimize.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记</p>
@@ -771,26 +774,6 @@
       <tags>
         <tag>yum</tag>
         <tag>Centos</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>明日清单</title>
-    <url>/todo_list.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>明天要完成的ioi</p>
-<span id="more"></span>
-<ul>
-<li><input disabled="" type="checkbox"> Spring boot</li>
-<li><input disabled="" type="checkbox"> flask</li>
-<li><input disabled="" type="checkbox"> 80% python 进阶</li>
-<li><input disabled="" type="checkbox"> 外卖项目</li>
-<li><input checked="" disabled="" type="checkbox"> ccf比赛赛题</li>
-</ul>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>清单</tag>
       </tags>
   </entry>
   <entry>
@@ -925,6 +908,26 @@
       </categories>
       <tags>
         <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>明日清单</title>
+    <url>/todo_list.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>明天要完成的ioi</p>
+<span id="more"></span>
+<ul>
+<li><input disabled="" type="checkbox"> Spring boot</li>
+<li><input disabled="" type="checkbox"> flask</li>
+<li><input disabled="" type="checkbox"> 80% python 进阶</li>
+<li><input disabled="" type="checkbox"> 外卖项目</li>
+<li><input checked="" disabled="" type="checkbox"> ccf比赛赛题</li>
+</ul>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>清单</tag>
       </tags>
   </entry>
   <entry>

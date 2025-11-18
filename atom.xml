@@ -6,7 +6,7 @@
   <link href="http://blog.lanouo.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.lanouo.xyz/"/>
-  <updated>2025-11-17T13:39:08.578Z</updated>
+  <updated>2025-11-18T09:09:42.668Z</updated>
   <id>http://blog.lanouo.xyz/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="http://blog.lanouo.xyz/git.html"/>
     <id>http://blog.lanouo.xyz/git.html</id>
     <published>2025-11-17T11:29:01.000Z</published>
-    <updated>2025-11-17T13:39:08.578Z</updated>
+    <updated>2025-11-18T09:09:42.668Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><span id="more"></span><blockquote><p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p></blockquote><p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p><p><code>Git Commit</code>：提交新记录，添加新节点</p><p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p><blockquote><p><code>main*</code>代表你当前在main分支下</p></blockquote><p><code>git checkout &lt;name&gt;</code>：切换分支</p><blockquote><p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p><blockquote><p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p></blockquote></blockquote><p><code>git merge &lt;your-branch-name&gt;</code> 合并分支</p><p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p><span id="more"></span><blockquote><p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p></blockquote><p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p><p><code>Git Commit</code>：提交新记录，添加新节点</p><p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p><blockquote><p><code>main*</code>代表你当前在main分支下</p></blockquote><p><code>git checkout &lt;name&gt;</code>：切换分支</p><blockquote><p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p><blockquote><p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p></blockquote></blockquote><p><code>git merge &lt;your-branch-name&gt;</code> 合并分支</p><p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181543273.png" alt="image-20251118153332906"></p><p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181548515.png" alt="image-20251118154854472"></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
-&lt;blockquote&gt;
-&lt;p&gt;学</summary>
-      
+    <summary type="html">&lt;p&gt;关于git的学习记录 oio&lt;/p&gt;</summary>
     
     
     
