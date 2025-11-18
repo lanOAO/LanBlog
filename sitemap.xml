@@ -215,14 +215,21 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/Python/</loc>
+    <loc>http://blog.lanouo.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
+    <loc>http://blog.lanouo.xyz/tags/Hexo/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/Python/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -243,14 +250,7 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.lanouo.xyz/tags/Hexo/</loc>
+    <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
