@@ -173,6 +173,20 @@
 
   
   <url>
+    <loc>http://blog.lanouo.xyz/tags/Flask/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/git/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.lanouo.xyz/tags/AutoHotkey/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -187,21 +201,14 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/git/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.lanouo.xyz/tags/Flask/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/Hadoop/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/Linux/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -222,21 +229,7 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/Linux/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.lanouo.xyz/tags/docker/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -258,6 +251,13 @@
   
   <url>
     <loc>http://blog.lanouo.xyz/tags/%E6%B8%85%E5%8D%95/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/docker/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -301,14 +301,14 @@
 
   
   <url>
-    <loc>http://blog.lanouo.xyz/categories/%E5%88%A9%E5%99%A8OuO/</loc>
+    <loc>http://blog.lanouo.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://blog.lanouo.xyz/categories/%E5%88%A9%E5%99%A8OuO/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
