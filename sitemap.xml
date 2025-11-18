@@ -208,13 +208,6 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/git/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -222,14 +215,14 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/Python/</loc>
+    <loc>http://blog.lanouo.xyz/tags/git/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
+    <loc>http://blog.lanouo.xyz/tags/Python/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -250,13 +243,6 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/docker/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/%E6%B8%85%E5%8D%95/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -264,7 +250,21 @@
   </url>
   
   <url>
+    <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.lanouo.xyz/tags/%E5%8F%82%E8%80%83%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/docker/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
