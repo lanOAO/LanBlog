@@ -1,53 +1,57 @@
-function set_image_size(image, width, height) 
-{
-    image.setAttribute("width", width + "px");
-    image.setAttribute("height", height + "px");
-}
-
-function hexo_resize_image()
-{
-    var imgs = document.getElementsByTagName('img');
-    for (var i = imgs.length - 1; i >= 0; i--) 
-    {
-        var img = imgs[i];
-
-        var src = img.getAttribute('src').toString();
-
-        var fields = src.match(/(?<=\?)\d*x\d*/g);
-        if (fields && fields.length == 1)
-        {
-            var values = fields[0].split("x");
-            if (values.length == 2)
-            {
-                var width = values[0];
-                var height = values[1];
-
-                if (!(width.length && height.length))
-                {
-                    var n_width = img.naturalWidth;
-                    var n_height = img.naturalHeight;
-                    if (width.length > 0)
-                    {
-                        height = n_height*width/n_width;
-                    }
-                    if (height.length > 0)
-                    {
-                        width = n_width*height/n_height;
-                    }
-                }
-                set_image_size(img, width, height);
-            }
-            continue;
-        }
-
-        fields = src.match(/(?<=\?)\d*/g);
-        if (fields && fields.length == 1)
-        {
-            var scale = parseFloat(fields[0].toString());
-            var width = scale/100.0*img.naturalWidth;
-            var height = scale/100.0*img.naturalHeight;
-            set_image_size(img, width, height);
-        }
+function setImageSize(image, width, height) {
+    if (width) image.setAttribute("width", width + "px");
+    if (height) image.setAttribute("height", height + "px");
+  }
+  
+  function setImageAlign(image, align) {
+    if (!align) return;
+    align = align.toLowerCase();
+    if (align === 'l') {
+      image.style.display = 'block';
+      image.style.marginLeft = '0';
+      image.style.marginRight = 'auto';
+    } else if (align === 'r') {
+      image.style.display = 'block';
+      image.style.marginLeft = 'auto';
+      image.style.marginRight = '0';
     }
-}
-window.onload = hexo_resize_image;
+    // 中间或其他不处理
+  }
+  
+  function hexoResizeImage() {
+    const imgs = document.querySelectorAll('img');
+  
+    imgs.forEach(img => {
+      const src = img.getAttribute('src');
+      if (!src) return; // 避免报错
+  
+      // 匹配 ?100x200l 或 ?50r 或 ?100x200 等
+      const match = src.match(/\?(\d*)x?(\d*)([lr]?)/i);
+      if (!match) return;
+  
+      let width = match[1] ? parseFloat(match[1]) : 0;
+      let height = match[2] ? parseFloat(match[2]) : 0;
+      const align = match[3] || null;
+  
+      const naturalWidth = img.naturalWidth;
+      const naturalHeight = img.naturalHeight;
+  
+      // 宽高比例计算
+      if (width && !height) {
+        height = Math.round(naturalHeight * width / naturalWidth);
+      } else if (height && !width) {
+        width = Math.round(naturalWidth * height / naturalHeight);
+      } else if (!width && !height && match[1]) {
+        // 纯百分比缩放 ?50
+        const scale = parseFloat(match[1]) / 100;
+        width = Math.round(naturalWidth * scale);
+        height = Math.round(naturalHeight * scale);
+      }
+  
+      setImageSize(img, width, height);
+      setImageAlign(img, align);
+    });
+  }
+  
+  window.addEventListener('load', hexoResizeImage);
+  
