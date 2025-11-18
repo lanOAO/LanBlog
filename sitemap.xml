@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.lanouo.xyz/hexo-optimize.html</loc>
+    
+    <lastmod>2025-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.lanouo.xyz/git.html</loc>
     
     <lastmod>2025-11-18</lastmod>
@@ -146,15 +155,6 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/hexo-optimize.html</loc>
-    
-    <lastmod>2025-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/index.html</loc>
     
     <lastmod>2025-07-06</lastmod>
@@ -173,13 +173,6 @@
 
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/Flask/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/AutoHotkey/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,6 +181,20 @@
   
   <url>
     <loc>http://blog.lanouo.xyz/tags/%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/Flask/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/git/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -208,21 +215,14 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.lanouo.xyz/tags/git/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.lanouo.xyz/tags/Python/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -243,21 +243,14 @@
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/%E6%B8%85%E5%8D%95/</loc>
+    <loc>http://blog.lanouo.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/tags/ubuntu/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.lanouo.xyz/tags/%E5%8F%82%E8%80%83%E8%AE%B0%E5%BD%95/</loc>
+    <loc>http://blog.lanouo.xyz/tags/Hexo/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -265,6 +258,20 @@
   
   <url>
     <loc>http://blog.lanouo.xyz/tags/docker/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/%E6%B8%85%E5%8D%95/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lanouo.xyz/tags/%E5%8F%82%E8%80%83%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -301,14 +308,14 @@
 
   
   <url>
-    <loc>http://blog.lanouo.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://blog.lanouo.xyz/categories/%E5%88%A9%E5%99%A8OuO/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.lanouo.xyz/categories/%E5%88%A9%E5%99%A8OuO/</loc>
+    <loc>http://blog.lanouo.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
