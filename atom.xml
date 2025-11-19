@@ -123,9 +123,9 @@
     
     <category term="Linux" scheme="http://blog.lanouo.xyz/tags/Linux/"/>
     
-    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
-    
     <category term="docker" scheme="http://blog.lanouo.xyz/tags/docker/"/>
+    
+    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
     
     <category term="ccf" scheme="http://blog.lanouo.xyz/tags/ccf/"/>
     
