@@ -1,82 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AutoHotkey —— 自动热键软件</title>
-    <url>/AutoHotkey1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-
-<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
-<span id="more"></span>
-
-<blockquote>
-<p>以下全部建立在2.0.19版本的的基础上</p>
-</blockquote>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
-<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
-<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
-<li>双击脚本，即可运行</li>
-</ul>
-<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
-<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
-</blockquote>
-<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
-<ul>
-<li><code>#</code> ：win 键</li>
-<li><code>!</code> ：alt</li>
-<li><code>^</code> ：ctrl</li>
-<li><code>+</code> ：shift</li>
-<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
-</ul>
-<blockquote>
-<p><code>^q</code> 即代表ctrl + q</p>
-</blockquote>
-<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
-<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
-<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
-<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>一个脚本里可以有多个热键</li>
-<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
-</ul>
-<hr>
-<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-
-<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
-<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
-]]></content>
-      <categories>
-        <category>利器OuO</category>
-      </categories>
-      <tags>
-        <tag>AutoHotkey</tag>
-        <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop入门</title>
     <url>/hadoop1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -425,6 +349,207 @@
       </tags>
   </entry>
   <entry>
+    <title>Flask学习笔记</title>
+    <url>/flask_lean1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <url>/AutoHotkey1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+
+<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>以下全部建立在2.0.19版本的的基础上</p>
+</blockquote>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
+<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
+<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
+<li>双击脚本，即可运行</li>
+</ul>
+<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
+<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
+</blockquote>
+<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
+<ul>
+<li><code>#</code> ：win 键</li>
+<li><code>!</code> ：alt</li>
+<li><code>^</code> ：ctrl</li>
+<li><code>+</code> ：shift</li>
+<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
+</ul>
+<blockquote>
+<p><code>^q</code> 即代表ctrl + q</p>
+</blockquote>
+<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
+<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
+<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
+<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
+<li>一个脚本里可以有多个热键</li>
+<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
+</ul>
+<hr>
+<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
+<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+]]></content>
+      <categories>
+        <category>利器OuO</category>
+      </categories>
+      <tags>
+        <tag>AutoHotkey</tag>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博文编写</title>
+    <url>/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记，分为入门和实用进阶两篇。</p>
+<span id="more"></span>
+<h1 id="实用进阶"><a href="#实用进阶" class="headerlink" title="实用进阶"></a>实用进阶</h1><h3 id="Q1：hexo中如何简洁的调整图片的大小"><a href="#Q1：hexo中如何简洁的调整图片的大小" class="headerlink" title="Q1：hexo中如何简洁的调整图片的大小"></a>Q1：hexo中如何简洁的调整图片的大小</h3><p><strong>这里推荐<a href="https://bobcn.github.io/2018/03/24/hexo_reset_image_size/"> Hexo 中扩展 Markdown 语法设置图片的大小</a></strong><br>可以通过在image的链接后添加文本的方式修改图片大小<br>实用方法：下载js到hexo根目录下的scripts文件夹，并在页面对应位置添加<script></script>标签</p>
+<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
+
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个&#96;</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 学习</title>
+    <url>/git.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p>
+<span id="more"></span>
+
+<blockquote>
+<p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
+</blockquote>
+<p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p>
+<h1 id="Git-主要命令"><a href="#Git-主要命令" class="headerlink" title="Git 主要命令"></a>Git 主要命令</h1><p><code>Git Commit</code>：提交新记录，添加新节点</p>
+<p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p>
+<blockquote>
+<p><code>main*</code>代表你当前在main分支下</p>
+</blockquote>
+<p><code>git checkout &lt;name&gt;</code>：切换分支</p>
+<blockquote>
+<p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
+<blockquote>
+<p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p>
+</blockquote>
+</blockquote>
+<p><code>git merge &lt;your-branch-name&gt;</code> 合并分支<br><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181543273.png?40-l" alt="git merge"></p>
+<p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。<br><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181548515.png?40-l" alt="git rebase"></p>
+<hr>
+<h1 id="Git-特性"><a href="#Git-特性" class="headerlink" title="Git 特性"></a>Git 特性</h1><h2 id="关于HEAD变量"><a href="#关于HEAD变量" class="headerlink" title="关于HEAD变量:"></a>关于<code>HEAD</code>变量:</h2><p>通过<code>git chekout &lt;name&gt;</code>命令可以切换<code>HEAD</code>的指向</p>
+<blockquote>
+<p> <em>可以<code>HEAD</code>→<code>main</code> →<code>C4</code>（<code>main</code>→<code>C4</code>）</em><br><em>也可以<code>HEAD</code>→<code>C4</code></em></p>
+</blockquote>
+<h2 id="相对引用——"><a href="#相对引用——" class="headerlink" title="相对引用——^,~"></a>相对引用——<code>^</code>,<code>~</code></h2><p><code>git log</code> 查看提交记录的哈希值</p>
+<p>其哈希值可以只输入前几个字母进行匹配<br>但是这样太麻烦了</p>
+<p><strong>^</strong>: 使用 <code>^</code> 向上移动 1 个提交记录 (父节点，且可叠用。<code>HEAD^</code>,<code>main^^</code>)<br><strong>~</strong>: 使用 <code>~&lt;num&gt;</code> 向上移动多个提交记录，如 <code>~3</code>,<code>HEAD~3</code></p>
+<p>结合之前的命令实用：<br><code>git branch -f main HEAD~3</code>：将 main 分支强制指向 HEAD 的第 3 级 parent 提交。</p>
+<h2 id="撤销变更-——-git-reset和git-revert"><a href="#撤销变更-——-git-reset和git-revert" class="headerlink" title="撤销变更 —— git reset和git revert"></a>撤销变更 —— <code>git reset</code>和<code>git revert</code></h2><p><code>git reset &lt;参数&gt;</code><br>在reset后， 撤销部分所做的变更还在，但是处于未加入暂存区状态。<strong>本地常用</strong><br><code>git revert &lt;参数&gt;</code><br>把撤销之前的部分作为新分支提交<strong>远程常用</strong></p>
+<hr>
+<h1 id="整理提交记录"><a href="#整理提交记录" class="headerlink" title="整理提交记录"></a>整理提交记录</h1><p><code>git cherry-pick &lt;提交号&gt;...</code><br>将一些提交<strong>复制</strong>到当前所在的位置（<code>HEAD</code>）下面</p>
+<h2 id="交互式的-rebase"><a href="#交互式的-rebase" class="headerlink" title="交互式的 rebase"></a>交互式的 rebase</h2><p><code>git rebase -i HEAD~4</code><br>会有一个交互式的页面供你进行<strong>排序、删除、合并</strong><br>在你完成后，会将处理好的分支放在当前分支下</p>
+<h2 id="只取一个提交记录（实战结合）"><a href="#只取一个提交记录（实战结合）" class="headerlink" title="只取一个提交记录（实战结合）"></a>只取一个提交记录（实战结合）</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>通过以上两个命令把修改bug中最后解决bug的提交记录复制或移动到main分支下</p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p><code>git commit --amend</code>追加提交<br>将不会重复提交而是修改之前的提交于同一位置</p>
+<p>可以先移动顺序，将要修改的放前面来，修改后再排序放回去。最后合并main分支。</p>
+<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><p>使用<code>git cherry-pick</code>一步步复制修改</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu24.04使用记录</title>
+    <url>/ubuntu_demo.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
+<span id="more"></span>
+
+<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
+
+<p>[^更新并安装]: </p>
+<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hadoop搭建教程</title>
     <url>/hadoop2.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
@@ -477,7 +602,7 @@
 </span>
 
 <h1 id="VMware-软件使用"><a href="#VMware-软件使用" class="headerlink" title="VMware 软件使用"></a>VMware 软件使用</h1><p>具体从软件配置到创建虚拟机这里不再赘述，大家可以自行搜索，这里只展示我觉得需要注意的点</p>
-<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png"></p>
+<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png"></p>
 <div class="tabs" id="vmware"><ul class="nav-tabs"><li class="tab active"><a href="#vmware-1">桥接模式</a></li><li class="tab"><a href="#vmware-2">NAT模式</a></li><li class="tab"><a href="#vmware-3">仅主机模式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vmware-1"><p>桥接模式会直接把虚拟机连接到物理网络，就像一台真实电脑。<br><strong>虚拟机直接使用主机所在的局域网IP</strong></p></div><div class="tab-pane" id="vmware-2"><p>NAT模式会通过主机共享网络连接，虚拟机和外网通信时由主机做中转。<br><strong>虚拟机通过主机的网络访问外网</strong></p></div><div class="tab-pane" id="vmware-3"><p>仅主机模式下，虚拟机只能和主机互通，不能访问外网。<br><strong>适合内网测试或安全环境</strong></p></div></div></div>
 
 <hr>
@@ -604,68 +729,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Flask学习笔记</title>
-    <url>/flask_lean1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Flask</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git 学习</title>
-    <url>/git.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p>
-<span id="more"></span>
-
-<blockquote>
-<p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
-</blockquote>
-<p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p>
-<h1 id="Git-主要命令"><a href="#Git-主要命令" class="headerlink" title="Git 主要命令"></a>Git 主要命令</h1><p><code>Git Commit</code>：提交新记录，添加新节点</p>
-<p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p>
-<blockquote>
-<p><code>main*</code>代表你当前在main分支下</p>
-</blockquote>
-<p><code>git checkout &lt;name&gt;</code>：切换分支</p>
-<blockquote>
-<p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
-<blockquote>
-<p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p>
-</blockquote>
-</blockquote>
-<p><code>git merge &lt;your-branch-name&gt;</code> 合并分支<br><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181543273.png?40-l" alt="git merge"></p>
-<p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。<br><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181548515.png?40-l" alt="git rebase"></p>
-<hr>
-<h1 id="Git-特性"><a href="#Git-特性" class="headerlink" title="Git 特性"></a>Git 特性</h1><h2 id="关于HEAD变量"><a href="#关于HEAD变量" class="headerlink" title="关于HEAD变量:"></a>关于<code>HEAD</code>变量:</h2><p>通过<code>git chekout &lt;name&gt;</code>命令可以切换<code>HEAD</code>的指向</p>
-<blockquote>
-<p> <em>可以<code>HEAD</code>→<code>main</code> →<code>C4</code>（<code>main</code>→<code>C4</code>）</em><br><em>也可以<code>HEAD</code>→<code>C4</code></em></p>
-</blockquote>
-<h2 id="相对引用——"><a href="#相对引用——" class="headerlink" title="相对引用——^,~"></a>相对引用——<code>^</code>,<code>~</code></h2><p><code>git log</code> 查看提交记录的哈希值</p>
-<p>其哈希值可以只输入前几个字母进行匹配<br>但是这样太麻烦了</p>
-<p><strong>^</strong>: 使用 <code>^</code> 向上移动 1 个提交记录 (父节点，且可叠用。<code>HEAD^</code>,<code>main^^</code>)<br><strong>~</strong>: 使用 <code>~&lt;num&gt;</code> 向上移动多个提交记录，如 <code>~3</code>,<code>HEAD~3</code></p>
-<p>结合之前的命令实用：<br><code>git branch -f main HEAD~3</code>：将 main 分支强制指向 HEAD 的第 3 级 parent 提交。</p>
-<h2 id="撤销变更-——-git-reset和git-revert"><a href="#撤销变更-——-git-reset和git-revert" class="headerlink" title="撤销变更 —— git reset和git revert"></a>撤销变更 —— <code>git reset</code>和<code>git revert</code></h2><p><code>git reset &lt;参数&gt;</code><br>在reset后， 撤销部分所做的变更还在，但是处于未加入暂存区状态。<strong>本地常用</strong><br><code>git revert &lt;参数&gt;</code><br>把撤销之前的部分作为新分支提交<strong>远程常用</strong></p>
-<hr>
-<h1 id="整理提交记录"><a href="#整理提交记录" class="headerlink" title="整理提交记录"></a>整理提交记录</h1><p><code>git cherry-pick &lt;提交号&gt;...</code><br>将一些提交<strong>复制</strong>到当前所在的位置（<code>HEAD</code>）下面</p>
-<h2 id="交互式的-rebase"><a href="#交互式的-rebase" class="headerlink" title="交互式的 rebase"></a>交互式的 rebase</h2><p><code>git rebase -i HEAD~4</code><br>会有一个交互式的页面供你进行<strong>排序、删除、合并</strong><br>在你完成后，会将处理好的分支放在当前分支下</p>
-<h2 id="只取一个提交记录（实战结合）"><a href="#只取一个提交记录（实战结合）" class="headerlink" title="只取一个提交记录（实战结合）"></a>只取一个提交记录（实战结合）</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>通过以上两个命令把修改bug中最后解决bug的提交记录复制或移动到main分支下</p>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p><code>git commit --amend</code>追加提交<br>将不会重复提交而是修改之前的提交于同一位置</p>
-<p>可以先移动顺序，将要修改的放前面来，修改后再排序放回去。最后合并main分支。</p>
-<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><p>使用<code>git cherry-pick</code>一步步复制修改</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记</title>
     <url>/Python_1.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -692,46 +755,41 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博文编写</title>
-    <url>/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记，分为入门和实用进阶两篇。</p>
+    <title>centos更换yum源</title>
+    <url>/centos_yum.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>centos7更换为国内yum源</p>
 <span id="more"></span>
-<h1 id="实用进阶"><a href="#实用进阶" class="headerlink" title="实用进阶"></a>实用进阶</h1><h3 id="Q1：hexo中如何简洁的调整图片的大小"><a href="#Q1：hexo中如何简洁的调整图片的大小" class="headerlink" title="Q1：hexo中如何简洁的调整图片的大小"></a>Q1：hexo中如何简洁的调整图片的大小</h3><p><strong>这里推荐<a href="https://bobcn.github.io/2018/03/24/hexo_reset_image_size/"> Hexo 中扩展 Markdown 语法设置图片的大小</a></strong><br>可以通过在image的链接后添加文本的方式修改图片大小<br>实用方法：下载js到hexo根目录下的scripts文件夹，并在页面对应位置添加<script></script>标签</p>
-<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个&#96;</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-
-<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>语法</th>
-<th>效果说明</th>
-<th>常见用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
+<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.bak</p>
+<h1 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h1><p><span class=“inline-note” title="看什么看，没有注释EmE">这里的命令是centos7的更新命令，可以根据自己的的版本替换一下</span><br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
+<h1 id="更新缓存"><a href="#更新缓存" class="headerlink" title="更新缓存"></a>更新缓存</h1><p>yum makecache</p>
 ]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
       <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
+        <tag>yum</tag>
+        <tag>Centos</tag>
       </tags>
   </entry>
   <entry>
@@ -770,7 +828,7 @@
 </ul>
 <p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
 <p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
-<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img data-src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
+<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
 <div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>类似于虚拟机中的镜像，是一个包含有文件系统的面向Docker引擎的只读模板。<br>任何应用程序运行都需要环境，而镜像就是用来提供这种运行环境的。例如一个Ubuntu镜像就是一个包含Ubuntu操作系统环境的模板，同理在该镜像上装上Apache软件，就可以称为Apache镜像。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>类似于代码仓库，这里是镜像仓库，是Docker用来集中存放镜像文件的地方。<br>注意与注册服务器（Registry）的区别：注册服务器是存放仓库的地方，一般会有多个仓库；而仓库是存放镜像的地方，一般每个仓库存放一类镜像，每个镜像利用tag进行区分，比如Ubuntu仓库存放有多个版本（12.04、14.04等）的Ubuntu镜像。</p></div></div></div>
 
 
@@ -889,64 +947,6 @@
       </tags>
   </entry>
   <entry>
-    <title>centos更换yum源</title>
-    <url>/centos_yum.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>centos7更换为国内yum源</p>
-<span id="more"></span>
-<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.bak</p>
-<h1 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h1><p><span class=“inline-note” title="看什么看，没有注释EmE">这里的命令是centos7的更新命令，可以根据自己的的版本替换一下</span><br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
-<h1 id="更新缓存"><a href="#更新缓存" class="headerlink" title="更新缓存"></a>更新缓存</h1><p>yum makecache</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>yum</tag>
-        <tag>Centos</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu24.04使用记录</title>
-    <url>/ubuntu_demo.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
-<span id="more"></span>
-
-<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
-
-<p>[^更新并安装]: </p>
-<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>各种各样的参考页面</title>
     <url>/reference.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -1009,21 +1009,21 @@
 </tr>
 </tbody></table>
 <h2 id="模块内容"><a href="#模块内容" class="headerlink" title="模块内容"></a>模块内容</h2><h3 id="1-大模型平台介绍"><a href="#1-大模型平台介绍" class="headerlink" title="1. 大模型平台介绍"></a>1. 大模型平台介绍</h3><p>本项目通过构建Docker+Ollama + Gradio容器化环境，以构建一个企业本地知识库，实现助手智能体。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925568.jpg" alt="1"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925568.jpg" alt="1"></p>
 <p>图1 项目示意</p>
 <h4 id="1-1-DeepSeek-Qwen国产大模型介绍"><a href="#1-1-DeepSeek-Qwen国产大模型介绍" class="headerlink" title="1.1 DeepSeek&#x2F;Qwen国产大模型介绍"></a><strong>1.1 DeepSeek&#x2F;Qwen国产大模型介绍</strong></h4><p>DeepSeek 的 AI 大模型是国产之光，千亿参数规模下，API 调用成本低至 0.5 元&#x2F;百万 tokens，中文基准测试得分高达 91.5%，推理效率还比传统架构提升了 5 倍。基于DeepSeek企业能轻松搭建本地知识库，提升信息管理效率。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925570.jpg" alt="2"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925570.jpg" alt="2"></p>
 <p>图2 DeepSeek产品</p>
 <p>千问大模型堪称国产大模型领域的 “超级明星”。它有着千亿级别的参数规模，依托千问大模型，企业能够轻松搭建本地知识库。通过对企业内部各类文档、资料、数据的整合与分析，模型可以快速定位和提供准确信息，极大地提升企业信息管理效率，帮助员工快速获取所需知识，减少查找信息的时间成本，为企业决策提供有力的数据支持。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925571.png" alt="3"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925571.png" alt="3"></p>
 <p>图3 千问大模型</p>
 <h4 id="1-2-Ollama：简化本地部署"><a href="#1-2-Ollama：简化本地部署" class="headerlink" title="1.2 Ollama：简化本地部署"></a>1.2 Ollama：简化本地部署</h4><p>Ollama 是一个开源的本地化工具，专门用来简化大型语言模型的本地运行和部署。它能让用户在个人计算机或服务器上轻松运行多种开源语言大模型，比如 DeepSeek、Qwen、Llama 等，完全不依赖云端服务，也不用复杂配置。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925572.jpg" alt="4"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925572.jpg" alt="4"></p>
 <p>图4 Ollama 开源的本地化工具</p>
 <h4 id="1-3-Gradio可视化界面"><a href="#1-3-Gradio可视化界面" class="headerlink" title="1.3 Gradio可视化界面"></a>1.3 Gradio可视化界面</h4><p>Gradio是一个搭建可视化界面的Python库，也是一个强大且易用的工具，可以帮助开发者快速构建交互式的机器学习模型展示界面。它提供了一个简单易用的界面搭建框架，让用户可以很容易地将模型部署为一个交互式的Web应用程序，而无需编写任何前端代码。</p>
 <p>Gradio支持各种类型的输入数据，包括文本、图像、音频和视频，让用户可以通过简单的拖放操作来测试和调整模型。用户可以自定义界面的样式和布局，添加各种控件来与模型交互，比如滑块、文本框、下拉菜单等。</p>
 <p>通过Gradio，用户可以快速构建一个漂亮的Web应用程序，用于展示自己的机器学习模型，与其他人分享模型的功能和性能，或者用于实际的应用场景中。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925573.png" alt="5"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925573.png" alt="5"></p>
 <p>图5 Gradio可视化界面</p>
 <h3 id="2-实战案例——搭建大模型平台"><a href="#2-实战案例——搭建大模型平台" class="headerlink" title="2. 实战案例——搭建大模型平台"></a>2. 实战案例——搭建大模型平台</h3><h4 id="2-1-Docker离线部署"><a href="#2-1-Docker离线部署" class="headerlink" title="2.1 Docker离线部署"></a>2.1 Docker离线部署</h4><p>下载docker-20.10.20.tgz、dify_images.tar.gz、models.tar.gz、dify-main.zip软件包，这些软件包分别用于安装Docker、Dify镜像导入、离线大模型导入Ollama管理平台和Dify容器化安装。将软件包下载到大模型节点上，并进行Docker服务的安装。</p>
 <p>首先修改主机名，修改完成后点击左边工具栏的”重连”按钮，或者使用bash命令进行刷新：</p>
@@ -1045,7 +1045,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ollama ~]# cat &gt;&gt;/etc/docker/daemon.json &lt;&lt; EOF</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://ebjpjftd.mirror.aliyuncs.com&quot;],</span><br><span class="line">&quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">[root@ollama ~]# systemctl daemon-reload &amp;&amp; systemctl restart docker</span><br></pre></td></tr></table></figure>
 
 <p>Docker 是一个开源的应用容器引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在本地编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack 集群和其他的基础应用平台。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925574.png" alt="6"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925574.png" alt="6"></p>
 <p>图6 Docker应用容器引擎</p>
 <p>简单的理解，Docker类似于集装箱，各式各样的货物，经过集装箱的标准化进行托管，而集装箱和集装箱之间没有影响。也就是说，Docker平台就是一个软件集装箱化平台，这就意味着我们自己可以构建应用程序，将其依赖关系一起打包到一个容器中，然后这容器就很容易运送到其他的机器上进行运行，而且非常易于装载、复制、移除，非常适合软件弹性架构。</p>
 <p>Docker提供容器管理的工具：</p>
@@ -1060,21 +1060,21 @@
 <p>部署Ollama服务，返回结果如图7所示。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ollama dify_images]# cd /root/</span><br><span class="line">[root@ollama ~]# docker run -d -v /root/ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama</span><br><span class="line">[root@ollama ~]# docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE           COMMAND               CREATED              STATUS              PORTS                                           NAMES</span><br><span class="line">695d51a52a44   ollama/ollama   &quot;/bin/ollama serve&quot;   About a minute ago   Up About a minute   0.0.0.0:11434-&gt;11434/tcp, :::11434-&gt;11434/tcp   ollama</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925575.png" alt="7"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925575.png" alt="7"></p>
 <p>图7 Docker部署</p>
 <p>正常运行后，可以登录网站进行查看Ollama的状态，如图8所示：</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925576.png" alt="8"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925576.png" alt="8"></p>
 <p>图8 查看Ollama的状态</p>
 <p>（2）离线部署大模型</p>
 <p>进入到Ollama模型存储目录，将打包好的models.tar.gz离线模型软件包解压到存储目录中，如图9所示，命令如下：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ollama ~]# cd /root/ollama/</span><br><span class="line">[root@ollama ollama]# tar zxvf /root/models.tar.gz -C .</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925577.png" alt="9"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925577.png" alt="9"></p>
 <p>图9  解压models.tar.gz</p>
 <p>解压完成后，进行验证，查看是否成功部署离线模型，如图10所示，命令如下：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ollama ollama]# docker exec -it ollama bash</span><br><span class="line">root@a049e8f3c525:/# ollama list</span><br><span class="line">NAME                ID              SIZE      MODIFIED     </span><br><span class="line">deepseek-r1:1.5b    a42b25d8c10a    1.1 GB    4 months ago    </span><br><span class="line">qwen:0.5b           b5dc5e784f2a    394 MB    4 months ago</span><br><span class="line">root@a049e8f3c525:/# exit</span><br></pre></td></tr></table></figure>
 
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925578.png" alt="10" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925578.png" alt="10" style="zoom:67%;" />
 
 <p>图10 验证</p>
 <p>可以看到，模型成功被导入到Ollama中。</p>
@@ -1199,14 +1199,14 @@
 <li><strong>依赖：</strong> 被需要安全发起外部网络请求的组件调用，通常是 <code>docker-worker-1</code> (处理数据集 URL 加载、网页抓取插件任务) 或 <code>docker-plugin_daemon-1</code> (执行需要网络访问的插件)。</li>
 </ul>
 <p>切换到桌面端机器，打开浏览器，输入<a href="http://ip/%EF%BC%8C%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AEDify%EF%BC%8C%E5%A6%82%E5%9B%BE11%E6%89%80%E7%A4%BA%E3%80%82">http://ip/，进行访问Dify，如图11所示。</a></p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925579.png" alt="11" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925579.png" alt="11" style="zoom:67%;" />
 
 <p>图11 访问Dify</p>
 <p>设置管理员账号：填写邮箱、用户名、密码后，再重新登录一下，如图12和图13所示。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925580.png" alt="12" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925580.png" alt="12" style="zoom:67%;" />
 
 <p>图12 登录界面</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925581.png" alt="13"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925581.png" alt="13"></p>
 <p>图13 控制台界面</p>
 <p>到此，Dify部署完成。</p>
 <h4 id="2-4-安装Gradio框架"><a href="#2-4-安装Gradio框架" class="headerlink" title="2.4 安装Gradio框架"></a>2.4 安装Gradio框架</h4><p>因为Gradio是一个搭建可视化界面的Python库，所以首先需要有Python环境，此处是Python版本为Python3.7.3。安装Python开发环境以及Gradio框架。</p>
@@ -1222,98 +1222,98 @@
 <p>验证是否有Gradio框架包，如果查询出来，则表示无需安装。</p>
 <p><strong>注意：本实验是连续实验，请不要释放实验环境。</strong></p>
 <h3 id="3-实战案例——大模型平台应用"><a href="#3-实战案例——大模型平台应用" class="headerlink" title="3.  实战案例——大模型平台应用"></a>3.  实战案例——大模型平台应用</h3><h4 id="3-1-将本地大模型与-Dify-进行关联"><a href="#3-1-将本地大模型与-Dify-进行关联" class="headerlink" title="3.1 将本地大模型与 Dify 进行关联"></a>3.1 将本地大模型与 Dify 进行关联</h4><p>返回到Dify主界面，点击右上角用户名下的”设置”，如图14所示。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925582.png" alt="14"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925582.png" alt="14"></p>
 <p>图14 设置</p>
 <p>选择“模型供应商”，找到对应的 Ollama，点击“安装”按钮，如图15所示。然后跳转对话框再次点击“安装”按钮，如图16所示。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925583.png" alt="15"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925583.png" alt="15"></p>
 <p>图15 点击“安装”</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925584.png" alt="16" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925584.png" alt="16" style="zoom:67%;" />
 
 <p>图16 安装插件</p>
 <p>安装完成后，在“模型供应商”中找到Ollama插件，并点击“添加模型”，如图17所示。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925585.png" alt="17"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925585.png" alt="17"></p>
 <p>图17  添加模型</p>
 <p>添加模型的信息，通过以下命令来查看：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@llama docker]# docker exec -it ollama  ollama list</span><br><span class="line">NAME                ID              SIZE      MODIFIED     </span><br><span class="line">deepseek-r1:1.5b    a42b25d8c10a    1.1 GB    3 months ago    </span><br><span class="line">qwen:0.5b           b5dc5e784f2a    394 MB    3 months ago</span><br></pre></td></tr></table></figure>
 
 <p>填写模型对应的信息，然后点击“保存”按钮，如图18所示。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925586.png" alt="18" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925586.png" alt="18" style="zoom: 50%;" />
 
 <p>图18  填写模型对应的信息</p>
 <p>保存过程中，插件容器会进行离线安装相关服务，在此期间可以通过以下命令来观察过程：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ollama docker]# docker logs docker-plugin_daemon-1 -f</span><br></pre></td></tr></table></figure>
 
 <p>如图19所示，在日志中看到此结果，则表示可以正常添加模型。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925587.png" alt="19"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925587.png" alt="19"></p>
 <p>图19 日志结果</p>
 <p>Qwen模型按照同样步骤，添加成功后，如图20所示，可以看到两个模型已经加入到了Dify里。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925588.png" alt="20"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925588.png" alt="20"></p>
 <p>图20 模型添加成功</p>
 <p>添加好模型后，接下来是设置系统模型，刷新网页。点击右上角用户名下的“设置”，选择“模型供应商”，点击右侧的“系统模型设置”，如图21所示。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925589.png" alt="21"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925589.png" alt="21"></p>
 <p>图21 系统模型设置</p>
 <p>然后选择模型，点击“保存”，如图22所示。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925590.png" alt="22" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925590.png" alt="22" style="zoom:80%;" />
 
 <p>图22 选择模型</p>
 <p>到此，Dify就与前面部署的本地大模型关联起来了。</p>
 <h4 id="3-2-创建聊天助手智能体应用"><a href="#3-2-创建聊天助手智能体应用" class="headerlink" title="3.2 创建聊天助手智能体应用"></a>3.2 创建聊天助手智能体应用</h4><p>（1）创建空白应用</p>
 <p>进入 Dify 主界面，点击“创建空白应用”，如图23所示：</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925591.png" alt="23"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925591.png" alt="23"></p>
 <p>图23 创建空白应用</p>
 <p>选择“聊天助手”，输入自定义应用名称和描述，点击“创建”按钮，如图24所示。该调试界面如图25所示。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925592.png" alt="24"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925592.png" alt="24"></p>
 <p>图24 选择聊天助手</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925593.png" alt="25"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925593.png" alt="25"></p>
 <p>图25 调试与预览界面</p>
 <h4 id="3-3-创建本地知识库"><a href="#3-3-创建本地知识库" class="headerlink" title="3.3 创建本地知识库"></a>3.3 创建本地知识库</h4><p>（1）添加Embedding 模型</p>
 <p>Embedding模型可以把复杂的、高维的数据（比如文本、图像等）转换成低维的向量。这些向量虽然看起来只是数字，但它们能够很好地捕捉到数据的语义信息。</p>
 <p>首先，它可以用于文本分类，比如判断一篇文章是正面评价还是负面评价；还可以用于相似性搜索，比如在海量的文本中快速找到和用户问题最相关的答案；甚至在推荐系统中，通过Embedding模型把用户和商品的特征转换成向量，就能更精准地给用户推荐他们可能喜欢的东西。</p>
 <p>在搭建知识库的时候，我们上传的资料（比如文档、文章等）需要先通过Embedding模型转换成向量，然后存入向量数据库。这样，当有人提问的时候，系统就能通过自然语言理解问题，然后在向量数据库中快速、准确地找到相关的资料，从而给出准确的回答。所以，提前把私有数据向量化入库，是为了让知识库在回答问题时更高效、更准确。</p>
 <p>点击右上角用户名下的“设置”，选择”模型供应商”，点击右侧的“添加模型”，如图26和图27所示：</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925594.png" alt="26" style="zoom:55%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925594.png" alt="26" style="zoom:55%;" />
 
 <p>图26 添加Ollama</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925595.png" alt="27"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925595.png" alt="27"></p>
 <p>图27 添加成功</p>
 <p>（2）创建知识库</p>
 <p>返回 Dify 主界面，点击上方的“知识库”，点击“创建知识库”，如图28所示。</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925596.png" alt="28"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925596.png" alt="28"></p>
 <p>图28 创建知识库</p>
 <p>在桌面端使用浏览器登陆到<a href="http://mirrors.douxuedu.com/newcloud/%E6%AD%A4%E5%9C%B0%E5%9D%80%EF%BC%8C%E7%84%B6%E5%90%8E%E6%89%BE%E5%88%B0guicheng.docx%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%A1%8C%E9%9D%A2%E7%AB%AF%E6%9C%BA%E5%99%A8%E3%80%82">http://mirrors.douxuedu.com/newcloud/此地址，然后找到guicheng.docx，点击下载，下载到桌面端机器。</a></p>
 <p>如图29所示，选择“导入已有文本”，上传资料（支持 TXT、PDF、Word、Excel 等格式，比如：可以上传一份企业内部的项目文档，或者个人的学习笔记）。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925597.png" alt="29" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925597.png" alt="29" style="zoom:60%;" />
 
 <p>图29 导入已有文本</p>
 <p>选择合适的模型，并配置相关参数后点击“保存并处理”，如图30和图31所示。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925598.png" alt="30" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925598.png" alt="30" style="zoom:50%;" />
 
 <p>图30 配置相关参数</p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925599.png" alt="31"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925599.png" alt="31"></p>
 <p>图31 保存并处理</p>
 <p>耐心等待，系统会自动对上传的文档进行解析和向量化处理。这个过程可能需要几分钟，具体时间取决于文档的大小和复杂程度。完成后会出现“嵌入已完成”信息，如图32所示。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925600.png" alt="32" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925600.png" alt="32" style="zoom: 67%;" />
 
 <p>图32 嵌入已完成</p>
 <p>创建成功后我们可以点击“前往文档”按钮，查看分段信息，如图33所示：</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925601.png" alt="33" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925601.png" alt="33" style="zoom:75%;" />
 
 <p>图33  查看分段信息</p>
 <p>（3）为对话上下文添加知识库</p>
 <p>返回 Dify 主界面，回到刚才的应用聊天页面，添加知识库，如图34所示：</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925602.png" alt="34" style="zoom:70%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925602.png" alt="34" style="zoom:70%;" />
 
 <p>图34 添加知识库</p>
 <p>然后选择刚刚创建的知识库，如图35所示：</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925603.png" alt="35" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925603.png" alt="35" style="zoom:60%;" />
 
 <p>图35 选择知识库</p>
 <p>选中后点击“添加”按钮，如图36所示：</p>
- <img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925604.png" alt="36" style="zoom:80%;" />
+ <img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925604.png" alt="36" style="zoom:80%;" />
 
 <p>图36 添加</p>
 <p>选择刚才创建的知识库作为对话上下文。保存当前应用设置后，就可以测试了，如图37所示。</p>
-<img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925605.png" alt="37" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925605.png" alt="37" style="zoom:67%;" />
 
 <p>图37  测试</p>
 <p>以上得出，DeepSeek的思考过程非常有特点，感觉就像有一个认真负责的人在仔细翻阅文档。它会把自己查找和分析的过程展示得很清楚，最后给出一个严谨的结论。如果你有一个专门的学术知识库，它不仅能帮你查找信息，还能进行推理、思考和总结，使用起来非常方便。</p>
@@ -1328,7 +1328,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ollama ~]# python3 /root/chat.py</span><br></pre></td></tr></table></figure>
 
 <p>在浏览器中，输入<a href="http://ip:7860/%E8%AE%BF%E9%97%AE%E9%A1%B5%E9%9D%A2%EF%BC%8C%E7%84%B6%E5%90%8E%E5%B0%9D%E8%AF%95%E5%9C%A8prompt%E4%B8%AD%E8%BE%93%E5%85%A5%E4%BF%A1%E6%81%AF%E8%BF%9B%E8%A1%8C%E8%AF%A2%E9%97%AE%E3%80%82%E4%BE%8B%E5%A6%82%E8%BE%93%E5%85%A5%E2%80%9C%E4%BD%A0%E6%98%AF%E8%B0%81%EF%BC%9F%E2%80%9D%E5%B9%B6%E6%8F%90%E4%BA%A4%EF%BC%8C%E5%9C%A8output%E4%B8%AD%E4%BC%9A%E6%98%BE%E7%A4%BA%E5%9B%9E%E7%AD%94%E4%BF%A1%E6%81%AF%EF%BC%8C%E5%A6%82%E5%9B%BE38%E6%89%80%E7%A4%BA%E3%80%82">http://ip:7860/访问页面，然后尝试在prompt中输入信息进行询问。例如输入“你是谁？”并提交，在output中会显示回答信息，如图38所示。</a></p>
-<p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925606.png" alt="38"></p>
+<p><img src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202509071925606.png" alt="38"></p>
 <p>图37 访问页面</p>
 <h3 id="5-项目总结"><a href="#5-项目总结" class="headerlink" title="5.  项目总结"></a>5.  项目总结</h3><p>通过 Ollama + Gradio+ Deepseek这个组合，企业可以轻松搭建本地知识库，提升内部信息管理效率。无论是文档检索、问答系统还是自动化工作流，都能轻松搞定，行业典型应用如下：</p>
 <p>（1）智能问答</p>
@@ -1342,8 +1342,8 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>docker</tag>
         <tag>Centos</tag>
+        <tag>docker</tag>
         <tag>ccf</tag>
         <tag>dify</tag>
         <tag>Gradio</tag>
