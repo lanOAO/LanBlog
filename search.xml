@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hadoop搭建教程</title>
-    <url>/hadoop2.html</url>
+    <title>AutoHotkey —— 自动热键软件</title>
+    <url>/AutoHotkey1.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
     .inline-note {
       display: inline-block;
@@ -24,245 +24,69 @@
       box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
     }
 </style>
-<p>在<a href="../hadoop1.html">Hadoop入门 </a>中，为大家简单介绍了 <a href="https://hadoop.apache.org/docs/">Hadoop</a> 。</p>
-<!--  [[Hadoop入门]]  -->
-<p>在本文，我将为大家演示基于 linux 的 Hadoop 搭建。</p>
+
+<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
 <span id="more"></span>
 
 <blockquote>
-<p><strong>本文所用软件版本:</strong></p>
-<p>CentOS 7<!--  [[centos7更换yum源]]  --><br>Vmware 16<br>Xshell 7<br>Xftp 7</p>
+<p>以下全部建立在2.0.19版本的的基础上</p>
 </blockquote>
-<div class="note primary"><p><strong>在开始之前你需要提前下载：</strong></p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
+<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
+<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
+<li>双击脚本，即可运行</li>
+</ul>
+<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
+<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
+</blockquote>
+<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
 <ul>
-<li><input checked="" disabled="" type="checkbox"> <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMwareWworkstation Pro</a> 虚拟机管理软件</li>
-<li><input checked="" disabled="" type="checkbox"> <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/">CentOS 7 镜像</a>或者其他版本的镜像</li>
+<li><code>#</code> ：win 键</li>
+<li><code>!</code> ：alt</li>
+<li><code>^</code> ：ctrl</li>
+<li><code>+</code> ：shift</li>
+<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
 </ul>
-<p>PS. 镜像下载时间超长</p>
-<p><strong>你需要提前准备:</strong></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 一台配置好 <em><a href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE">网络</a>&amp;主机名&amp;配置好xshell</em> 的虚拟机</li>
-</ul>
-</div>
+<blockquote>
+<p><code>^q</code> 即代表ctrl + q</p>
+</blockquote>
+<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
+<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
 
-
-
-<hr>
-<p><span class = "inline-note" title ="小提示">本文将以初学者的视角进行详细讲解，左侧配有目录，大家按需选择阅读章节OuO。</p>
-<p>全文中的重点内容都采用与本条相同的样式，鼠标悬停即可显示简要说明，方便快速理解。</p>
-</span>
-
-<h1 id="VMware-软件使用"><a href="#VMware-软件使用" class="headerlink" title="VMware 软件使用"></a>VMware 软件使用</h1><p>具体从软件配置到创建虚拟机这里不再赘述，大家可以自行搜索，这里只展示我觉得需要注意的点</p>
-<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png"></p>
-<div class="tabs" id="vmware"><ul class="nav-tabs"><li class="tab active"><a href="#vmware-1">桥接模式</a></li><li class="tab"><a href="#vmware-2">NAT模式</a></li><li class="tab"><a href="#vmware-3">仅主机模式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vmware-1"><p>桥接模式会直接把虚拟机连接到物理网络，就像一台真实电脑。<br><strong>虚拟机直接使用主机所在的局域网IP</strong></p></div><div class="tab-pane" id="vmware-2"><p>NAT模式会通过主机共享网络连接，虚拟机和外网通信时由主机做中转。<br><strong>虚拟机通过主机的网络访问外网</strong></p></div><div class="tab-pane" id="vmware-3"><p>仅主机模式下，虚拟机只能和主机互通，不能访问外网。<br><strong>适合内网测试或安全环境</strong></p></div></div></div>
-
-<hr>
-<h1 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemcttl stop firewalld    --关闭防火墙</span><br><span class="line">systemctl disable firewalld    --永久关闭防火墙</span><br></pre></td></tr></table></figure>
-
-<h1 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h1><h2 id="1-使用Xftp传输压缩包并解压"><a href="#1-使用Xftp传输压缩包并解压" class="headerlink" title="1.使用Xftp传输压缩包并解压"></a>1.使用Xftp传输压缩包并解压</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master opt]# pwd</span><br><span class="line">/opt</span><br><span class="line">[root@master opt]# mkdir module #解压后的位置</span><br><span class="line">[root@master opt]# mkdir software #压缩包</span><br><span class="line">[root@master opt]# cd software</span><br><span class="line">[root@master software]# ll</span><br><span class="line">total 1488592</span><br><span class="line">-rw-r--r--. 1 root root  87380462 Aug 27 10:59 apache-flume-1.11.0-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  22347776 Aug 27 10:59 apache-hive-3.1.2-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  14853274 Aug 27 10:59 apache-zookeeper-3.8.3-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 730107476 Aug 27 10:59 hadoop-3.3.6.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 141600542 Aug 27 10:59 jdk-8u401-linux-x64.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 528015360 Aug 27 10:59 mysql-5.7.25-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">[root@master software]# tar -zvxf jdk-8u401-linux-x64.tar.gz -C ../module #解压jdk压缩包</span><br><span class="line">[root@master software]# tar -zvxf hadoop-3.3.6.tar.gz -C ../module/ #解压hadoop压缩包</span><br><span class="line">[root@master software]# cd ../module/                              </span><br><span class="line">[root@master module]# ll</span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 10 1000 1000 4096 Jun 18  2023 hadoop-3.3.6</span><br><span class="line">drwxr-x---.  8 root root 4096 Aug 27 11:02 jdk1.8.0_401</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master module]# cd jdk1.8.0_401/</span><br><span class="line">[root@master jdk1.8.0_401]# pwd</span><br><span class="line">/opt/module/jdk1.8.0_401</span><br><span class="line"></span><br><span class="line">[root@master module]# vi /etc/profile</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/opt/module/jdk1.8.0_401</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"></span><br><span class="line">[root@master module]# source /etc/profile #刷新环境变量</span><br><span class="line">[root@master ~]# jps</span><br><span class="line">508 Jps</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="克隆三台虚拟机"><a href="#克隆三台虚拟机" class="headerlink" title="克隆三台虚拟机"></a>克隆三台虚拟机</h1><p>在克隆之前建议配置好<a href="#1.%E6%9B%B4%E6%94%B9hosts">hosts文件</a>为下一步做准备</p>
-<p>配置好后依次更改主机名</p>
-<p>这里不过多赘述</p>
-<h1 id="配置免密—SSH"><a href="#配置免密—SSH" class="headerlink" title="配置免密—SSH"></a>配置免密—SSH</h1><h2 id="1-更改hosts"><a href="#1-更改hosts" class="headerlink" title="1.更改hosts"></a>1.更改hosts</h2><p>三台虚拟机都更改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi /etc/hosts</span><br><span class="line">[ip-1] [hostname-1]</span><br><span class="line">[ip-2] [hostname-2]</span><br><span class="line">[ip-3] [hostname-3]</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-生成并传输密钥"><a href="#2-生成并传输密钥" class="headerlink" title="2.生成并传输密钥"></a>2.生成并传输密钥</h2><p>在<span class = "inline-note " title = "一定要更改好hosts后再生成">主节点生成密钥</span></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa #生成密钥</span><br><span class="line">ssh-copy-id [hostname-1&amp;2&amp;3] #传输密钥</span><br></pre></td></tr></table></figure>
-
-<p>输入 yes+对应主机的密码</p>
-<p>成功后可以使用 <code>ssh + [hostname-1&amp;2&amp;3]</code>进行测试</p>
-<p><code>exit</code>命令即可退出</p>
-<h1 id="配置Hadoop配置文件"><a href="#配置Hadoop配置文件" class="headerlink" title="配置Hadoop配置文件"></a>配置Hadoop配置文件</h1><p>以下配置文件的路径为<code>$hadoop_home/etc/hadoop/</code></p>
-<h2 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/root/software/hadoop-3.3.4/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span>    --hadoop路径</span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>3<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master:50070<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.app.mapreduce.am.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.map.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.reduce.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.env-whitelist<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,</span><br><span class="line">HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,</span><br><span class="line">HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>4096<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="hadoop-env-sh"><a href="#hadoop-env-sh" class="headerlink" title="hadoop-env.sh"></a>hadoop-env.sh</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=$JAVA_HOME</span><br></pre></td></tr></table></figure>
-
-<h2 id="workers"><a href="#workers" class="headerlink" title="workers"></a>workers</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">三台机器的名字</span><br></pre></td></tr></table></figure>
-<h1 id="配置并刷新环境变量"><a href="#配置并刷新环境变量" class="headerlink" title="配置并刷新环境变量"></a>配置并刷新环境变量</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#hadoop</span><br><span class="line">export HADOOP_HOME=/root/software/hadoop-3.3.4</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin</span><br><span class="line"></span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">export YARN_NODEMANAGER_USER=root</span><br></pre></td></tr></table></figure>
-<p>刷新环境变量   <code>source /etc/profile</code></p>
-<h1 id="SSH-传输"><a href="#SSH-传输" class="headerlink" title="SSH 传输"></a>SSH 传输</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp [-1246BCpqrv]  [-c cipher]  [-F ssh_config]  [-i identity_file]  [-l limit]  [-o ssh_option]  [-P port]  [-S program]  [[user@]host1:]file1 [...]  [[user@]host2:]file2</span><br></pre></td></tr></table></figure>
-<p>依次传输Hadoop、环境变量到其他虚拟机</p>
-<h1 id="启动Hadoop"><a href="#启动Hadoop" class="headerlink" title="启动Hadoop"></a>启动Hadoop</h1><p><span class = "inline-note" title ="注意都在主节点运行"><strong>Hadoop 启动与停止命令一览</strong></span></p>
-<h2 id="1-启动-停止所有守护进程"><a href="#1-启动-停止所有守护进程" class="headerlink" title="1. 启动&#x2F;停止所有守护进程"></a>1. 启动&#x2F;停止所有守护进程</h2><ul>
-<li><p><strong>启动所有守护进程</strong></p>
-<p><code>sbin/start-all.sh</code></p>
-</li>
-</ul>
-<p>启动内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
-<ul>
-<li><p><strong>停止所有守护进程</strong></p>
-<p><code>sbin/stop-all.sh</code></p>
-</li>
-</ul>
-<p>停止内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
-<hr>
-<h2 id="2-HDFS-守护进程"><a href="#2-HDFS-守护进程" class="headerlink" title="2. HDFS 守护进程"></a>2. HDFS 守护进程</h2><ul>
-<li><p><strong>启动 HDFS 守护进程</strong></p>
-<p><code>sbin/start-dfs.sh</code></p>
-</li>
-</ul>
-<p>启动内容：NameNode、Secondary NameNode、DataNode</p>
-<ul>
-<li><p><strong>停止 HDFS 守护进程</strong></p>
-<p><code>sbin/stop-dfs.sh</code></p>
-</li>
-</ul>
-<p>停止内容：NameNode、Secondary NameNode、DataNode</p>
-<h3 id="单独启动-停止-HDFS-守护进程"><a href="#单独启动-停止-HDFS-守护进程" class="headerlink" title="单独启动&#x2F;停止 HDFS 守护进程"></a>单独启动&#x2F;停止 HDFS 守护进程</h3><ul>
-<li><p><strong>NameNode</strong></p>
-<p><code>sbin/hadoop-daemons.sh start namenode</code></p>
-<p><code>sbin/hadoop-daemons.sh stop namenode</code></p>
-</li>
-<li><p><strong>DataNode</strong></p>
-<p><code>sbin/hadoop-daemons.sh start datanode</code></p>
-<p><code>sbin/hadoop-daemons.sh stop datanode</code></p>
-</li>
-<li><p><strong>Secondary NameNode</strong></p>
-<p><code>sbin/hadoop-daemons.sh start secondarynamenode</code></p>
-<p><code>sbin/hadoop-daemons.sh stop secondarynamenode</code></p>
-</li>
+<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
+<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
+<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
+<li>一个脚本里可以有多个热键</li>
+<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
 </ul>
 <hr>
-<h2 id="3-YARN-守护进程"><a href="#3-YARN-守护进程" class="headerlink" title="3. YARN 守护进程"></a>3. YARN 守护进程</h2><ul>
-<li><p><strong>启动 YARN 守护进程</strong></p>
-<p><code>sbin/start-yarn.sh</code></p>
-</li>
-</ul>
-<p>启动内容：ResourceManager、NodeManager</p>
-<ul>
-<li><p><strong>停止 YARN 守护进程</strong></p>
-<p><code>sbin/stop-yarn.sh</code></p>
-</li>
-</ul>
-<p>停止内容：ResourceManager、NodeManager</p>
-<h3 id="单独启动-停止-YARN-守护进程"><a href="#单独启动-停止-YARN-守护进程" class="headerlink" title="单独启动&#x2F;停止 YARN 守护进程"></a>单独启动&#x2F;停止 YARN 守护进程</h3><ul>
-<li><p><strong>ResourceManager</strong></p>
-<p><code>sbin/yarn-daemon.sh start resourcemanager</code></p>
-<p>&#96;&#96;sbin&#x2F;yarn-daemon.sh stop resourcemanager&#96;</p>
-</li>
-<li><p><strong>NodeManager</strong></p>
-<p><code>sbin/yarn-daemons.sh start nodemanager</code></p>
-<p>&#96;&#96;sbin&#x2F;yarn-daemons.sh stop nodemanager&#96;</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-MapReduce-JobHistory-服务"><a href="#4-MapReduce-JobHistory-服务" class="headerlink" title="4. MapReduce JobHistory 服务"></a>4. MapReduce JobHistory 服务</h2><ul>
-<li><p><strong>启动 JobHistory</strong></p>
-<p><code>sbin/mr-jobhistory-daemon.sh start historyserver</code></p>
-</li>
-<li><p><strong>停止 JobHistory</strong></p>
-<p><code>sbin/mr-jobhistory-daemon.sh stop historyserver</code></p>
-</li>
-</ul>
-<h1 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h1><ul>
-<li><p>先使用jps查看进程，查看是否成功启动所有进程</p>
-</li>
-<li><p>打开网页 主节点的ip地址:9870<br>查看是否有web ui,在这里你能看到你所搭建的集群的基本信息</p>
-</li>
-</ul>
+<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
+<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
 ]]></content>
       <categories>
-        <category>大数据</category>
-        <category>搭建</category>
+        <category>利器OuO</category>
       </categories>
       <tags>
-        <tag>Hadoop</tag>
-        <tag>Linux</tag>
+        <tag>AutoHotkey</tag>
+        <tag>脚本</tag>
       </tags>
   </entry>
   <entry>
-    <title>Git 学习</title>
-    <url>/git.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p>
+    <title>Flask学习笔记</title>
+    <url>/flask_lean1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
 <span id="more"></span>
-
-<blockquote>
-<p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
-</blockquote>
-<p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p>
-<p><code>Git Commit</code>：提交新记录，添加新节点</p>
-<p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p>
-<blockquote>
-<p><code>main*</code>代表你当前在main分支下</p>
-</blockquote>
-<p><code>git checkout &lt;name&gt;</code>：切换分支</p>
-<blockquote>
-<p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
-<blockquote>
-<p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p>
-</blockquote>
-</blockquote>
-<p><code>git merge &lt;your-branch-name&gt;</code> 合并分支<br><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181543273.png?40-l" alt="git merge"></p>
-<p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。<br><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181548515.png?40-l" alt="git rebase"></p>
-<p>关于<code>HEAD</code>变量:</p>
-<p>通过<code>git chekout &lt;name&gt;</code>命令可以切换<code>HEAD</code>的指向</p>
-<blockquote>
-<p> <em>可以<code>HEAD</code>→<code>main</code> →<code>C4</code>（<code>main</code>→<code>C4</code>）</em><br><em>也可以<code>HEAD</code>→<code>C4</code></em></p>
-</blockquote>
-<p><code>git log</code> 查看提交记录的哈希值</p>
-<p>其哈希值可以只输入前几个字母进行匹配<br>但是这样太麻烦了</p>
-<p>&#x3D;&#x3D;^&#x3D;&#x3D;: 使用 <code>^</code> 向上移动 1 个提交记录 (父节点，且可叠用。<code>HEAD^</code>,<code>main^^</code>)<br>&#x3D;&#x3D;<del>&#x3D;&#x3D;: 使用 &#96;</del><num><code>向上移动多个提交记录，如</code><del>3<code>,</code>HEAD</del>3&#96;</p>
-<p>结合之前的命令实用：<br><code>git branch -f main HEAD~3</code>：将 main 分支强制指向 HEAD 的第 3 级 parent 提交。</p>
-<p>撤销变更 —— <code>git reset</code>和<code>git revert</code></p>
-<p><code>git reset &lt;参数&gt;</code><br>在reset后， 撤销部分所做的变更还在，但是处于未加入暂存区状态。<em>本地</em><br><code>git revert &lt;参数&gt;</code><br>*<em>把撤销之前的部分作为新分支提交</em>远程*</p>
 ]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博文编写</title>
-    <url>/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记，分为入门和实用进阶两篇。</p>
-<span id="more"></span>
-<h1 id="实用进阶"><a href="#实用进阶" class="headerlink" title="实用进阶"></a>实用进阶</h1><h3 id="Q1：hexo中如何简洁的调整图片的大小"><a href="#Q1：hexo中如何简洁的调整图片的大小" class="headerlink" title="Q1：hexo中如何简洁的调整图片的大小"></a>Q1：hexo中如何简洁的调整图片的大小</h3><p><strong>这里推荐<a href="https://bobcn.github.io/2018/03/24/hexo_reset_image_size/"> Hexo 中扩展 Markdown 语法设置图片的大小</a></strong><br>可以通过在image的链接后添加文本的方式修改图片大小<br>实用方法：下载js到hexo根目录下的scripts文件夹，并在页面对应位置添加<script></script>标签</p>
-<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个&#96;</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-
-<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>语法</th>
-<th>效果说明</th>
-<th>常见用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -614,39 +438,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Flask学习笔记</title>
-    <url>/flask_lean1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Flask</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu24.04使用记录</title>
-    <url>/ubuntu_demo.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
-<span id="more"></span>
-
-<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
-
-<p>[^更新并安装]: </p>
-<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记</title>
     <url>/Python_1.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -673,8 +464,100 @@
       </tags>
   </entry>
   <entry>
-    <title>AutoHotkey —— 自动热键软件</title>
-    <url>/AutoHotkey1.html</url>
+    <title>Git 学习</title>
+    <url>/git.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p>
+<span id="more"></span>
+
+<blockquote>
+<p>学习网站：<a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
+</blockquote>
+<p>Git 希望提交记录尽可能地轻量，因此在你每次进行提交时，它并不会盲目地复制整个目录。条件允许的情况下，它会将当前版本与仓库中的上一个版本进行对比，并把所有的差异打包到一起作为一个提交记录。</p>
+<h1 id="Git-主要命令"><a href="#Git-主要命令" class="headerlink" title="Git 主要命令"></a>Git 主要命令</h1><p><code>Git Commit</code>：提交新记录，添加新节点</p>
+<p><code>Git Branch &lt;name&gt;</code>：基于这个提交及他所有的parent新建分支<em>仅新建分支</em></p>
+<blockquote>
+<p><code>main*</code>代表你当前在main分支下</p>
+</blockquote>
+<p><code>git checkout &lt;name&gt;</code>：切换分支</p>
+<blockquote>
+<p>创建一个新的分支同时切换到新创建的分支的话，可以通过 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
+<blockquote>
+<p><em>新版本使用</em><code>git</code> <code>switch</code> [<em><options></em>] [<code>--no-guess</code>] <em><branch></em></p>
+</blockquote>
+</blockquote>
+<p><code>git merge &lt;your-branch-name&gt;</code> 合并分支<br><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181543273.png?40-l" alt="git merge"></p>
+<p><code>git rebase &lt;your-branch-name&gt;</code> 合并分支<br>Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。<br>Rebase 的优势就是可以创造更线性的提交历史。<br><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/202511181548515.png?40-l" alt="git rebase"></p>
+<hr>
+<h1 id="Git-特性"><a href="#Git-特性" class="headerlink" title="Git 特性"></a>Git 特性</h1><h2 id="关于HEAD变量"><a href="#关于HEAD变量" class="headerlink" title="关于HEAD变量:"></a>关于<code>HEAD</code>变量:</h2><p>通过<code>git chekout &lt;name&gt;</code>命令可以切换<code>HEAD</code>的指向</p>
+<blockquote>
+<p> <em>可以<code>HEAD</code>→<code>main</code> →<code>C4</code>（<code>main</code>→<code>C4</code>）</em><br><em>也可以<code>HEAD</code>→<code>C4</code></em></p>
+</blockquote>
+<h2 id="相对引用——"><a href="#相对引用——" class="headerlink" title="相对引用——^,~"></a>相对引用——<code>^</code>,<code>~</code></h2><p><code>git log</code> 查看提交记录的哈希值</p>
+<p>其哈希值可以只输入前几个字母进行匹配<br>但是这样太麻烦了</p>
+<p><strong>^</strong>: 使用 <code>^</code> 向上移动 1 个提交记录 (父节点，且可叠用。<code>HEAD^</code>,<code>main^^</code>)<br><strong>~</strong>: 使用 <code>~&lt;num&gt;</code> 向上移动多个提交记录，如 <code>~3</code>,<code>HEAD~3</code></p>
+<p>结合之前的命令实用：<br><code>git branch -f main HEAD~3</code>：将 main 分支强制指向 HEAD 的第 3 级 parent 提交。</p>
+<h2 id="撤销变更-——-git-reset和git-revert"><a href="#撤销变更-——-git-reset和git-revert" class="headerlink" title="撤销变更 —— git reset和git revert"></a>撤销变更 —— <code>git reset</code>和<code>git revert</code></h2><p><code>git reset &lt;参数&gt;</code><br>在reset后， 撤销部分所做的变更还在，但是处于未加入暂存区状态。<strong>本地常用</strong><br><code>git revert &lt;参数&gt;</code><br>把撤销之前的部分作为新分支提交<strong>远程常用</strong></p>
+<hr>
+<h1 id="整理提交记录"><a href="#整理提交记录" class="headerlink" title="整理提交记录"></a>整理提交记录</h1><p><code>git cherry-pick &lt;提交号&gt;...</code><br>将一些提交<strong>复制</strong>到当前所在的位置（<code>HEAD</code>）下面</p>
+<h2 id="交互式的-rebase"><a href="#交互式的-rebase" class="headerlink" title="交互式的 rebase"></a>交互式的 rebase</h2><p><code>git rebase -i HEAD~4</code><br>会有一个交互式的页面供你进行<strong>排序、删除、合并</strong><br>在你完成后，会将处理好的分支放在当前分支下</p>
+<h2 id="只取一个提交记录（实战结合）"><a href="#只取一个提交记录（实战结合）" class="headerlink" title="只取一个提交记录（实战结合）"></a>只取一个提交记录（实战结合）</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>通过以上两个命令把修改bug中最后解决bug的提交记录复制或移动到main分支下</p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p><code>git commit --amend</code>追加提交<br>将不会重复提交而是修改之前的提交于同一位置</p>
+<p>可以先移动顺序，将要修改的放前面来，修改后再排序放回去。最后合并main分支。</p>
+<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><p>使用<code>git cherry-pick</code>一步步复制修改</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博文编写</title>
+    <url>/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记，分为入门和实用进阶两篇。</p>
+<span id="more"></span>
+<h1 id="实用进阶"><a href="#实用进阶" class="headerlink" title="实用进阶"></a>实用进阶</h1><h3 id="Q1：hexo中如何简洁的调整图片的大小"><a href="#Q1：hexo中如何简洁的调整图片的大小" class="headerlink" title="Q1：hexo中如何简洁的调整图片的大小"></a>Q1：hexo中如何简洁的调整图片的大小</h3><p><strong>这里推荐<a href="https://bobcn.github.io/2018/03/24/hexo_reset_image_size/"> Hexo 中扩展 Markdown 语法设置图片的大小</a></strong><br>可以通过在image的链接后添加文本的方式修改图片大小<br>实用方法：下载js到hexo根目录下的scripts文件夹，并在页面对应位置添加<script></script>标签</p>
+<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
+
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个&#96;</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hadoop搭建教程</title>
+    <url>/hadoop2.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
     .inline-note {
       display: inline-block;
@@ -696,56 +579,159 @@
       box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
     }
 </style>
-
-<p><b><a href="https://autohotkey.com/">AutoHotkey</a></b>是一款windows 平台下的热键脚本语言程序。可以实现诸如窗口置顶、快速输入、快捷操作等丰富多彩的功能。</p>
+<p>在<a href="../hadoop1.html">Hadoop入门 </a>中，为大家简单介绍了 <a href="https://hadoop.apache.org/docs/">Hadoop</a> 。</p>
+<!--  [[Hadoop入门]]  -->
+<p>在本文，我将为大家演示基于 linux 的 Hadoop 搭建。</p>
 <span id="more"></span>
 
 <blockquote>
-<p>以下全部建立在2.0.19版本的的基础上</p>
+<p><strong>本文所用软件版本:</strong></p>
+<p>CentOS 7<!--  [[centos7更换yum源]]  --><br>Vmware 16<br>Xshell 7<br>Xftp 7</p>
 </blockquote>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ul>
-<li>进入官网下载并安装<span class = "inline-note" title ="我的建议是下在c盘"><a href="https://autohotkey.com/">AutoHotkey</a></span></li>
-<li>编写脚本并已 <strong>.ahk</strong> 为后缀名</li>
-<li>双击脚本，即可运行</li>
-</ul>
-<h1 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h1><blockquote>
-<p>详细可以看<a href="https://wyagd001.github.io/v2/docs/">脚本语言 | AutoHotkey v2</a>，这里只介绍基础编写</p>
-</blockquote>
-<h2 id="热键标记"><a href="#热键标记" class="headerlink" title="热键标记"></a>热键标记</h2><p>常用热键标记：</p>
+<div class="note primary"><p><strong>在开始之前你需要提前下载：</strong></p>
 <ul>
-<li><code>#</code> ：win 键</li>
-<li><code>!</code> ：alt</li>
-<li><code>^</code> ：ctrl</li>
-<li><code>+</code> ：shift</li>
-<li><code>&amp;</code> ：用于连接两个按键(含鼠标按键) 合并成一个自定义热键</li>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMwareWworkstation Pro</a> 虚拟机管理软件</li>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/">CentOS 7 镜像</a>或者其他版本的镜像</li>
 </ul>
-<blockquote>
-<p><code>^q</code> 即代表ctrl + q</p>
-</blockquote>
-<p><code>::</code>连接符，当执行前面的后面的也会被执行</p>
-<h2 id="打开程序-网页"><a href="#打开程序-网页" class="headerlink" title="打开程序 &amp; 网页"></a>打开程序 &amp; 网页</h2><p>可以使用<em><strong>Run</strong></em>函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 打开一个程序，为了不报错我建议大家用绝对路径:</span><br><span class="line">; 当然一些程序并不需要完整路径, 如 Windows 标准程序:</span><br><span class="line">Run &quot;notepad.exe&quot;</span><br><span class="line"></span><br><span class="line">; 使用内置变量来打开 &quot;我的文档&quot;:</span><br><span class="line">Run A_MyDocuments</span><br><span class="line"></span><br><span class="line">; 打开一个网址:</span><br><span class="line">Run &quot;https://www.autohotkey.com&quot;</span><br></pre></td></tr></table></figure>
+<p>PS. 镜像下载时间超长</p>
+<p><strong>你需要提前准备:</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 一台配置好 <em><a href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE">网络</a>&amp;主机名&amp;配置好xshell</em> 的虚拟机</li>
+</ul>
+</div>
 
-<h2 id="关于开机自启"><a href="#关于开机自启" class="headerlink" title="关于开机自启"></a>关于开机自启</h2><p>把需要开机启动的脚本，放入 “启动” 文件夹即可。</p>
-<p>目录：{C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup}</p>
-<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>一个脚本里可以有多个热键</li>
-<li>支持函数&#x2F;变量…，大家可以自己探索QoQ</li>
+
+
+<hr>
+<p><span class = "inline-note" title ="小提示">本文将以初学者的视角进行详细讲解，左侧配有目录，大家按需选择阅读章节OuO。</p>
+<p>全文中的重点内容都采用与本条相同的样式，鼠标悬停即可显示简要说明，方便快速理解。</p>
+</span>
+
+<h1 id="VMware-软件使用"><a href="#VMware-软件使用" class="headerlink" title="VMware 软件使用"></a>VMware 软件使用</h1><p>具体从软件配置到创建虚拟机这里不再赘述，大家可以自行搜索，这里只展示我觉得需要注意的点</p>
+<h2 id="网络设置"><a href="#网络设置" class="headerlink" title="网络设置"></a>网络设置</h2><p><img data-src="https://raw.githubusercontent.com/lanOAO/blog_img/main/image-20250814221946282.png"></p>
+<div class="tabs" id="vmware"><ul class="nav-tabs"><li class="tab active"><a href="#vmware-1">桥接模式</a></li><li class="tab"><a href="#vmware-2">NAT模式</a></li><li class="tab"><a href="#vmware-3">仅主机模式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vmware-1"><p>桥接模式会直接把虚拟机连接到物理网络，就像一台真实电脑。<br><strong>虚拟机直接使用主机所在的局域网IP</strong></p></div><div class="tab-pane" id="vmware-2"><p>NAT模式会通过主机共享网络连接，虚拟机和外网通信时由主机做中转。<br><strong>虚拟机通过主机的网络访问外网</strong></p></div><div class="tab-pane" id="vmware-3"><p>仅主机模式下，虚拟机只能和主机互通，不能访问外网。<br><strong>适合内网测试或安全环境</strong></p></div></div></div>
+
+<hr>
+<h1 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemcttl stop firewalld    --关闭防火墙</span><br><span class="line">systemctl disable firewalld    --永久关闭防火墙</span><br></pre></td></tr></table></figure>
+
+<h1 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h1><h2 id="1-使用Xftp传输压缩包并解压"><a href="#1-使用Xftp传输压缩包并解压" class="headerlink" title="1.使用Xftp传输压缩包并解压"></a>1.使用Xftp传输压缩包并解压</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master opt]# pwd</span><br><span class="line">/opt</span><br><span class="line">[root@master opt]# mkdir module #解压后的位置</span><br><span class="line">[root@master opt]# mkdir software #压缩包</span><br><span class="line">[root@master opt]# cd software</span><br><span class="line">[root@master software]# ll</span><br><span class="line">total 1488592</span><br><span class="line">-rw-r--r--. 1 root root  87380462 Aug 27 10:59 apache-flume-1.11.0-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  22347776 Aug 27 10:59 apache-hive-3.1.2-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root  14853274 Aug 27 10:59 apache-zookeeper-3.8.3-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 730107476 Aug 27 10:59 hadoop-3.3.6.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 141600542 Aug 27 10:59 jdk-8u401-linux-x64.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 528015360 Aug 27 10:59 mysql-5.7.25-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">[root@master software]# tar -zvxf jdk-8u401-linux-x64.tar.gz -C ../module #解压jdk压缩包</span><br><span class="line">[root@master software]# tar -zvxf hadoop-3.3.6.tar.gz -C ../module/ #解压hadoop压缩包</span><br><span class="line">[root@master software]# cd ../module/                              </span><br><span class="line">[root@master module]# ll</span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 10 1000 1000 4096 Jun 18  2023 hadoop-3.3.6</span><br><span class="line">drwxr-x---.  8 root root 4096 Aug 27 11:02 jdk1.8.0_401</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@master module]# cd jdk1.8.0_401/</span><br><span class="line">[root@master jdk1.8.0_401]# pwd</span><br><span class="line">/opt/module/jdk1.8.0_401</span><br><span class="line"></span><br><span class="line">[root@master module]# vi /etc/profile</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/opt/module/jdk1.8.0_401</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"></span><br><span class="line">[root@master module]# source /etc/profile #刷新环境变量</span><br><span class="line">[root@master ~]# jps</span><br><span class="line">508 Jps</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="克隆三台虚拟机"><a href="#克隆三台虚拟机" class="headerlink" title="克隆三台虚拟机"></a>克隆三台虚拟机</h1><p>在克隆之前建议配置好<a href="#1.%E6%9B%B4%E6%94%B9hosts">hosts文件</a>为下一步做准备</p>
+<p>配置好后依次更改主机名</p>
+<p>这里不过多赘述</p>
+<h1 id="配置免密—SSH"><a href="#配置免密—SSH" class="headerlink" title="配置免密—SSH"></a>配置免密—SSH</h1><h2 id="1-更改hosts"><a href="#1-更改hosts" class="headerlink" title="1.更改hosts"></a>1.更改hosts</h2><p>三台虚拟机都更改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi /etc/hosts</span><br><span class="line">[ip-1] [hostname-1]</span><br><span class="line">[ip-2] [hostname-2]</span><br><span class="line">[ip-3] [hostname-3]</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-生成并传输密钥"><a href="#2-生成并传输密钥" class="headerlink" title="2.生成并传输密钥"></a>2.生成并传输密钥</h2><p>在<span class = "inline-note " title = "一定要更改好hosts后再生成">主节点生成密钥</span></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa #生成密钥</span><br><span class="line">ssh-copy-id [hostname-1&amp;2&amp;3] #传输密钥</span><br></pre></td></tr></table></figure>
+
+<p>输入 yes+对应主机的密码</p>
+<p>成功后可以使用 <code>ssh + [hostname-1&amp;2&amp;3]</code>进行测试</p>
+<p><code>exit</code>命令即可退出</p>
+<h1 id="配置Hadoop配置文件"><a href="#配置Hadoop配置文件" class="headerlink" title="配置Hadoop配置文件"></a>配置Hadoop配置文件</h1><p>以下配置文件的路径为<code>$hadoop_home/etc/hadoop/</code></p>
+<h2 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/root/software/hadoop-3.3.4/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span>    --hadoop路径</span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>3<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master:50070<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.app.mapreduce.am.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.map.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.reduce.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=/root/software/hadoop-3.3.4<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.env-whitelist<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,</span><br><span class="line">HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,</span><br><span class="line">HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>master<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>4096<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="hadoop-env-sh"><a href="#hadoop-env-sh" class="headerlink" title="hadoop-env.sh"></a>hadoop-env.sh</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=$JAVA_HOME</span><br></pre></td></tr></table></figure>
+
+<h2 id="workers"><a href="#workers" class="headerlink" title="workers"></a>workers</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">三台机器的名字</span><br></pre></td></tr></table></figure>
+<h1 id="配置并刷新环境变量"><a href="#配置并刷新环境变量" class="headerlink" title="配置并刷新环境变量"></a>配置并刷新环境变量</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#hadoop</span><br><span class="line">export HADOOP_HOME=/root/software/hadoop-3.3.4</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin</span><br><span class="line"></span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">export YARN_NODEMANAGER_USER=root</span><br></pre></td></tr></table></figure>
+<p>刷新环境变量   <code>source /etc/profile</code></p>
+<h1 id="SSH-传输"><a href="#SSH-传输" class="headerlink" title="SSH 传输"></a>SSH 传输</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp [-1246BCpqrv]  [-c cipher]  [-F ssh_config]  [-i identity_file]  [-l limit]  [-o ssh_option]  [-P port]  [-S program]  [[user@]host1:]file1 [...]  [[user@]host2:]file2</span><br></pre></td></tr></table></figure>
+<p>依次传输Hadoop、环境变量到其他虚拟机</p>
+<h1 id="启动Hadoop"><a href="#启动Hadoop" class="headerlink" title="启动Hadoop"></a>启动Hadoop</h1><p><span class = "inline-note" title ="注意都在主节点运行"><strong>Hadoop 启动与停止命令一览</strong></span></p>
+<h2 id="1-启动-停止所有守护进程"><a href="#1-启动-停止所有守护进程" class="headerlink" title="1. 启动&#x2F;停止所有守护进程"></a>1. 启动&#x2F;停止所有守护进程</h2><ul>
+<li><p><strong>启动所有守护进程</strong></p>
+<p><code>sbin/start-all.sh</code></p>
+</li>
+</ul>
+<p>启动内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
+<ul>
+<li><p><strong>停止所有守护进程</strong></p>
+<p><code>sbin/stop-all.sh</code></p>
+</li>
+</ul>
+<p>停止内容包括：NameNode、Secondary NameNode、DataNode、ResourceManager、NodeManager</p>
+<hr>
+<h2 id="2-HDFS-守护进程"><a href="#2-HDFS-守护进程" class="headerlink" title="2. HDFS 守护进程"></a>2. HDFS 守护进程</h2><ul>
+<li><p><strong>启动 HDFS 守护进程</strong></p>
+<p><code>sbin/start-dfs.sh</code></p>
+</li>
+</ul>
+<p>启动内容：NameNode、Secondary NameNode、DataNode</p>
+<ul>
+<li><p><strong>停止 HDFS 守护进程</strong></p>
+<p><code>sbin/stop-dfs.sh</code></p>
+</li>
+</ul>
+<p>停止内容：NameNode、Secondary NameNode、DataNode</p>
+<h3 id="单独启动-停止-HDFS-守护进程"><a href="#单独启动-停止-HDFS-守护进程" class="headerlink" title="单独启动&#x2F;停止 HDFS 守护进程"></a>单独启动&#x2F;停止 HDFS 守护进程</h3><ul>
+<li><p><strong>NameNode</strong></p>
+<p><code>sbin/hadoop-daemons.sh start namenode</code></p>
+<p><code>sbin/hadoop-daemons.sh stop namenode</code></p>
+</li>
+<li><p><strong>DataNode</strong></p>
+<p><code>sbin/hadoop-daemons.sh start datanode</code></p>
+<p><code>sbin/hadoop-daemons.sh stop datanode</code></p>
+</li>
+<li><p><strong>Secondary NameNode</strong></p>
+<p><code>sbin/hadoop-daemons.sh start secondarynamenode</code></p>
+<p><code>sbin/hadoop-daemons.sh stop secondarynamenode</code></p>
+</li>
 </ul>
 <hr>
-<h1 id="一些案例分享"><a href="#一些案例分享" class="headerlink" title="一些案例分享"></a>一些案例分享</h1><h2 id="ctrl-空格-窗口置顶-取消置顶"><a href="#ctrl-空格-窗口置顶-取消置顶" class="headerlink" title="ctrl 空格 窗口置顶&#x2F;取消置顶"></a>ctrl 空格 窗口置顶&#x2F;取消置顶</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">^SPACE::  ; Ctrl + 空格 键切换置顶状态</span><br><span class="line">WinSet, AlwaysOnTop, Toggle, A</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-
-<h2 id="文字替换-快捷输入"><a href="#文字替换-快捷输入" class="headerlink" title="文字替换&#x2F;快捷输入"></a>文字替换&#x2F;快捷输入</h2><p>ps：这里用了<a href="https://zhuanlan.zhihu.com/p/35379309">crystal</a>的例子</p>
-<p>键盘输入 <code>/2</code>、<code>/h</code> + Tab、空格或回车，触发缩写功能，自动快速输入对应文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; / + 缩写 触发，格式 “ ::/缩写::文本 ”</span><br><span class="line">::/qm::123456@qq.com</span><br><span class="line">::/zw::输入中文符号 、 也可触发</span><br><span class="line">::/2::您好，请问有什么可以帮助您的吗？</span><br><span class="line">::/h::哈哈哈哈</span><br><span class="line"></span><br><span class="line">; 结合快捷键命令，按 alt + 1 触发，</span><br><span class="line">; 以下是一条完整的命令，“!1” 为快捷键设置，Send 后跟文本</span><br><span class="line">!1::</span><br><span class="line">Send 快捷键触发输出</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
-<p><span class = "inline-note" align = "center">这个真的超级好用，主要是因为摸鱼的时候没法把看番的窗口置顶所以才有了这个OuO</span></p>
+<h2 id="3-YARN-守护进程"><a href="#3-YARN-守护进程" class="headerlink" title="3. YARN 守护进程"></a>3. YARN 守护进程</h2><ul>
+<li><p><strong>启动 YARN 守护进程</strong></p>
+<p><code>sbin/start-yarn.sh</code></p>
+</li>
+</ul>
+<p>启动内容：ResourceManager、NodeManager</p>
+<ul>
+<li><p><strong>停止 YARN 守护进程</strong></p>
+<p><code>sbin/stop-yarn.sh</code></p>
+</li>
+</ul>
+<p>停止内容：ResourceManager、NodeManager</p>
+<h3 id="单独启动-停止-YARN-守护进程"><a href="#单独启动-停止-YARN-守护进程" class="headerlink" title="单独启动&#x2F;停止 YARN 守护进程"></a>单独启动&#x2F;停止 YARN 守护进程</h3><ul>
+<li><p><strong>ResourceManager</strong></p>
+<p><code>sbin/yarn-daemon.sh start resourcemanager</code></p>
+<p>&#96;&#96;sbin&#x2F;yarn-daemon.sh stop resourcemanager&#96;</p>
+</li>
+<li><p><strong>NodeManager</strong></p>
+<p><code>sbin/yarn-daemons.sh start nodemanager</code></p>
+<p>&#96;&#96;sbin&#x2F;yarn-daemons.sh stop nodemanager&#96;</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-MapReduce-JobHistory-服务"><a href="#4-MapReduce-JobHistory-服务" class="headerlink" title="4. MapReduce JobHistory 服务"></a>4. MapReduce JobHistory 服务</h2><ul>
+<li><p><strong>启动 JobHistory</strong></p>
+<p><code>sbin/mr-jobhistory-daemon.sh start historyserver</code></p>
+</li>
+<li><p><strong>停止 JobHistory</strong></p>
+<p><code>sbin/mr-jobhistory-daemon.sh stop historyserver</code></p>
+</li>
+</ul>
+<h1 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h1><ul>
+<li><p>先使用jps查看进程，查看是否成功启动所有进程</p>
+</li>
+<li><p>打开网页 主节点的ip地址:9870<br>查看是否有web ui,在这里你能看到你所搭建的集群的基本信息</p>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>利器OuO</category>
+        <category>大数据</category>
+        <category>搭建</category>
       </categories>
       <tags>
-        <tag>AutoHotkey</tag>
-        <tag>脚本</tag>
+        <tag>Hadoop</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -944,6 +930,46 @@
       </categories>
       <tags>
         <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu24.04使用记录</title>
+    <url>/ubuntu_demo.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
+<span id="more"></span>
+
+<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
+
+<p>[^更新并安装]: </p>
+<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>明日清单</title>
+    <url>/todo_list.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>明天要完成的ioi</p>
+<span id="more"></span>
+<ul>
+<li><input disabled="" type="checkbox"> Spring boot</li>
+<li><input disabled="" type="checkbox"> flask</li>
+<li><input disabled="" type="checkbox"> 80% python 进阶</li>
+<li><input disabled="" type="checkbox"> 外卖项目</li>
+<li><input checked="" disabled="" type="checkbox"> ccf比赛赛题</li>
+</ul>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>清单</tag>
       </tags>
   </entry>
   <entry>
@@ -1322,26 +1348,6 @@
         <tag>dify</tag>
         <tag>Gradio</tag>
         <tag>Ollama</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>明日清单</title>
-    <url>/todo_list.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>明天要完成的ioi</p>
-<span id="more"></span>
-<ul>
-<li><input disabled="" type="checkbox"> Spring boot</li>
-<li><input disabled="" type="checkbox"> flask</li>
-<li><input disabled="" type="checkbox"> 80% python 进阶</li>
-<li><input disabled="" type="checkbox"> 外卖项目</li>
-<li><input checked="" disabled="" type="checkbox"> ccf比赛赛题</li>
-</ul>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>清单</tag>
       </tags>
   </entry>
 </search>
