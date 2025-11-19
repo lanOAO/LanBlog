@@ -10,9 +10,18 @@ function hexo_resize_image()
     for (var i = imgs.length - 1; i >= 0; i--) 
     {
         var img = imgs[i];
+        var src = img.getAttribute('src');
+        if (!src) continue;  
+        src = src.toString();
 
-        var src = img.getAttribute('src').toString();
+        // 只有 URL ? 后有 l 时，才独占一行并靠左
+        if (/\?[^?]*l/.test(src)) {
+            img.style.setProperty("display", "block", "important");
+            img.style.setProperty("float", "none", "important");
+            img.style.setProperty("margin", "10px 0", "important"); // 上下间距，左对齐
+        }
 
+        // 宽高解析 xh 格式
         var fields = src.match(/(?<=\?)\d*x\d*/g);
         if (fields && fields.length == 1)
         {
@@ -40,6 +49,7 @@ function hexo_resize_image()
             continue;
         }
 
+        // 百分比缩放
         fields = src.match(/(?<=\?)\d*/g);
         if (fields && fields.length == 1)
         {
@@ -50,4 +60,5 @@ function hexo_resize_image()
         }
     }
 }
+
 window.onload = hexo_resize_image;
