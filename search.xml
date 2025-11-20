@@ -77,6 +77,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Flask学习笔记</title>
+    <url>/flask_lean1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git 学习</title>
     <url>/git.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>关于git的学习记录 oio</p>
@@ -135,62 +148,6 @@
       </categories>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flask学习笔记</title>
-    <url>/flask_lean1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Flask</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博文编写</title>
-    <url>/hexo-optimize.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记，分为入门和实用进阶两篇。</p>
-<span id="more"></span>
-<h1 id="实用进阶"><a href="#实用进阶" class="headerlink" title="实用进阶"></a>实用进阶</h1><h3 id="Q1：hexo中如何简洁的调整图片的大小"><a href="#Q1：hexo中如何简洁的调整图片的大小" class="headerlink" title="Q1：hexo中如何简洁的调整图片的大小"></a>Q1：hexo中如何简洁的调整图片的大小</h3><p><strong>这里推荐<a href="https://bobcn.github.io/2018/03/24/hexo_reset_image_size/"> Hexo 中扩展 Markdown 语法设置图片的大小</a></strong><br>可以通过在image的链接后添加文本的方式修改图片大小<br>实用方法：下载js到hexo根目录下的scripts文件夹，并在页面对应位置添加<script></script>标签</p>
-<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
-<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者三个&#96;</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote><p>内容</p>
-<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
-
-<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>语法</th>
-<th>效果说明</th>
-<th>常见用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -721,23 +678,46 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu24.04使用记录</title>
-    <url>/ubuntu_demo.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
+    <title>Hexo博文编写</title>
+    <url>/hexo-optimize.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>编写博文的笔记，分为入门和实用进阶两篇。</p>
 <span id="more"></span>
+<h1 id="实用进阶"><a href="#实用进阶" class="headerlink" title="实用进阶"></a>实用进阶</h1><h3 id="Q1：hexo中如何简洁的调整图片的大小"><a href="#Q1：hexo中如何简洁的调整图片的大小" class="headerlink" title="Q1：hexo中如何简洁的调整图片的大小"></a>Q1：hexo中如何简洁的调整图片的大小</h3><p><strong>这里推荐<a href="https://bobcn.github.io/2018/03/24/hexo_reset_image_size/"> Hexo 中扩展 Markdown 语法设置图片的大小</a></strong><br>可以通过在image的链接后添加文本的方式修改图片大小<br>实用方法：下载js到hexo根目录下的scripts文件夹，并在页面对应位置添加<script></script>标签</p>
+<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h2><p>名字: 链接 || 图标名<br>social:<br>图标名必须在<a href="http://fontawesome.dashgame.com/" title="external" target="">Fontawesome</a>里有</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>在Font-matter加：</p>
+<figure class="highlight plaintext"><figcaption><span>tag-e.g.</span></figcaption><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - 笔记</span><br><span class="line">    - 博客</span><br></pre></td></tr></table></figure>
 
-<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>text：链接显示的文字<br>url：链接的地址<br>[external]：可选，如果加上 external，链接会在新标签页打开（即添加 target&#x3D;”_blank”）<br>[title]：可选，设置 title 属性（鼠标悬停时显示的文字）</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>有两种写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] %&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者三个&#96;</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [作者[, 来源]] [链接地址] [链接标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>[^更新并安装]: </p>
-<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
+<blockquote><p>内容</p>
+<footer><strong>[作者[</strong><cite>来源]] [链接地址] [链接标题]</cite></footer></blockquote>
 
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">🤔 **随手记：** 这个 API 文档写得跟谜语一样，看三遍才明白……</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>🤔 <strong>随手记：</strong> 这个 API 文档写得跟谜语一样，看三遍才明白……</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 ]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>ubuntu</tag>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -779,163 +759,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记</title>
-    <url>/Python_1.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="0d1e0d2ee91ea2c4fed5ccdfba08e1a67624a72765e80e579f7265f5a507821a">172b901311fda5dafa89e27317358587749f6b88053833814a240761be71973790ebbe06846f2440e034d3d366d915c5a38504e790b8fce97d523ee15e69a2ae67450fe5822b521e85c2f5208f1515ea07866f04a6ca3bf0bdb73254ec02fd68e7e6cdbb1060508571575042ecd908a839af15bb0b543b0574f553c6564c054f97c6993d9793546a1215996719c924d9c4ca0d060a5466d22c3dda7be952a04361fb532b1827d1b2785e56912576ff6072ba29b39cbb3805fa4bfe25e9a6add011fd5532eacda48ce154ce36e38fe503b403788d778cf5493311725793b75058c30830e10080c9f236b1a9e216f7799c29ab499e2c674dd1913f7e628143f67d95eddd4f99d63fda94ec76c84042f64c89bab1c8e7a71df5f66dfac35558e96c45740a6ab5cd9350f1565005f32433cc851cbfcda500a20561b1299532c1dd5069f36a2627eb7b6a4bccecf2dfe9d8318538f38551ab02c8361e55278678cc5d470b85ccd27f36fa993c2d6a65b936a3d3ff2054367a6afcc504a14c47626e567932be8d1671048fc41524c357897139bbdd2e1710cebe5678352d06d822273c5e9bebee249c06d454ca8d7c64793fdf71744d0e8e3fa3d55a482fa5906f422b922b29117261e792c39f7f6e56d5c8f1655f3ff3d39aa5fd037c6659ce52365f49101d396de592e07abbd938c5b7b55f7ffa3cfde7361fd18790cbdaac221ed8a0571442031ff5f8e64f6ae43318f7d8a4c255a25e16209c8d536f577cf7d41f792afb6b8683c191a4b369bcc6ec0a644a68942973f7ccdbcc4243f2a40419540b63b4b192d4f0c7b350e0c164ed86037ab4e761f2ea0580c6bba4d351f0081f6915bd19927c3f119c3e26d5fe47c68643f482b06f0c0e5a6b07e2247fc6f1f3b08c25f0c9e63f7190dc3b0ba4588caf7c83046c7d1098a63c3ed6db97712a9468eece40a1725662699b3c7d730095f64c4ca7cd129a5b544e8d09fd9ba50f329a91a7d0d0d5482ee7cbf9c44c1934647adc225f945929d11cd676cda3e9eaecea8ca56c5c56713609bd6535512461ff957ffef64b34ac5940e49e3881ebbeb4090f14408227d2b1a7b8561a5a2cbf60dec1a9d7e0d8bca7e2dbb6e6838f1cf73e5a42c38c154fcfca36c1e56fb57f7d8d1b3e0c40fb7fe50ee74e903ade15c6056d8aae4ee182a63982a70a214d69b512b3573195abf5f16528fa9943f14152ba43fdd09aa04eac02e6a4416d6f96676038e78b81e2b4be2c0e399b7d086cf5d20b6c70de6d932ecf52c53f423c72d49a2a11f717d7e09294c9513046895d174bcc33973a4e62bc2e0058a376a2ec293faac6da41bddfa4343774c59b5bc75bfd300a07ca7a13d2a034612ac58a72df89b527567900f6e306b26162169f99ba98a2efcb7e1ed7a846c55e4d88a99b5d6758ccdcf189200e868ef9f5e4b2bba5b8d7e0743bc8015cb13a18beb8ff4c867177c45fb9ac90b95be63cd462247ded1adb3cfdc8785fc1cbf1bc8faa9e9209fb31ce7168d80e0cdfd9d865f0b848e4b4afc56ab108d7cb7602e0f46c7cd86d616ae2f11b7f5d893b7f61392ea6d6752a87175ec95a0e3145b8f7a5995f91bfe6d2dfdd8021f3faa57ea80e2c9b975995bb26457ab03c174affdbd263d9e0a5e2566d3cc0badb08be0e81ee77e6f9e02d6cd002e1484593c383d82ce14c870a94bc3ef6df6697f6776de263efbe0af91f91a5ee27f7b6f954bc1fbddf81d0030cdff1fed4a62e78895b86eccc3429cf1edcbaf9de1e8bb9c63d660f8b681865ee9445a16e35888af2f5d98dcacd0547c123b04b05bd4d5a652b3327fefbc2c762853de4696245640a6a1c33daa17f5c38c10b57de474c7e28c232155899b14063c838608cc867f9d1c8cfa11271583c8f8f770a7423a798fec12822afabb0f5058dbcc3bf9e650aa3718fac37b02adadde4149d711ba3a239a4cf47d9aa26af18e6ba026cf263ff75c497287bd15eb556b4cc92c6e79f56178e9129acb01cf07497aad08a8301944f60c0f8cb56f9331623d8ea70a77353a3eeca0a99ea6a373c68a3783fcf3630cc4c58c1be07925221bd5ad9fb5aa948981b41c7e40523c275e7abb6df30aa2010496570af7471c5af765c884280926c6e94b1de8702e06c913591abe946982d6ac0e60ce8ba041b3c08e11e3d1d3c0438ce694c5483f63bfdb92e750220835bd8f1068ffa97ecb6b1e1c8ee0323fbfe2283521885ba1966cd77c6d807748b10e8af4dfda6a70d0e390a87af222d1fc474a02ad8847f7a74d3af5b2386012a1647fac1c80850f7fb80bc6cc828243b11070f8ae737932d7086dbc2bd3a49d789873671bae063d770da568a43cf158f1f61b9a8f6e450dcf26b367580b5c8b4e71f0d369148d621027ffdbee72599f287f6d3c536db4c0572384f88183013741e59d75e7bd41168ee780c24ba6135ff780a4b5da6101d308fe98d6f1ad8f5da62c4f9067c2b82b4dc92a44671b6c710bae34f60a02afb08033355b01c68d89af468f9122a53e2ccf2a2e6dd8bbad00fcf655a85965743ceda6ecfe93ec342d32a1eb9a8a683aa6a720a5b7edc07ef21fce53922d8cfa1b3c5c2d2dcd71809ec341a8717718b1ee0501aa5195330d80fb8038f9d3b32b6ddc9a046f921e2793be8cf1dba04e0b7ff9130795728f693f82c9467ecfb4017241e6a2306bed1f4281d5e9132d4c74a0af14279810ca37e14ea60bf876163c3ba95a681275da31e89fc771179cc4f054ace1c74e4536093ec7bb2d2b1b698838a05d5f6877b1cd653c2163c1c439d72c3a9748e10a7eef49e93f81b609525689e3bd85774a61f881eb355100944165ac40db51b15be0e35009e02f9c55525803b175b0b6d7d6e876b764124575c753756d270293cbdc97ff39d3d641b54754308b5b838729b2a7b7a1048520292212c7587637eeb4822f3fdb2d55c1de4f6fe549c550795c5490eeddbd35a7c1d17372c36de40316c99b50552f3b65c87ca23d1e1060311118a091179202a7c564c6e1f4cdece382ea1a0cd30b619615c3eb10f33cc3c2d17ca0ee1d8cacbfa03a933c8a65577facea72a73336655f1ffe1c8e184270d762d477a05eb55b7266e7e124f1dcce9c5e7c661b88b299f1d4838e947337c27e74e7bb3e9615354857669eace2a5e3d2641e9a2b8245dcf40cdd326e3169540f32bcf11644b6c1efa83cbb210676c66513457b74826d27449c9853f934517ca82225daab5fe3e96892fbd53ec6499213e4e459bc699d036424c2fa18135439eb8fcaf8ac3f7c65086785c68a1b5b545ae4d7823453a0892f7ba85b58d5d91a787f47c77787561c9683588f3564ace364031f15a5d804e839c748c3861f317ca5b92c2b95855773fb64fe980ec06550663f445ce2394591eefa7409b38ea79ecdbe52c98f058fac17b44636b189301be6f2cebcab463ce561dffc6281ed3e7e5a19b6b1239967303af905f04c70ba7996fc212e08d71137dc0f01ded90fc58138d7e27624825561af67ccccbbebcd845eda080f1f573174b9d405610bb180ccae83b34d33758eb54e69b40c0e58f1b053da9fd9b1d60b9133e7a10e90e743685cf3e2b4ba91bb740ff887147e6caa40af095313791d448608eb978c655d1d1c833b70e7ee7f56b048077ec91732fa0e3f67e742e330a46b5c3c38709ef7fa136f3af2e738e8e30dd9d1b981c634f309369e72ee065af1a980b696681166380c32e9d140834138d1026b07051e18975fb80e2a46db41f490c0206a538d866e6a0d939ff9396ca282f954232c483dc4913039d9334f42f2c032722dbf193ef4501a8330a211cf9ae3fae4fc749cee311a3516f64e6d3c1d3de1afaf2795eb337d584d4ccce7aa7cb846516f0a3bd7fd4901b1c76a9af579754cfea2577a3a51f20bd0b7b5c7275a2c22a92ccf8439e3c91d73c69e8458f27d86fd96072643bcf40b7518280584b8dacb98231fe3e38bb572924360becee71a7417b1cd89d8a7fec2ac0e11ba3a8241e8977f51aee02c22f639c63e2227e19c7b969b5dd528db447e64bf9f6050aff3bd0c6fd78635b54c00824e4fa0b9f46ccc60c0d8ad9cf0bb818bd6ee85ce982a8c8c088a57dca2c09d1863118c303856658095f2ffca3490b40b2d95b27e06dd89e1500f3758c3f37d25f7f30a9bf6608e29f7e7d3dc03ab2f7e435b292993627b68a72229b33058ff704a32983efc1299d0a1f276da810b2227213df73b20c746ae79c425ecaae50cc1f86b1261109cba4c30e36d55fcf193b30ccb2b9aad8beb89a15ee89e4d8e02dbcecea92e98c6206f98c9fc7e4c78b01ea9aa8306b88099fd3b22ffba053d766e89beec1dff8818ef49d77611a4d736097f3313b5087c3e6609a14995bf3fbb662ee05bb966b29fc1022d4b77c0a72acee756099090ff9faed769ef1fa5a7c127daf90c55b1d51ea9e2ed137771d1aeab33d7fb677100590fc3cd34a66973d2e71bed6dfc8433697b65d64ac48a7713079cd12fb795578d6931a0d5c16c6a8e31a108328671a8a861d391b55d8db1fbc8f68ba9d07a6db81c4ce6580a3fbc88e7b6e7bde2f60e8ca3295521a63057a7ace86fa5c2eef7931378f5f07d5d3ee6488b7580f6bd6df78f8f0e78d71e481c2a66a8b950463d36fd74c06f335edec1b3c32c15518e8b18e59b002cc78cf20fa0dd5cc15d16688e71e408f755336e5baf32822fdd58ea3cb5833b81f5b664e8b2a0a6454ebce9df3b3a022629564115b7ab62dd3a2c37c47a0acbfefcccced4b081d41c8e8afff913b8ba0ef2059c2b5f27453fd167dade36ed2b8ec50b6e270884b50da204febef2a44d460b3d0e935a8ba89fef1743d0cb2251002e24f5270c541978607815ba7feeffc80abdef09f95a395749ad4aec374f53a6473bfa0f3c3743f89f2eb78b413431465d12ca29309b96d823abced501449fc3902106e0ef8297fdb608291ec7144e85c9306ce4bc83bb123e782002999eed82936c1b43c4c1f96edc55647218d1a02091303a26043833f078c3bdda9abbe0e17f07c4185a3e49c6a50d298b3362df9fca182774ce9ffa3cf1a13cd907186699a0105b299537d4b1196f5f5dda2aca7b5f84d779a178f0bc52970551185489520bc56b0acd2a02a262759f53bc323e7169605177dcbdc7d96c2ae60658ec1e1d91d4ec2283ab9dccdf19721f946fb3b0b8e1c1293c00d7e8430a541101d8f23da743aa8cafc641b0db0d98841b872b611e5a3b1e79c5a8f77f8327b2a9682079223009f157ed7d5b51718e566a19a7468578ba7076445c6f816b27c4a27fd5c00ccf819f0a7ec5d5500586d20de85556252277c434537c218d828ff268e9eb225b2cd4c1f591d164c97f9169181f1d6953d711533d08be87ae7f6e8a619382336e4fcd799ffb34fb68c03e53bb6b26cae7d52d53c98d11aa937428aecb57f22c1c1608db76b1b24a26697c6e152af98041c9c1263e26f8654ca4aac36ae0dbac9002f1cab6a84c2587d21b17a102a9dbac11eb91f8f586ebd70f17f56cf23069d8d0198bd8a972030ca1549e4a0e221fcd16c0d768f0fd2f345b915824d578d957d4f93b04eb879f08a21b9c5066c8ae6df90a0882c38d2eb0a3d328db23f8b6b5a9a1fc3c4aa8da3313bac07665707bbf0939f18851bcb9f244553a9cfefe5763eb51ea527cce335160dbfc0688836d0df08414a2088e6eb2d7a114a99e3df979246666f2744bfb5133a504071a8fb7e090bfeac2c81f2bd64cd746aa9e3c20c793d54b9724deafa902e88d066cc6744f94f7b44a28b3cac09ad0279e4c8ddc423fd459846e222d63432d354eac5037c61bf457185e97ffa83962cd053d2f8a53b807f410b826cd2bcacc24ad66120bce200dfe2238d333313ee49c0a5d6e4e9762583dc58177fb3636dc117f4f68613036a21fa20b40cded458fec8b823e3f0bc3bdbb96a50fd50743d464660afb526abdc5638ed165922f82a3ac1340962c641c54fcaccbe522e5aabc0056a3e790f077d0d6a245edc43fb95612ce71d66c2316f96ef6153f4fdbe1ae91cd02f45ed0cf5f97facf088daf7037fc06b8695deffd5cb906ae33c800229790cc93371804182f12c2715ab051092392c3819ad667ef3b95aa6194a8e017e50023cf6185630b6c84b334ef7f53c6f8de627004d6452d2f3f309e00248796bb9e0fff44e690e2b1725f1357b5f142fa449981a088519ed34f1aff6e6e61368801edfb2adf729f7a7285e151a60006214f0f7aadbe827585b39c2caf466f49a8d884cb801111e8909e3ff7c45d5db2c177629ec3ca66bb5bfde00135c46b3f6131c9c9e225e45137183ae90ba87d64dcec1d8048642724c6178389299d978ee5739250099c53bd028ee0d820556345e8ac0edb422dc3ddda2c4167d8b7ba9fd8cc1d3c1d46e82659a27ea40561772898aa1de4bbd407dd739ef1da044089f626bcb9033447fdbe959cbaf1ece50f14a936790a3613a2bd0b6e3e69a3e1231587e7c914af2ee7ee33993654f8bddd3363002047db34215db34116b0804428a8a35511d257987d3ef2c18801f3f0f76a374fa45a03c1be0b2edbdacfc5d607470b2f1cc1cfc129dc65c69111caccc69055888307bbf6cf772016b73babb6dfeaec785cdb2f948600525b09cbb08a7f7e9dc05eb727cd10be3e8159e3fdac3fdf37b857dde0d44e3d7181f34410885dd737f8136705c48250313a740459f7fdef2a8b0c59bc2538870d5ec2a7512fc6c5c5f30ab8226d2f61dfeb4a529039a25f4ad569acc5f70abe2cb17c9d3686c4c7ab5253039c105fd912155fdaf04cf6e68ff57e6cffe9c0d0e39a0d84d2684275ed212b9560c7c7d2757f06064bda61124b16504cbbc1536c373cca731924d13b46ae098d12da5a546d7a2bb45eee33edee864a366644a905d0b05475ceed7673411b10baea6320571b14bc57b1d22c1f38b256fc0c4140988a45628dc767605716126a20d491de4accdffe7144868339aa9267880871133a21f266ec45056b45c8831b92dbdb66f926b272c3fde37f957cde7fb81af49c0a50b475d4b5f6dcdb04e816f2482e06269c15ff3d0692c011c45c7f0518028c55c26d92aa43b604e35469453c8b0a020eaaf3fd59f8babde4db7f5856d58f572f2e1d7827eb3eb3971d1526ba8fcafa1e2adc9d58eff5a51cf6549dcce7ff53c47b9f1a40bcc37993cb7082449c4ae428d3248e49399bf69d43e2660ea1cc321622377c87330974a90eb04242126f3d433964eb291f1beb7cf272b4f941d27f31d5e09700f52ad0d923eab1255dbb8e9117272f00438290098b9c95eee6e28ebbd5f4240aae71ebd7abd6b20d98e81ad36e9569cbe926e62c33006f2d9e909b65a86fd82eb31220094a3beec8119c6fb743dbe0c57ff4ae8ca1d540bfa99bc715aa35a4a358996d3dddfaa2a3c33ebd3bd781b5f5e0f38907294818f44896174c2a818852ce3930a36029bb9bcd02ab200667a3216a2ec3f0ceb7f46976e0f6a62b5e33f7708cae3d37bfd2aaf30aa39954ea9ca7199333bd53386e4e86686949b20fd6bcf3fce7f7ce8e9c227fb6428d2dda3e3eb1ff45bac1e475138bf555057ea172ec1297b4562a19d87f23248bd698a0c4c7ee75ae1e3b2da11794aa60b6ed309b1d2b4d27b9f427298afc5b4ad0c6455e073499f0c228cff8a4a24463c7e1d89f62d74a896d1b733d93dfe08fad23da516776fd2bcd1f899eb5d8669e367d10f0c9dbb05b1f1da3cb8f99ee4b9877fc022a2209e586e2d3a59e249ed1ba5ce271d74cbe72567009f4f1816af07d8833aea6e459430defbe3399358a15cab991feaa403035fef5f481190d744fb2feacdc57d2ac82246cb85bf18cb2d38c99f976f7c1413f45bfccfaff59be069c9e85c3d3ada71d1e2f6d5491129f2be6d08b047cc06f4ec31c07d3236e171daa8fe6d899264f0ce50ee4ee6d7f38bd2781aa64ea872c51cd9c3d75453fab5257d2bf56b471dd71a6b2d403a5eb554aadeb95febab03d6240c9e1711936a384db9b02055e2c663d48ee3be4b30433e79db18fff967b82eb51804049946caa422f66c7a24915aaa4cadf20fb50611de7a1267cad1ed2e4e842a0ddb7ef62c67bed999fedf7af42e56d15f011cd30d3e3c9fb879bd4f0ce68fbe4d6034bd5dc39712026bea9a37bc0060da39b7b5aead1136f920d374d48528ab8cb29236be0e81f8dc2767729c27ce0aa4d95a0920515b2934e9b940f276df4718498c6c3ae7693fea724ef77577452da2c795f39083c0fc9302f82d8228b23a1621abba70998e7a6fc0a20f343a3cd19c4c63caaf937a753e32b33b43aed76a2bc74a6b08ff4cd1c3d77250a8bad741d725e98d5b34e131de4c3c2d9ca83d35c23adcaf3b479fb1e1bdc275c395f8f70616c2651e2490874511b69299d20274430c436288a85f09d329e641e4c2c36b8ef76610a1fda5e32d549bc78c3b0eb4358f573ef2505041a8db960926e8bb305f56d4efdc85c5257ebcec2cb7551ceef432f7fab7e0a50e8dc010d34452869af532350f538963ad61e4893f9909f168cf82af11d9760b07ecea6129b5755d932e19dcb8b00f7aa68219da9dc182979c8e46eddd976800f9eb9571ba4e2fb2ffb1160d681ac2b1d5c75cd111bd34119ebd211213483db1b88153c5dd3b628bb87dd1c36a79904b2d6d0dfa78b636abdd0b5dc8f30d7a1eb653d28849bb5b407192cb86382906fa86bdb660b10b692367eb8a63af1c37cb4b85d3bcbf6ff579a8ce29b9d77f78980f80f81b1e373ced29fe03dbd410151e36b54e9ca2f736fbb40d208368d1f34911afd40e7e093b45ab9e72ed8dede2f7ca53c084b503222910e816eed4c955038c8e933f340b6389218def9277c89c47354c0c4f4eb7ccc49289540a7a638fd84526f6daaab1dc4fe433b9be67479c6a681cd3925baff6ece0cf542ce81e4c2b327c5742196a99b917f87c09faeff2cd442a5d6a25d9c800ec38a5bdc27d938e2d86b1a8b9d245ab9e28486d78f722472e52390daa45ee4f2611ae876f79e36e1ad19ee61248a15a9a2de05f9e06e272f75cb0f3e4b87ebc6c1dacf72b7771d308ed23b7dd815f430ddb51e47d3c8fe62b1d48d6441b60552a03e4262bcc63e8e7295a176b8ee81cacc1fdf25c1c0b485888d2ef076602cdc53febeb462243add1fdd39349b0b0e20c4bc2bed43aa7a73a9c24bfaacca87e73bb13e61c2c2ae683e1715a5eec48270370834c3ff5cb7191bf6dea41897eee124f67e0a98ac4165f616126b5884dedccefe977661713b0df8dd8ee5a79f2e5111779c6f88ba230c788e3f73d28297a8faf077f05267b77</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker 学习笔记</title>
-    <url>/docker_note1.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
-    .inline-note {
-      display: inline-block;
-      background-color: #fffbe6;
-      color: #333;
-      border-left: 4px solid #f7c948;
-      padding: 0.2em 0.6em;
-      margin: 0 0.2em;
-      font-size: 0.95em;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      font-style: italic;
-      cursor: help;
-      transition: all 0.2s ease;
-    }
-
-    .inline-note:hover {
-      background-color: #fff3bf;
-      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
-    }
-</style>
-<p>初学者的docker入门笔记</p>
+    <title>Ubuntu24.04使用记录</title>
+    <url>/ubuntu_demo.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></style></p>
 <span id="more"></span>
-<p><a href="https://docs.docker.com/">Docker文档</a></p>
-<h1 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h1><h2 id="Docker-出现的原因"><a href="#Docker-出现的原因" class="headerlink" title="Docker 出现的原因"></a>Docker 出现的原因</h2><p><u>解决环境一致性问题</u><br>当我们开发一个项目时，通常需要依赖大量的框架、库、插件、环境变量等。例如，某个项目可能依赖：</p>
-<ul>
-<li>Node.js 特定版本</li>
-<li>MySQL 数据库</li>
-<li>Redis 缓存</li>
-<li>某些 C++ 编译器或 Python 包</li>
-</ul>
-<p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
-<p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
-<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
-<div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>类似于虚拟机中的镜像，是一个包含有文件系统的面向Docker引擎的只读模板。<br>任何应用程序运行都需要环境，而镜像就是用来提供这种运行环境的。例如一个Ubuntu镜像就是一个包含Ubuntu操作系统环境的模板，同理在该镜像上装上Apache软件，就可以称为Apache镜像。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>类似于代码仓库，这里是镜像仓库，是Docker用来集中存放镜像文件的地方。<br>注意与注册服务器（Registry）的区别：注册服务器是存放仓库的地方，一般会有多个仓库；而仓库是存放镜像的地方，一般每个仓库存放一类镜像，每个镜像利用tag进行区分，比如Ubuntu仓库存放有多个版本（12.04、14.04等）的Ubuntu镜像。</p></div></div></div>
 
+<h1 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h1><h2 id="安装OpenSSH-Sever"><a href="#安装OpenSSH-Sever" class="headerlink" title="安装OpenSSH Sever"></a>安装OpenSSH Sever</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt install -y openssh-server</span><br></pre></td></tr></table></figure>
 
-<p>除了以上几个结构组成中重要的概念外，还有另一个重要的概念<br><strong>Dockerfile</strong>：<br>它像一个自动化的脚本，它主要用来创建我们之前讲到的镜像。</p>
-<blockquote>
-<p>他就好比把虚拟机中创建虚拟机并安装软件的过程压缩为一个脚本。</p>
-</blockquote>
-<h1 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h1><div class="note info"><p><a href="https://docs.docker.com/get-started/get-docker/">Docker Desktop 安装文档</a><br><a href="https://docs.docker.com/engine/install/">Docker Engine 安装文档</a></p>
-</div>
-<p>安装完成后可以使用<code>docker version</code>查看Docker的版本信息<br>查看Docker的帮助信息：<code>docker --help</code></p>
-<h1 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h1><div class="note warning"><p><strong>列举所有的容器:</strong> <code>docker ps</code><br><strong>停止容器:</strong> <code>docker stop &lt;容器 ID&gt;</code><br><strong>重启容器:</strong> <code>docker restart &lt;容器 ID&gt;</code><br><strong>删除容器:</strong> <code>docker rm &lt;容器 ID&gt;</code><br><strong>启动一个远程 Shell:</strong> <code>docker exec -it&lt;容器 ID&gt; /bin/bash</code><br>只用 <code>-i</code> 参数时，由于没有分配伪终端，界面没有我们熟悉的 Linux 命令提示符，但命令执行结果仍然可以返回。</p>
-<p>当 <code>-i</code> <code>-t</code> 参数一起使用时，则可以看到我们熟悉的 Linux 命令提示符。</p>
-</div>
+<p>[^更新并安装]: </p>
+<h2 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo bash -c &#x27;cat &gt; /etc/apt/sources.list&#x27; &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo apt clean</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br><span class="line">sudo apt install vim -y</span><br><span class="line">lan@lan-VMware-Virtual-Platform:~$ </span><br></pre></td></tr></table></figure>
 
-
-<ol>
-<li><p><code>docker run</code>: 运行一个容器。<br>示例：<code>docker run </code></p>
-</li>
-<li><p><code>docker ps</code>: 列出正在运行的容器。<br>示例：<code>docker ps</code></p>
-</li>
-<li><p><code>docker images</code>: 列出本地已有的镜像。<br>示例：<code>docker images</code></p>
-</li>
-<li><p><code>docker pull</code>: 从远程仓库下载镜像。<br>示例：<code>docker pull </code></p>
-</li>
-<li><p><code>docker stop</code>: 停止一个运行中的容器。<br>示例：<code>docker stop </code></p>
-</li>
-<li><p><code>docker rm</code>: 删除一个容器。<br>示例：<code>docker rm </code></p>
-</li>
-<li><p><code>docker rmi</code>: 删除一个镜像。<br>示例：<code>docker rmi </code></p>
-</li>
-<li><p><code>docker build</code>: 构建一个镜像。<br>示例：<code>docker build -t  </code></p>
-</li>
-<li><p><code>docker exec</code>: 在运行中的容器中执行命令。<br>示例：<code>docker exec  </code></p>
-</li>
-<li><p><code>docker logs</code>: 查看容器的日志。<br>示例：<code>docker logs </code></p>
-</li>
-<li><p><code>docker-compose up</code>: 使用Docker Compose启动容器。<br>示例：<code>docker-compose up</code></p>
-</li>
-<li><p><code>docker-compose down</code>: 停止并移除使用Docker Compose启动的容器。<br>示例：<code>docker-compose down</code></p>
-</li>
-<li><p><code>docker network ls</code>: 列出Docker网络。<br>示例：<code>docker network ls</code></p>
-</li>
-<li><p><code>docker network create</code>: 创建一个Docker网络。<br>示例：<code>docker network create </code></p>
-</li>
-<li><p><code>docker network connect</code>: 将容器连接到一个Docker网络。<br>示例：<code>docker network connect  </code></p>
-</li>
-<li><p><code>docker volume ls</code>: 列出Docker卷。<br>示例：<code>docker volume ls</code></p>
-</li>
-<li><p><code>docker volume create</code>: 创建一个Docker卷。<br>示例：<code>docker volume create </code></p>
-</li>
-<li><p><code>docker volume rm</code>: 删除一个Docker卷。<br>示例：<code>docker volume rm </code></p>
-</li>
-<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
-</li>
-<li><p><code>docker tag</code>: 创建一个标签来标识镜像。<br>示例：<code>docker tag  </code></p>
-</li>
-<li><p><code>docker push</code>: 将镜像推送到远程仓库。<br>示例：<code>docker push </code></p>
-</li>
-<li><p><code>docker login</code>: 登录到远程Docker仓库。<br>示例：<code>docker login</code></p>
-</li>
-<li><p><code>docker logout</code>: 从远程Docker仓库注销。<br>示例：<code>docker logout</code></p>
-</li>
-<li><p><code>docker restart</code>: 重启一个容器。<br>示例：<code>docker restart </code></p>
-</li>
-<li><p><code>docker pause</code>: 暂停一个容器的所有进程。<br>示例：<code>docker pause </code></p>
-</li>
-<li><p><code>docker unpause</code>: 恢复一个暂停的容器。<br>示例：<code>docker unpause </code></p>
-</li>
-<li><p><code>docker kill</code>: 强制停止一个容器。<br>示例：<code>docker kill </code></p>
-</li>
-<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
-</li>
-<li><p><code>docker cp</code>: 在容器和主机之间复制文件或目录。<br>示例：<code>docker cp : </code></p>
-</li>
-<li><p><code>docker stats</code>: 实时显示容器的资源使用情况。<br>示例：<code>docker stats </code></p>
-</li>
-<li><p><code>docker attach</code>: 连接到正在运行的容器的标准输入、输出和错误流。<br>示例：<code>docker attach </code></p>
-</li>
-<li><p><code>docker top</code>: 显示容器中运行的进程列表。<br>示例：<code>docker top </code></p>
-</li>
-<li><p><code>docker commit</code>: 创建一个新的镜像，基于正在运行的容器。<br>示例：<code>docker commit  </code></p>
-</li>
-<li><p><code>docker system prune</code>: 清理无用的镜像、容器和卷。<br>示例：<code>docker system prune</code></p>
-</li>
-<li><p><code>docker version</code>: 显示Docker客户端和服务器的版本信息。<br>示例：<code>docker version</code></p>
-</li>
-</ol>
-<hr>
-<p>参考：<br><a href="https://zhuanlan.zhihu.com/p/23599229">只要一小时，零基础入门Docker - 知乎</a><br><a href="https://blog.csdn.net/leah126/article/details/131871717">Docker入门教程（非常详细）从零基础入门到精通，看完这一篇就够了_docker教程-CSDN博客</a><br><a href="https://github.com/feixuek/docker?tab=readme-ov-file">Github-Docker中文</a></p>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>docker</tag>
+        <tag>Linux</tag>
+        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1355,11 +1195,171 @@
       <tags>
         <tag>Linux</tag>
         <tag>Centos</tag>
-        <tag>docker</tag>
         <tag>ccf</tag>
         <tag>dify</tag>
         <tag>Gradio</tag>
         <tag>Ollama</tag>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 学习笔记</title>
+    <url>/docker_note1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
+    .inline-note {
+      display: inline-block;
+      background-color: #fffbe6;
+      color: #333;
+      border-left: 4px solid #f7c948;
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 0.95em;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-style: italic;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+
+    .inline-note:hover {
+      background-color: #fff3bf;
+      box-shadow: 0 0 5px rgba(247, 201, 72, 0.4);
+    }
+</style>
+<p>初学者的docker入门笔记</p>
+<span id="more"></span>
+<p><a href="https://docs.docker.com/">Docker文档</a></p>
+<h1 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h1><h2 id="Docker-出现的原因"><a href="#Docker-出现的原因" class="headerlink" title="Docker 出现的原因"></a>Docker 出现的原因</h2><p><u>解决环境一致性问题</u><br>当我们开发一个项目时，通常需要依赖大量的框架、库、插件、环境变量等。例如，某个项目可能依赖：</p>
+<ul>
+<li>Node.js 特定版本</li>
+<li>MySQL 数据库</li>
+<li>Redis 缓存</li>
+<li>某些 C++ 编译器或 Python 包</li>
+</ul>
+<p>这些依赖项在我们本地电脑上能正常运行，并不意味着在他人的电脑或线上服务器上也能顺利部署。<strong>不同系统、不同版本、配置差异</strong>都会带来兼容性问题，这就是我们常说的 <strong>“环境不一致”</strong> 问题。</p>
+<p>在docker之前，大家使用虚拟机技术解决这个问题<br> ——但是它的本质是运用<strong>使用软件模拟一整套硬件系统</strong>，体积大、速度慢、资源消耗高<br> 而 Docker 是通过 <strong>操作系统级虚拟化</strong>，模拟出 轻量 隔离 的运行环境。</p>
+<h2 id="Docker-基本结构"><a href="#Docker-基本结构" class="headerlink" title="Docker 基本结构"></a>Docker 基本结构</h2><p><img src="https://docs.docker.com/get-started/images/docker-architecture.webp"></p>
+<div class="tabs" id="docker-基础概念"><ul class="nav-tabs"><li class="tab active"><a href="#docker-基础概念-1">镜像（Image）</a></li><li class="tab"><a href="#docker-基础概念-2">容器（Container）</a></li><li class="tab"><a href="#docker-基础概念-3">仓库（Repository）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docker-基础概念-1"><p>类似于虚拟机中的镜像，是一个包含有文件系统的面向Docker引擎的只读模板。<br>任何应用程序运行都需要环境，而镜像就是用来提供这种运行环境的。例如一个Ubuntu镜像就是一个包含Ubuntu操作系统环境的模板，同理在该镜像上装上Apache软件，就可以称为Apache镜像。</p></div><div class="tab-pane" id="docker-基础概念-2"><p>Docker 容器就像一台台运行的虚拟机，<br>里面运行你的应用程序。<br>它们是相互隔离的，互不影响。</p></div><div class="tab-pane" id="docker-基础概念-3"><p>类似于代码仓库，这里是镜像仓库，是Docker用来集中存放镜像文件的地方。<br>注意与注册服务器（Registry）的区别：注册服务器是存放仓库的地方，一般会有多个仓库；而仓库是存放镜像的地方，一般每个仓库存放一类镜像，每个镜像利用tag进行区分，比如Ubuntu仓库存放有多个版本（12.04、14.04等）的Ubuntu镜像。</p></div></div></div>
+
+
+<p>除了以上几个结构组成中重要的概念外，还有另一个重要的概念<br><strong>Dockerfile</strong>：<br>它像一个自动化的脚本，它主要用来创建我们之前讲到的镜像。</p>
+<blockquote>
+<p>他就好比把虚拟机中创建虚拟机并安装软件的过程压缩为一个脚本。</p>
+</blockquote>
+<h1 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h1><div class="note info"><p><a href="https://docs.docker.com/get-started/get-docker/">Docker Desktop 安装文档</a><br><a href="https://docs.docker.com/engine/install/">Docker Engine 安装文档</a></p>
+</div>
+<p>安装完成后可以使用<code>docker version</code>查看Docker的版本信息<br>查看Docker的帮助信息：<code>docker --help</code></p>
+<h1 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h1><div class="note warning"><p><strong>列举所有的容器:</strong> <code>docker ps</code><br><strong>停止容器:</strong> <code>docker stop &lt;容器 ID&gt;</code><br><strong>重启容器:</strong> <code>docker restart &lt;容器 ID&gt;</code><br><strong>删除容器:</strong> <code>docker rm &lt;容器 ID&gt;</code><br><strong>启动一个远程 Shell:</strong> <code>docker exec -it&lt;容器 ID&gt; /bin/bash</code><br>只用 <code>-i</code> 参数时，由于没有分配伪终端，界面没有我们熟悉的 Linux 命令提示符，但命令执行结果仍然可以返回。</p>
+<p>当 <code>-i</code> <code>-t</code> 参数一起使用时，则可以看到我们熟悉的 Linux 命令提示符。</p>
+</div>
+
+
+<ol>
+<li><p><code>docker run</code>: 运行一个容器。<br>示例：<code>docker run </code></p>
+</li>
+<li><p><code>docker ps</code>: 列出正在运行的容器。<br>示例：<code>docker ps</code></p>
+</li>
+<li><p><code>docker images</code>: 列出本地已有的镜像。<br>示例：<code>docker images</code></p>
+</li>
+<li><p><code>docker pull</code>: 从远程仓库下载镜像。<br>示例：<code>docker pull </code></p>
+</li>
+<li><p><code>docker stop</code>: 停止一个运行中的容器。<br>示例：<code>docker stop </code></p>
+</li>
+<li><p><code>docker rm</code>: 删除一个容器。<br>示例：<code>docker rm </code></p>
+</li>
+<li><p><code>docker rmi</code>: 删除一个镜像。<br>示例：<code>docker rmi </code></p>
+</li>
+<li><p><code>docker build</code>: 构建一个镜像。<br>示例：<code>docker build -t  </code></p>
+</li>
+<li><p><code>docker exec</code>: 在运行中的容器中执行命令。<br>示例：<code>docker exec  </code></p>
+</li>
+<li><p><code>docker logs</code>: 查看容器的日志。<br>示例：<code>docker logs </code></p>
+</li>
+<li><p><code>docker-compose up</code>: 使用Docker Compose启动容器。<br>示例：<code>docker-compose up</code></p>
+</li>
+<li><p><code>docker-compose down</code>: 停止并移除使用Docker Compose启动的容器。<br>示例：<code>docker-compose down</code></p>
+</li>
+<li><p><code>docker network ls</code>: 列出Docker网络。<br>示例：<code>docker network ls</code></p>
+</li>
+<li><p><code>docker network create</code>: 创建一个Docker网络。<br>示例：<code>docker network create </code></p>
+</li>
+<li><p><code>docker network connect</code>: 将容器连接到一个Docker网络。<br>示例：<code>docker network connect  </code></p>
+</li>
+<li><p><code>docker volume ls</code>: 列出Docker卷。<br>示例：<code>docker volume ls</code></p>
+</li>
+<li><p><code>docker volume create</code>: 创建一个Docker卷。<br>示例：<code>docker volume create </code></p>
+</li>
+<li><p><code>docker volume rm</code>: 删除一个Docker卷。<br>示例：<code>docker volume rm </code></p>
+</li>
+<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
+</li>
+<li><p><code>docker tag</code>: 创建一个标签来标识镜像。<br>示例：<code>docker tag  </code></p>
+</li>
+<li><p><code>docker push</code>: 将镜像推送到远程仓库。<br>示例：<code>docker push </code></p>
+</li>
+<li><p><code>docker login</code>: 登录到远程Docker仓库。<br>示例：<code>docker login</code></p>
+</li>
+<li><p><code>docker logout</code>: 从远程Docker仓库注销。<br>示例：<code>docker logout</code></p>
+</li>
+<li><p><code>docker restart</code>: 重启一个容器。<br>示例：<code>docker restart </code></p>
+</li>
+<li><p><code>docker pause</code>: 暂停一个容器的所有进程。<br>示例：<code>docker pause </code></p>
+</li>
+<li><p><code>docker unpause</code>: 恢复一个暂停的容器。<br>示例：<code>docker unpause </code></p>
+</li>
+<li><p><code>docker kill</code>: 强制停止一个容器。<br>示例：<code>docker kill </code></p>
+</li>
+<li><p><code>docker inspect</code>: 检查容器、镜像、网络等的详细信息。<br>示例：<code>docker inspect </code></p>
+</li>
+<li><p><code>docker cp</code>: 在容器和主机之间复制文件或目录。<br>示例：<code>docker cp : </code></p>
+</li>
+<li><p><code>docker stats</code>: 实时显示容器的资源使用情况。<br>示例：<code>docker stats </code></p>
+</li>
+<li><p><code>docker attach</code>: 连接到正在运行的容器的标准输入、输出和错误流。<br>示例：<code>docker attach </code></p>
+</li>
+<li><p><code>docker top</code>: 显示容器中运行的进程列表。<br>示例：<code>docker top </code></p>
+</li>
+<li><p><code>docker commit</code>: 创建一个新的镜像，基于正在运行的容器。<br>示例：<code>docker commit  </code></p>
+</li>
+<li><p><code>docker system prune</code>: 清理无用的镜像、容器和卷。<br>示例：<code>docker system prune</code></p>
+</li>
+<li><p><code>docker version</code>: 显示Docker客户端和服务器的版本信息。<br>示例：<code>docker version</code></p>
+</li>
+</ol>
+<hr>
+<p>参考：<br><a href="https://zhuanlan.zhihu.com/p/23599229">只要一小时，零基础入门Docker - 知乎</a><br><a href="https://blog.csdn.net/leah126/article/details/131871717">Docker入门教程（非常详细）从零基础入门到精通，看完这一篇就够了_docker教程-CSDN博客</a><br><a href="https://github.com/feixuek/docker?tab=readme-ov-file">Github-Docker中文</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记</title>
+    <url>/Python_1.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0d1e0d2ee91ea2c4fed5ccdfba08e1a67624a72765e80e579f7265f5a507821a">172b901311fda5dafa89e27317358587749f6b88053833814a240761be71973790ebbe06846f2440e034d3d366d915c5a38504e790b8fce97d523ee15e69a2ae67450fe5822b521e85c2f5208f1515ea07866f04a6ca3bf0bdb73254ec02fd68e7e6cdbb1060508571575042ecd908a839af15bb0b543b0574f553c6564c054f97c6993d9793546a1215996719c924d9c4ca0d060a5466d22c3dda7be952a04361fb532b1827d1b2785e56912576ff6072ba29b39cbb3805fa4bfe25e9a6add011fd5532eacda48ce154ce36e38fe503b403788d778cf5493311725793b75058c30830e10080c9f236b1a9e216f7799c29ab499e2c674dd1913f7e628143f67d95eddd4f99d63fda94ec76c84042f64c89bab1c8e7a71df5f66dfac35558e96c45740a6ab5cd9350f1565005f32433cc851cbfcda500a20561b1299532c1dd5069f36a2627eb7b6a4bccecf2dfe9d8318538f38551ab02c8361e55278678cc5d470b85ccd27f36fa993c2d6a65b936a3d3ff2054367a6afcc504a14c47626e567932be8d1671048fc41524c357897139bbdd2e1710cebe5678352d06d822273c5e9bebee249c06d454ca8d7c64793fdf71744d0e8e3fa3d55a482fa5906f422b922b29117261e792c39f7f6e56d5c8f1655f3ff3d39aa5fd037c6659ce52365f49101d396de592e07abbd938c5b7b55f7ffa3cfde7361fd18790cbdaac221ed8a0571442031ff5f8e64f6ae43318f7d8a4c255a25e16209c8d536f577cf7d41f792afb6b8683c191a4b369bcc6ec0a644a68942973f7ccdbcc4243f2a40419540b63b4b192d4f0c7b350e0c164ed86037ab4e761f2ea0580c6bba4d351f0081f6915bd19927c3f119c3e26d5fe47c68643f482b06f0c0e5a6b07e2247fc6f1f3b08c25f0c9e63f7190dc3b0ba4588caf7c83046c7d1098a63c3ed6db97712a9468eece40a1725662699b3c7d730095f64c4ca7cd129a5b544e8d09fd9ba50f329a91a7d0d0d5482ee7cbf9c44c1934647adc225f945929d11cd676cda3e9eaecea8ca56c5c56713609bd6535512461ff957ffef64b34ac5940e49e3881ebbeb4090f14408227d2b1a7b8561a5a2cbf60dec1a9d7e0d8bca7e2dbb6e6838f1cf73e5a42c38c154fcfca36c1e56fb57f7d8d1b3e0c40fb7fe50ee74e903ade15c6056d8aae4ee182a63982a70a214d69b512b3573195abf5f16528fa9943f14152ba43fdd09aa04eac02e6a4416d6f96676038e78b81e2b4be2c0e399b7d086cf5d20b6c70de6d932ecf52c53f423c72d49a2a11f717d7e09294c9513046895d174bcc33973a4e62bc2e0058a376a2ec293faac6da41bddfa4343774c59b5bc75bfd300a07ca7a13d2a034612ac58a72df89b527567900f6e306b26162169f99ba98a2efcb7e1ed7a846c55e4d88a99b5d6758ccdcf189200e868ef9f5e4b2bba5b8d7e0743bc8015cb13a18beb8ff4c867177c45fb9ac90b95be63cd462247ded1adb3cfdc8785fc1cbf1bc8faa9e9209fb31ce7168d80e0cdfd9d865f0b848e4b4afc56ab108d7cb7602e0f46c7cd86d616ae2f11b7f5d893b7f61392ea6d6752a87175ec95a0e3145b8f7a5995f91bfe6d2dfdd8021f3faa57ea80e2c9b975995bb26457ab03c174affdbd263d9e0a5e2566d3cc0badb08be0e81ee77e6f9e02d6cd002e1484593c383d82ce14c870a94bc3ef6df6697f6776de263efbe0af91f91a5ee27f7b6f954bc1fbddf81d0030cdff1fed4a62e78895b86eccc3429cf1edcbaf9de1e8bb9c63d660f8b681865ee9445a16e35888af2f5d98dcacd0547c123b04b05bd4d5a652b3327fefbc2c762853de4696245640a6a1c33daa17f5c38c10b57de474c7e28c232155899b14063c838608cc867f9d1c8cfa11271583c8f8f770a7423a798fec12822afabb0f5058dbcc3bf9e650aa3718fac37b02adadde4149d711ba3a239a4cf47d9aa26af18e6ba026cf263ff75c497287bd15eb556b4cc92c6e79f56178e9129acb01cf07497aad08a8301944f60c0f8cb56f9331623d8ea70a77353a3eeca0a99ea6a373c68a3783fcf3630cc4c58c1be07925221bd5ad9fb5aa948981b41c7e40523c275e7abb6df30aa2010496570af7471c5af765c884280926c6e94b1de8702e06c913591abe946982d6ac0e60ce8ba041b3c08e11e3d1d3c0438ce694c5483f63bfdb92e750220835bd8f1068ffa97ecb6b1e1c8ee0323fbfe2283521885ba1966cd77c6d807748b10e8af4dfda6a70d0e390a87af222d1fc474a02ad8847f7a74d3af5b2386012a1647fac1c80850f7fb80bc6cc828243b11070f8ae737932d7086dbc2bd3a49d789873671bae063d770da568a43cf158f1f61b9a8f6e450dcf26b367580b5c8b4e71f0d369148d621027ffdbee72599f287f6d3c536db4c0572384f88183013741e59d75e7bd41168ee780c24ba6135ff780a4b5da6101d308fe98d6f1ad8f5da62c4f9067c2b82b4dc92a44671b6c710bae34f60a02afb08033355b01c68d89af468f9122a53e2ccf2a2e6dd8bbad00fcf655a85965743ceda6ecfe93ec342d32a1eb9a8a683aa6a720a5b7edc07ef21fce53922d8cfa1b3c5c2d2dcd71809ec341a8717718b1ee0501aa5195330d80fb8038f9d3b32b6ddc9a046f921e2793be8cf1dba04e0b7ff9130795728f693f82c9467ecfb4017241e6a2306bed1f4281d5e9132d4c74a0af14279810ca37e14ea60bf876163c3ba95a681275da31e89fc771179cc4f054ace1c74e4536093ec7bb2d2b1b698838a05d5f6877b1cd653c2163c1c439d72c3a9748e10a7eef49e93f81b609525689e3bd85774a61f881eb355100944165ac40db51b15be0e35009e02f9c55525803b175b0b6d7d6e876b764124575c753756d270293cbdc97ff39d3d641b54754308b5b838729b2a7b7a1048520292212c7587637eeb4822f3fdb2d55c1de4f6fe549c550795c5490eeddbd35a7c1d17372c36de40316c99b50552f3b65c87ca23d1e1060311118a091179202a7c564c6e1f4cdece382ea1a0cd30b619615c3eb10f33cc3c2d17ca0ee1d8cacbfa03a933c8a65577facea72a73336655f1ffe1c8e184270d762d477a05eb55b7266e7e124f1dcce9c5e7c661b88b299f1d4838e947337c27e74e7bb3e9615354857669eace2a5e3d2641e9a2b8245dcf40cdd326e3169540f32bcf11644b6c1efa83cbb210676c66513457b74826d27449c9853f934517ca82225daab5fe3e96892fbd53ec6499213e4e459bc699d036424c2fa18135439eb8fcaf8ac3f7c65086785c68a1b5b545ae4d7823453a0892f7ba85b58d5d91a787f47c77787561c9683588f3564ace364031f15a5d804e839c748c3861f317ca5b92c2b95855773fb64fe980ec06550663f445ce2394591eefa7409b38ea79ecdbe52c98f058fac17b44636b189301be6f2cebcab463ce561dffc6281ed3e7e5a19b6b1239967303af905f04c70ba7996fc212e08d71137dc0f01ded90fc58138d7e27624825561af67ccccbbebcd845eda080f1f573174b9d405610bb180ccae83b34d33758eb54e69b40c0e58f1b053da9fd9b1d60b9133e7a10e90e743685cf3e2b4ba91bb740ff887147e6caa40af095313791d448608eb978c655d1d1c833b70e7ee7f56b048077ec91732fa0e3f67e742e330a46b5c3c38709ef7fa136f3af2e738e8e30dd9d1b981c634f309369e72ee065af1a980b696681166380c32e9d140834138d1026b07051e18975fb80e2a46db41f490c0206a538d866e6a0d939ff9396ca282f954232c483dc4913039d9334f42f2c032722dbf193ef4501a8330a211cf9ae3fae4fc749cee311a3516f64e6d3c1d3de1afaf2795eb337d584d4ccce7aa7cb846516f0a3bd7fd4901b1c76a9af579754cfea2577a3a51f20bd0b7b5c7275a2c22a92ccf8439e3c91d73c69e8458f27d86fd96072643bcf40b7518280584b8dacb98231fe3e38bb572924360becee71a7417b1cd89d8a7fec2ac0e11ba3a8241e8977f51aee02c22f639c63e2227e19c7b969b5dd528db447e64bf9f6050aff3bd0c6fd78635b54c00824e4fa0b9f46ccc60c0d8ad9cf0bb818bd6ee85ce982a8c8c088a57dca2c09d1863118c303856658095f2ffca3490b40b2d95b27e06dd89e1500f3758c3f37d25f7f30a9bf6608e29f7e7d3dc03ab2f7e435b292993627b68a72229b33058ff704a32983efc1299d0a1f276da810b2227213df73b20c746ae79c425ecaae50cc1f86b1261109cba4c30e36d55fcf193b30ccb2b9aad8beb89a15ee89e4d8e02dbcecea92e98c6206f98c9fc7e4c78b01ea9aa8306b88099fd3b22ffba053d766e89beec1dff8818ef49d77611a4d736097f3313b5087c3e6609a14995bf3fbb662ee05bb966b29fc1022d4b77c0a72acee756099090ff9faed769ef1fa5a7c127daf90c55b1d51ea9e2ed137771d1aeab33d7fb677100590fc3cd34a66973d2e71bed6dfc8433697b65d64ac48a7713079cd12fb795578d6931a0d5c16c6a8e31a108328671a8a861d391b55d8db1fbc8f68ba9d07a6db81c4ce6580a3fbc88e7b6e7bde2f60e8ca3295521a63057a7ace86fa5c2eef7931378f5f07d5d3ee6488b7580f6bd6df78f8f0e78d71e481c2a66a8b950463d36fd74c06f335edec1b3c32c15518e8b18e59b002cc78cf20fa0dd5cc15d16688e71e408f755336e5baf32822fdd58ea3cb5833b81f5b664e8b2a0a6454ebce9df3b3a022629564115b7ab62dd3a2c37c47a0acbfefcccced4b081d41c8e8afff913b8ba0ef2059c2b5f27453fd167dade36ed2b8ec50b6e270884b50da204febef2a44d460b3d0e935a8ba89fef1743d0cb2251002e24f5270c541978607815ba7feeffc80abdef09f95a395749ad4aec374f53a6473bfa0f3c3743f89f2eb78b413431465d12ca29309b96d823abced501449fc3902106e0ef8297fdb608291ec7144e85c9306ce4bc83bb123e782002999eed82936c1b43c4c1f96edc55647218d1a02091303a26043833f078c3bdda9abbe0e17f07c4185a3e49c6a50d298b3362df9fca182774ce9ffa3cf1a13cd907186699a0105b299537d4b1196f5f5dda2aca7b5f84d779a178f0bc52970551185489520bc56b0acd2a02a262759f53bc323e7169605177dcbdc7d96c2ae60658ec1e1d91d4ec2283ab9dccdf19721f946fb3b0b8e1c1293c00d7e8430a541101d8f23da743aa8cafc641b0db0d98841b872b611e5a3b1e79c5a8f77f8327b2a9682079223009f157ed7d5b51718e566a19a7468578ba7076445c6f816b27c4a27fd5c00ccf819f0a7ec5d5500586d20de85556252277c434537c218d828ff268e9eb225b2cd4c1f591d164c97f9169181f1d6953d711533d08be87ae7f6e8a619382336e4fcd799ffb34fb68c03e53bb6b26cae7d52d53c98d11aa937428aecb57f22c1c1608db76b1b24a26697c6e152af98041c9c1263e26f8654ca4aac36ae0dbac9002f1cab6a84c2587d21b17a102a9dbac11eb91f8f586ebd70f17f56cf23069d8d0198bd8a972030ca1549e4a0e221fcd16c0d768f0fd2f345b915824d578d957d4f93b04eb879f08a21b9c5066c8ae6df90a0882c38d2eb0a3d328db23f8b6b5a9a1fc3c4aa8da3313bac07665707bbf0939f18851bcb9f244553a9cfefe5763eb51ea527cce335160dbfc0688836d0df08414a2088e6eb2d7a114a99e3df979246666f2744bfb5133a504071a8fb7e090bfeac2c81f2bd64cd746aa9e3c20c793d54b9724deafa902e88d066cc6744f94f7b44a28b3cac09ad0279e4c8ddc423fd459846e222d63432d354eac5037c61bf457185e97ffa83962cd053d2f8a53b807f410b826cd2bcacc24ad66120bce200dfe2238d333313ee49c0a5d6e4e9762583dc58177fb3636dc117f4f68613036a21fa20b40cded458fec8b823e3f0bc3bdbb96a50fd50743d464660afb526abdc5638ed165922f82a3ac1340962c641c54fcaccbe522e5aabc0056a3e790f077d0d6a245edc43fb95612ce71d66c2316f96ef6153f4fdbe1ae91cd02f45ed0cf5f97facf088daf7037fc06b8695deffd5cb906ae33c800229790cc93371804182f12c2715ab051092392c3819ad667ef3b95aa6194a8e017e50023cf6185630b6c84b334ef7f53c6f8de627004d6452d2f3f309e00248796bb9e0fff44e690e2b1725f1357b5f142fa449981a088519ed34f1aff6e6e61368801edfb2adf729f7a7285e151a60006214f0f7aadbe827585b39c2caf466f49a8d884cb801111e8909e3ff7c45d5db2c177629ec3ca66bb5bfde00135c46b3f6131c9c9e225e45137183ae90ba87d64dcec1d8048642724c6178389299d978ee5739250099c53bd028ee0d820556345e8ac0edb422dc3ddda2c4167d8b7ba9fd8cc1d3c1d46e82659a27ea40561772898aa1de4bbd407dd739ef1da044089f626bcb9033447fdbe959cbaf1ece50f14a936790a3613a2bd0b6e3e69a3e1231587e7c914af2ee7ee33993654f8bddd3363002047db34215db34116b0804428a8a35511d257987d3ef2c18801f3f0f76a374fa45a03c1be0b2edbdacfc5d607470b2f1cc1cfc129dc65c69111caccc69055888307bbf6cf772016b73babb6dfeaec785cdb2f948600525b09cbb08a7f7e9dc05eb727cd10be3e8159e3fdac3fdf37b857dde0d44e3d7181f34410885dd737f8136705c48250313a740459f7fdef2a8b0c59bc2538870d5ec2a7512fc6c5c5f30ab8226d2f61dfeb4a529039a25f4ad569acc5f70abe2cb17c9d3686c4c7ab5253039c105fd912155fdaf04cf6e68ff57e6cffe9c0d0e39a0d84d2684275ed212b9560c7c7d2757f06064bda61124b16504cbbc1536c373cca731924d13b46ae098d12da5a546d7a2bb45eee33edee864a366644a905d0b05475ceed7673411b10baea6320571b14bc57b1d22c1f38b256fc0c4140988a45628dc767605716126a20d491de4accdffe7144868339aa9267880871133a21f266ec45056b45c8831b92dbdb66f926b272c3fde37f957cde7fb81af49c0a50b475d4b5f6dcdb04e816f2482e06269c15ff3d0692c011c45c7f0518028c55c26d92aa43b604e35469453c8b0a020eaaf3fd59f8babde4db7f5856d58f572f2e1d7827eb3eb3971d1526ba8fcafa1e2adc9d58eff5a51cf6549dcce7ff53c47b9f1a40bcc37993cb7082449c4ae428d3248e49399bf69d43e2660ea1cc321622377c87330974a90eb04242126f3d433964eb291f1beb7cf272b4f941d27f31d5e09700f52ad0d923eab1255dbb8e9117272f00438290098b9c95eee6e28ebbd5f4240aae71ebd7abd6b20d98e81ad36e9569cbe926e62c33006f2d9e909b65a86fd82eb31220094a3beec8119c6fb743dbe0c57ff4ae8ca1d540bfa99bc715aa35a4a358996d3dddfaa2a3c33ebd3bd781b5f5e0f38907294818f44896174c2a818852ce3930a36029bb9bcd02ab200667a3216a2ec3f0ceb7f46976e0f6a62b5e33f7708cae3d37bfd2aaf30aa39954ea9ca7199333bd53386e4e86686949b20fd6bcf3fce7f7ce8e9c227fb6428d2dda3e3eb1ff45bac1e475138bf555057ea172ec1297b4562a19d87f23248bd698a0c4c7ee75ae1e3b2da11794aa60b6ed309b1d2b4d27b9f427298afc5b4ad0c6455e073499f0c228cff8a4a24463c7e1d89f62d74a896d1b733d93dfe08fad23da516776fd2bcd1f899eb5d8669e367d10f0c9dbb05b1f1da3cb8f99ee4b9877fc022a2209e586e2d3a59e249ed1ba5ce271d74cbe72567009f4f1816af07d8833aea6e459430defbe3399358a15cab991feaa403035fef5f481190d744fb2feacdc57d2ac82246cb85bf18cb2d38c99f976f7c1413f45bfccfaff59be069c9e85c3d3ada71d1e2f6d5491129f2be6d08b047cc06f4ec31c07d3236e171daa8fe6d899264f0ce50ee4ee6d7f38bd2781aa64ea872c51cd9c3d75453fab5257d2bf56b471dd71a6b2d403a5eb554aadeb95febab03d6240c9e1711936a384db9b02055e2c663d48ee3be4b30433e79db18fff967b82eb51804049946caa422f66c7a24915aaa4cadf20fb50611de7a1267cad1ed2e4e842a0ddb7ef62c67bed999fedf7af42e56d15f011cd30d3e3c9fb879bd4f0ce68fbe4d6034bd5dc39712026bea9a37bc0060da39b7b5aead1136f920d374d48528ab8cb29236be0e81f8dc2767729c27ce0aa4d95a0920515b2934e9b940f276df4718498c6c3ae7693fea724ef77577452da2c795f39083c0fc9302f82d8228b23a1621abba70998e7a6fc0a20f343a3cd19c4c63caaf937a753e32b33b43aed76a2bc74a6b08ff4cd1c3d77250a8bad741d725e98d5b34e131de4c3c2d9ca83d35c23adcaf3b479fb1e1bdc275c395f8f70616c2651e2490874511b69299d20274430c436288a85f09d329e641e4c2c36b8ef76610a1fda5e32d549bc78c3b0eb4358f573ef2505041a8db960926e8bb305f56d4efdc85c5257ebcec2cb7551ceef432f7fab7e0a50e8dc010d34452869af532350f538963ad61e4893f9909f168cf82af11d9760b07ecea6129b5755d932e19dcb8b00f7aa68219da9dc182979c8e46eddd976800f9eb9571ba4e2fb2ffb1160d681ac2b1d5c75cd111bd34119ebd211213483db1b88153c5dd3b628bb87dd1c36a79904b2d6d0dfa78b636abdd0b5dc8f30d7a1eb653d28849bb5b407192cb86382906fa86bdb660b10b692367eb8a63af1c37cb4b85d3bcbf6ff579a8ce29b9d77f78980f80f81b1e373ced29fe03dbd410151e36b54e9ca2f736fbb40d208368d1f34911afd40e7e093b45ab9e72ed8dede2f7ca53c084b503222910e816eed4c955038c8e933f340b6389218def9277c89c47354c0c4f4eb7ccc49289540a7a638fd84526f6daaab1dc4fe433b9be67479c6a681cd3925baff6ece0cf542ce81e4c2b327c5742196a99b917f87c09faeff2cd442a5d6a25d9c800ec38a5bdc27d938e2d86b1a8b9d245ab9e28486d78f722472e52390daa45ee4f2611ae876f79e36e1ad19ee61248a15a9a2de05f9e06e272f75cb0f3e4b87ebc6c1dacf72b7771d308ed23b7dd815f430ddb51e47d3c8fe62b1d48d6441b60552a03e4262bcc63e8e7295a176b8ee81cacc1fdf25c1c0b485888d2ef076602cdc53febeb462243add1fdd39349b0b0e20c4bc2bed43aa7a73a9c24bfaacca87e73bb13e61c2c2ae683e1715a5eec48270370834c3ff5cb7191bf6dea41897eee124f67e0a98ac4165f616126b5884dedccefe977661713b0df8dd8ee5a79f2e5111779c6f88ba230c788e3f73d28297a8faf077f05267b77</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
