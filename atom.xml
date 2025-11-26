@@ -101,27 +101,6 @@
   </entry>
   
   <entry>
-    <title>Flask学习笔记</title>
-    <link href="http://blog.lanouo.xyz/flask_lean1.html"/>
-    <id>http://blog.lanouo.xyz/flask_lean1.html</id>
-    <published>2025-11-13T07:41:01.000Z</published>
-    <updated>2025-11-13T07:46:33.753Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Flask学习相关记录</p><span id="more"></span>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Flask学习相关记录&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="笔记" scheme="http://blog.lanouo.xyz/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Flask" scheme="http://blog.lanouo.xyz/tags/Flask/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python 学习笔记</title>
     <link href="http://blog.lanouo.xyz/Python_1.html"/>
     <id>http://blog.lanouo.xyz/Python_1.html</id>
@@ -188,11 +167,11 @@
     
     <category term="docker" scheme="http://blog.lanouo.xyz/tags/docker/"/>
     
-    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
-    
     <category term="ccf" scheme="http://blog.lanouo.xyz/tags/ccf/"/>
     
     <category term="dify" scheme="http://blog.lanouo.xyz/tags/dify/"/>
+    
+    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
     
     <category term="Gradio" scheme="http://blog.lanouo.xyz/tags/Gradio/"/>
     
@@ -238,9 +217,9 @@
     <category term="Linux" scheme="http://blog.lanouo.xyz/categories/Linux/"/>
     
     
-    <category term="yum" scheme="http://blog.lanouo.xyz/tags/yum/"/>
-    
     <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
+    
+    <category term="yum" scheme="http://blog.lanouo.xyz/tags/yum/"/>
     
   </entry>
   
