@@ -188,8 +188,6 @@
     
     <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
     
-    <category term="docker" scheme="http://blog.lanouo.xyz/tags/docker/"/>
-    
     <category term="ccf" scheme="http://blog.lanouo.xyz/tags/ccf/"/>
     
     <category term="dify" scheme="http://blog.lanouo.xyz/tags/dify/"/>
@@ -197,6 +195,8 @@
     <category term="Gradio" scheme="http://blog.lanouo.xyz/tags/Gradio/"/>
     
     <category term="Ollama" scheme="http://blog.lanouo.xyz/tags/Ollama/"/>
+    
+    <category term="docker" scheme="http://blog.lanouo.xyz/tags/docker/"/>
     
   </entry>
   

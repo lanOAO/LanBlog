@@ -22,15 +22,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.lanouo.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.24.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism-solarizedlight.min","dark":"prism-dark.min"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"bounce","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":-1,"unescape":true,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="&#x2F;* 列表容器 *&#x2F;     .friend-list {         list-style: none;         width: 100%;         padding: 0;         margin: 0;         display: flex;         flex-wrap: wrap;         gap: 20px;         just">
+    <meta name="description" content="&#x2F;* 列表容器 *&#x2F;     .friend-list {       list-style: none;       width: 100%;       padding: 0;       margin: 0;       display: flex;       flex-wrap: wrap;       gap: 20px;     }      &#x2F;* 卡片项 *&#x2F;     .">
 <meta property="og:type" content="website">
 <meta property="og:title" content="友链OuO">
 <meta property="og:url" content="http://blog.lanouo.xyz/links/index.html">
 <meta property="og:site_name" content="幽篁里">
-<meta property="og:description" content="&#x2F;* 列表容器 *&#x2F;     .friend-list {         list-style: none;         width: 100%;         padding: 0;         margin: 0;         display: flex;         flex-wrap: wrap;         gap: 20px;         just">
+<meta property="og:description" content="&#x2F;* 列表容器 *&#x2F;     .friend-list {       list-style: none;       width: 100%;       padding: 0;       margin: 0;       display: flex;       flex-wrap: wrap;       gap: 20px;     }      &#x2F;* 卡片项 *&#x2F;     .">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-15T16:34:27.000Z">
-<meta property="article:modified_time" content="2025-11-26T08:53:02.899Z">
+<meta property="article:modified_time" content="2025-11-26T09:00:23.463Z">
 <meta property="article:author" content="LanOoO">
 <meta name="twitter:card" content="summary">
 
@@ -314,267 +314,217 @@ customElements.define('an_loading', CharAnimation);
           <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><style>
     /* 列表容器 */
     .friend-list {
-        list-style: none;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center; /* 卡片居中 */
+      list-style: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     /* 卡片项 */
     .friend-item {
-        font-size: 14px;
-        /* 默认 3 栏布局 */
-        width: calc(33.333% - 13.333px);
-        min-width: 280px; /* 略微增加最小宽度 */
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      font-size: 14px;
+      width: calc(33.333% - 20px);
+      min-width: 250px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     /* 卡片本体 */
     .friend-card {
-        display: flex; /* **核心优化：改为 Flex 布局以容纳头像和文本** */
-        align-items: center; /* 垂直居中对齐 */
-        border-left: 5px solid transparent; /* **优化：边框加粗，突出颜色** */
-        border-radius: 12px; /* **优化：圆角加大** */
-        padding: 15px; /* **优化：内边距加大** */
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        background-color: #ffffff;
-        
-        /* Neumorphism 阴影 */
-        box-shadow: 6px 6px 12px rgba(0,0,0,0.08), 
-                    -6px -6px 12px rgba(255,255,255,1);
-        text-decoration: none;
-        line-height: 1.4;
-        cursor: pointer;
-        position: relative;
-        height: 100px; /* 固定高度 */
+      display: block;
+      border-left: 3px solid #76d100;
+      border-radius: 7px;
+      padding-left: 12px;
+      transition: all 0.3s;
+      background-color:rgb(255, 255, 255);
+      box-shadow: 9px 9px 15px rgba(0,0,0,0.1),
+                  -9px -9px 15px rgba(255,255,255,1);
+      text-decoration: none;
+      line-height: normal;
+      cursor: pointer;
+      position: relative;
     }
 
-    /* 悬停状态：按下效果 */
     .friend-card:hover {
-        transform: translateY(-3px); /* 悬停位移减小 */
-        box-shadow:
-            inset 3px 3px 6px rgba(0,0,0,0.15), 
-            inset -3px -3px 6px rgba(255,255,255,1);
+      transform: translateY(-5px);
+      box-shadow:
+        0 0 0 rgba(0,0,0,0.2),
+        0 0 0 rgba(251, 255, 251, 0.8),
+        inset 9px 9px 15px rgba(0,0,0,0.1),
+        inset -9px -9px 15px rgba(255,255,255,1);
     }
-    
-    /* 焦点状态：键盘导航优化 */
+
     .friend-card:focus {
-        border-left: 5px solid #d10073 !important; 
-        transform: translateY(-3px); 
-        outline: 2px dashed #d10073; 
-        outline-offset: 4px; 
-    }
-    
-    /* **新增：头像样式** */
-    .friend-avatar {
-        width: 60px; /* 头像大小 */
-        height: 60px;
-        flex-shrink: 0; 
-        border-radius: 50%;
-        margin-right: 15px;
-        object-fit: cover;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-left: 3px solid #d10073;
+      outline-offset: 2px;
     }
 
-    /* **新增：文本容器样式** */
-    .friend-text-content {
-        flex-grow: 1; /* 占据剩余空间 */
-        min-width: 0;
+    .friend-card div {
+      padding: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #999;
     }
 
-    .friend-text-content div {
-        /* 移除原先的 padding */
-        padding: 0; 
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .friend-text-content div:first-child {
-        /* 移除分隔线 */
-        border-bottom: none; 
-        font-size: 1.1em; 
-        color: #333;
-        font-weight: 600; /* 名称加粗 */
-        margin-bottom: 4px; 
-    }
-
-    .friend-text-content div:last-child {
-        font-size: 0.9em; 
-        color: #888;
-        font-weight: 400;
+    .friend-card div:first-child {
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 1em;
+      color: #333;
+      font-weight: 500;
     }
 
     /* 响应式设计 */
-    /* 平板 (768px - 1024px) -> 2 栏布局 */
-    @media (min-width: 768px) and (max-width: 1024px) {
-        .friend-item {
-            width: calc(50% - 10px);
-            min-width: auto;
-        }
+    @media (max-width: 768px) {
+      .friend-item {
+        width: 100%;
+        min-width: auto;
+      }
+      
+      .friend-list {
+        gap: 15px;
+      }
     }
 
-    /* 手机/小平板 (小于 767px) -> 1 栏布局 */
-    @media (max-width: 767px) {
-        .friend-item {
-            width: 100%;
-            min-width: auto;
-        }
-        .friend-list {
-            gap: 15px;
-        }
+    @media (max-width: 480px) {
+      .friend-card {
+        padding-left: 8px;
+      }
+      
+      .friend-card div {
+        padding: 8px;
+      }
     }
-    /* 极小屏幕下，减小头像尺寸 */
-    @media (max-width: 400px) {
-        .friend-avatar {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .friend-card {
-            padding: 10px;
-            height: 90px;
-        }
-    }
-</style>
 
+
+
+
+  </style>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadFriendsData();
+
+  document.addEventListener('mouseover', (e) => {
+    const card = e.target.closest('.friend-card');
+    if (card) {
+      // 直接从dataset中获取JSON中的颜色
+      const cardColor = card.dataset.color;
+      // 将颜色转换为RGBA格式用于动画
+      const rgbaColor = hexToRgba(cardColor, 0.25);
+      const rgbaColorLight = hexToRgba(cardColor, 0.15);
+      
+      gsap.to(card, {
+        duration: 1.2,
+        background:
+          `radial-gradient(circle at 40% 40%, ${rgbaColor} 0%, rgba(255,255,255,0) 80%), ` + 
+          `radial-gradient(circle at 70% 70%, ${rgbaColorLight} 0%, rgba(255,255,255,0) 90%), ` + 
+          "#ffffff",
+        ease: "power3.out"
+      });
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    const card = e.target.closest('.friend-card');
+    if (card) {
+      gsap.to(card, {
+        duration: 1.2,
+        background:
+          "radial-gradient(circle at 40% 40%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%), " + 
+          "radial-gradient(circle at 70% 70%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 90%), " + 
+          "#ffffff",
+        ease: "power3.inOut"
+      });
+    }
+  });
+});
+
 // 将16进制颜色转换为RGBA格式
 function hexToRgba(hex, alpha = 1) {
-    if (!hex || hex === '') return `rgba(118, 209, 0, ${alpha})`;
-    
-    hex = hex.replace('#', '');
-    
-    if (hex.length === 3) {
-        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
-    }
-    
-    const r = parseInt(hex.substr(0, 2), 16);
-    const g = parseInt(hex.substr(2, 2), 16);
-    const b = parseInt(hex.substr(4, 2), 16);
-    
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  if (!hex || hex === '') return `rgba(118, 209, 0, ${alpha})`; // 默认颜色
+  
+  // 移除#号
+  hex = hex.replace('#', '');
+  
+  // 解析RGB值
+  const r = parseInt(hex.substr(0, 2), 16);
+  const g = parseInt(hex.substr(2, 2), 16);
+  const b = parseInt(hex.substr(4, 2), 16);
+  
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
 
-// 从外部JSON文件加载友链数据 (保持原有的 fetch 逻辑)
+
+
+// 从外部JSON文件加载友链数据
 async function loadFriendsData() {
-    try {
-        const response = await fetch('./friends.json');
-        if (!response.ok) {
-            throw new Error('Failed to load friends data');
-        }
-        const friendsData = await response.json();
-        generateFriendsList(friendsData);
-    } catch (error) {
-        console.error('加载友链数据失败，使用默认数据:', error);
-        const defaultData = [
-            {
-                "name": "加载失败，请检查 friends.json",
-                "description": "默认数据",
-                "url": "javascript:void(0)",
-                "avatar": "",
-                "color": "#76d100"
-            }
-        ];
-        generateFriendsList(defaultData);
+  try {
+    const response = await fetch('./friends.json');
+    if (!response.ok) {
+      throw new Error('Failed to load friends data');
     }
+    const friendsData = await response.json();
+    generateFriendsList(friendsData);
+  } catch (error) {
+    console.error('加载友链数据失败:', error);
+    // 如果加载失败，显示默认数据
+    const defaultData = [
+      {
+        "name": "测试",
+        "description": "测试",
+        "url": "https://example.com/",
+        "avatar": "",
+        "color": "#76d100"
+      }
+    ];
+    generateFriendsList(defaultData);
+  }
 }
 
-// 生成友链HTML (已修改以适应新的 Flex 布局和头像)
+// 生成友链HTML
 function generateFriendsList(friendsData) {
-    const container = document.querySelector('.friend-list');
-    if (!container) return;
-
-    container.innerHTML = '';
+  const container = document.querySelector('.friend-list');
+  container.innerHTML = '';
+  
+  friendsData.forEach(friend => {
+    const li = document.createElement('li');
+    li.className = 'friend-item';
     
-    friendsData.forEach(friend => {
-        const li = document.createElement('li');
-        li.className = 'friend-item';
-        
-        const card = document.createElement('div');
-        card.className = 'friend-card';
-
-        // 设置左侧边框颜色
-        card.style.borderLeftColor = friend.color;
-        card.dataset.color = friend.color;
-
-        // **无障碍优化**
-        const handleClick = () => window.open(friend.url, '_blank');
-        card.onclick = handleClick;
-        card.onkeydown = (e) => {
-            if(e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                handleClick();
-            }
-        };
-        
-        card.tabIndex = 0;
-        card.role = 'link';
-        card.setAttribute('aria-label', `访问${friend.name}的网站: ${friend.description}`);
-
-        // **新增：头像元素**
-        if (friend.avatar) {
-            const avatarImg = document.createElement('img');
-            avatarImg.className = 'friend-avatar';
-            avatarImg.src = friend.avatar;
-            avatarImg.alt = friend.name + '的头像';
-            avatarImg.onerror = function() { this.style.display = 'none'; }; // 错误时隐藏
-            card.appendChild(avatarImg);
-        }
-
-        // **新增：文本内容容器**
-        const textContent = document.createElement('div');
-        textContent.className = 'friend-text-content';
-
-        const nameDiv = document.createElement('div');
-        nameDiv.textContent = friend.name;
-        
-        const descDiv = document.createElement('div');
-        descDiv.textContent = friend.description;
-        
-        textContent.appendChild(nameDiv);
-        textContent.appendChild(descDiv);
-        card.appendChild(textContent);
-
-        // **GSAP 监听器**
-        card.onmouseenter = () => {
-            const cardColor = card.dataset.color;
-            const rgbaColor = hexToRgba(cardColor, 0.25);
-            const rgbaColorLight = hexToRgba(cardColor, 0.15);
-            
-            gsap.to(card, {
-                duration: 0.8,
-                background:
-                    `radial-gradient(circle at 40% 40%, ${rgbaColor} 0%, rgba(255,255,255,0) 80%), ` + 
-                    `radial-gradient(circle at 70% 70%, ${rgbaColorLight} 0%, rgba(255,255,255,0) 90%), ` + 
-                    "#ffffff",
-                ease: "power3.out"
-            });
-        };
-
-        card.onmouseleave = () => {
-            gsap.to(card, {
-                duration: 0.8,
-                background:
-                    "radial-gradient(circle at 40% 40%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%), " + 
-                    "radial-gradient(circle at 70% 70%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 90%), " + 
-                    "#ffffff",
-                ease: "power3.inOut"
-            });
-        };
-        
-        li.appendChild(card);
-        container.appendChild(li);
-    });
+    const card = document.createElement('div');
+    card.className = 'friend-card';
+    card.style.borderLeftColor = friend.color;
+    // 将颜色数据存储在卡片元素上，方便悬停时获取
+    card.dataset.color = friend.color;
+    card.onclick = () => window.open(friend.url, '_blank');
+    card.onkeydown = (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        window.open(friend.url, '_blank');
+      }
+    };
+    card.tabIndex = 0;
+    card.role = 'button';
+    card.setAttribute('aria-label', `访问${friend.name}的网站`);
+    
+    const nameDiv = document.createElement('div');
+    nameDiv.textContent = friend.name;
+    
+    const descDiv = document.createElement('div');
+    descDiv.textContent = friend.description;
+    
+    card.appendChild(nameDiv);
+    card.appendChild(descDiv);
+    li.appendChild(card);
+    container.appendChild(li);
+  });
 }
 
 // 页面加载完成后加载友链数据
@@ -582,15 +532,16 @@ document.addEventListener('DOMContentLoaded', loadFriendsData);
 </script>
 
 <ul class="friend-list">
-    </ul>
+  <!-- 友链将通过JavaScript动态生成 -->
+</ul>
 
 <hr>
 <div style="text-align:center;">
-    这里记录着：对我产生影响的博客 & Friend
-    <br />
-    <span class="with-love" id="animate1"><i class="fa fa-heart"></i></span>
-    一起互换友链吧 o ((>ω<)) o
-    <span class="with-love" id="animate2"><i class="fa fa-heart"></i></span>
+  这里记录着：对我产生影响的博客 & Friend
+  <br />
+  <span class="with-love" id="animate1"><i class="fa fa-heart"></i></span>
+  一起互换友链吧 o ((>ω<)) o
+  <span class="with-love" id="animate2"><i class="fa fa-heart"></i></span>
 </div>
 
 <hr>
