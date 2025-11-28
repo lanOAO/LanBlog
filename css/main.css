@@ -1240,7 +1240,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #bd87de;
+    background: #ff3309;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2881,7 +2881,7 @@ header.header {
   }
 }
 body {
-  background: linear-gradient(to bottom left, #e2e8e6 0%, #cdd3cd 100%), linear-gradient(to left, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0.12) 100%);
+  background: #f4fff3;
   background-blend-mode: screen;
   background-attachment: fixed;
 }
@@ -2889,13 +2889,16 @@ body {
   background: rgba(255,255,255,0.8);
 }
 .sidebar {
-  opacity: 0.8;
+  opacity: 0.75;
 }
 .content-wrap {
-  opacity: 0.8;
+  opacity: 0.75;
 }
 .popup {
   opacity: 0.8;
+}
+.body {
+  color: #323932;
 }
 @font-face {
   font-family: 'LXGW WenKai';
@@ -2926,4 +2929,7 @@ p:has(+ #more) {
   margin-top: -5px;
 /* 与 #more 的距离加大 */
   margin-bottom: 20px;
+}
+.footer {
+  color: #9aba9a;
 }
