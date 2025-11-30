@@ -138,9 +138,9 @@
     <category term="Linux" scheme="http://blog.lanouo.xyz/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="http://blog.lanouo.xyz/tags/Linux/"/>
-    
     <category term="ubuntu" scheme="http://blog.lanouo.xyz/tags/ubuntu/"/>
+    
+    <category term="Linux" scheme="http://blog.lanouo.xyz/tags/Linux/"/>
     
   </entry>
   
@@ -165,13 +165,13 @@
     
     <category term="Linux" scheme="http://blog.lanouo.xyz/tags/Linux/"/>
     
+    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
+    
     <category term="docker" scheme="http://blog.lanouo.xyz/tags/docker/"/>
     
     <category term="ccf" scheme="http://blog.lanouo.xyz/tags/ccf/"/>
     
     <category term="dify" scheme="http://blog.lanouo.xyz/tags/dify/"/>
-    
-    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
     
     <category term="Gradio" scheme="http://blog.lanouo.xyz/tags/Gradio/"/>
     
@@ -217,9 +217,9 @@
     <category term="Linux" scheme="http://blog.lanouo.xyz/categories/Linux/"/>
     
     
-    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
-    
     <category term="yum" scheme="http://blog.lanouo.xyz/tags/yum/"/>
+    
+    <category term="Centos" scheme="http://blog.lanouo.xyz/tags/Centos/"/>
     
   </entry>
   
